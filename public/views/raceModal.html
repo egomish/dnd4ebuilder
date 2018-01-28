@@ -1,0 +1,23 @@
+<div ng-controller="raceModalController">
+    <div class="modal-header">
+        <h3 class="modal-title">Race Modal</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>Race</h4><br>
+                <select ng-model="selected" ng-change="changeRace()">
+                    <option ng-repeat="race in races" value="{{race.name}}">{{race.name}}</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <h4>Description:</h4> <br>
+                <p ng-bind="description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

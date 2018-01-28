@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>D&D Character Builder</title>
+</head>
+<body>
+    <div class="container" ng-controller="MainController">
+        <div id="title"><h1>Dungeons and Dragons 4e Character Builder</h1></div>
+        <div id="body">
+            <div class="row">
+                <div class="col-sm-4">
+                    Name: <br>
+                    <input ng-model="character.name">
+                </div>
+                <div class="col-sm-4">
+                    Race: <br>
+                    <input ng-model="character.race" ng-click="chooseRace()">
+                </div>
+                <div class="col-sm-4">
+                    Class: <br>
+                    <input ng-model="character.class" ng-click="chooseClass()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="controllers/controller.js"></script>
+    <script src="controllers/raceModalController.js"></script>
+    <script src="controllers/classModalController.js"></script>
+</body>
+</html>
