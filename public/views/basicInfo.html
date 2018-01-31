@@ -1,27 +1,27 @@
 <div class="row">
     <div class="col-sm-2">
         Character Name:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.characterName" ng-change="updateCharacterInfo('characterName')">
     </div>
     <div class="col-sm-1">
         Level:<br>
-        <input size="3">
+        <input size="3" ng-model="localProperties.level" ng-change="updateCharacterInfo('level')">
     </div>
     <div class="col-sm-2">
         Class:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.class" ng-change="updateCharacterInfo('class')">
     </div>
     <div class="col-sm-2">
         Paragon Path:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.paragonPath" ng-change="updateCharacterInfo('paragonPath')">
     </div>
     <div class="col-sm-2">
         Epic Destiny:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.epicDestiny" ng-change="updateCharacterInfo('epicDestiny')">
     </div>
     <div class="col-sm-2">
         Total XP:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.totalXP" ng-change="updateCharacterInfo('totalXP')">
     </div>
 </div>
 
@@ -30,38 +30,38 @@
 <div class="row">
     <div class="col-sm-1">
         Race:<br>
-        <input size="10">
+        <input size="10" ng-model="localProperties.race" ng-change="updateCharacterInfo('race')">
     </div>
     <div class="col-sm-1">
         Size:<br>
-        <input size="10">
-    </div>
+        <input size="10" ng-model="localProperties.size" ng-change="updateCharacterInfo('size')">
+    </div>H
     <div class="col-sm-1">
         Age:<br>
-        <input size="3">
+        <input size="3" ng-model="localProperties.age" ng-change="updateCharacterInfo('age')">
     </div>
     <div class="col-sm-1">
         Gender:<br>
-        <input size="10">
+        <input size="10" ng-model="localProperties.gender" ng-change="updateCharacterInfo('gender')">
     </div>
     <div class="col-sm-1">
         Height:<br>
-        <input size="5">
+        <input size="5" ng-model="localProperties.height" ng-change="updateCharacterInfo('height')">
     </div>
     <div class="col-sm-1">
         Weight:<br>
-        <input size="5">
+        <input size="5" ng-model="localProperties.weight" ng-change="updateCharacterInfo('weight')">
     </div>
     <div class="col-sm-2">
         Alignment:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.alignment" ng-change="updateCharacterInfo('alignment')">
     </div>
     <div class="col-sm-2">
         Deity:<br>
-        <input size="20">
+        <input size="20" ng-model="localProperties.deity" ng-change="updateCharacterInfo('deity')">
     </div>
     <div class="col-sm-2">
         RPGA #:<br>
-        <input size="10">
+        <input size="10" ng-model="localProperties.rpgaNumber" ng-change="updateCharacterInfo('rpgaNumber')">
     </div>
 </div>

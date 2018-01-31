@@ -8,4 +8,8 @@ app.service('characterInfo', function() {
     this.set = function(key, value) {
         this.character[key] = value;
     };
+
+    this.getAll = function() {
+        return this.character;
+    };
 });
