@@ -12,7 +12,7 @@ app.controller('basicInfoController', ['$scope', '$http', 'characterInfo', funct
 		age: undefined,
 		gender: undefined,
 		height: undefined,
-		wheight: undefined,
+		weight: undefined,
 		alignment: undefined,
 		deity: undefined,
 		rpgaNumber: undefined
