@@ -1,4 +1,4 @@
 var app = angular.module('app', []);
-app.controller('mainController', ['$scope', '$http', function($scope, $http) {
-
+app.controller('mainController', ['$scope', '$http', 'characterInfo', function($scope, $http, characterInfo) {
+	
 }]);
