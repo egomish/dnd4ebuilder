@@ -1,0 +1,22 @@
+{
+  "name": "dnd4ebuilder",
+  "version": "1.0.0",
+  "description": "A 4th edition character builder for dungeons and dragons.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egomish/dnd4ebuilder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egomish/dnd4ebuilder/issues"
+  },
+  "homepage": "https://github.com/egomish/dnd4ebuilder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>D&D Character Builder</title>
+</head>
+<body>
+    <div class="container" ng-controller="mainController">
+        <h1>Dungeons and Dragons 4e Character Builder</h1>
+        <br>
+        <basic-info></basic-info> <!--This is where the first 2 lines of UI are coming from.
+                                      look at views/basicInfo.html to see the markup.
+                                      The directive setup is inside directives/directives.js-->
+        <div>
+            <ability-scores></ability-scores>
+        </div>
+        <div>
+            <defenses></defenses>
+        </div>
+        <div>
+            <movement></movement>
+            <initiative></initiative>
+            <weapon-proficiencies></weapon-proficiencies>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/directive_controllers/basicInfoController.js"></script>
+    <script src="controllers/directive_controllers/abilityScoresController.js"></script>
+    <script src="controllers/directive_controllers/defensesController.js"></script>
+    <script src="controllers/directive_controllers/movementController.js"></script>
+    <script src="controllers/directive_controllers/initiativeController.js"></script>
+    <script src="controllers/directive_controllers/weaponProficienciesController.js"></script>
+    <script src="directives/directiveDefinitions.js"></script>
+    <script src="services/characterInfoService.js"></script>
+</body>
+</html>
