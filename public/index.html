@@ -9,19 +9,40 @@
     <div class="container" ng-controller="mainController">
         <h1>Dungeons and Dragons 4e Character Builder</h1>
         <br>
-        <basic-info></basic-info> <!--This is where the first 2 lines of UI are coming from.
-                                      look at views/basicInfo.html to see the markup.
-                                      The directive setup is inside directives/directives.js-->
-        <div>
-            <ability-scores></ability-scores>
+        <div class="row">
+            <!--Basic Info-->
+            <basic-info></basic-info>
         </div>
-        <div>
-            <defenses></defenses>
+        <div class="col-sm-4">
+            <div class="row">
+                <!--Ability Scores-->
+                <h3>Ability Scores</h3>
+                <ability-scores></ability-scores>
+            </div>
         </div>
-        <div>
-            <movement></movement>
-            <initiative></initiative>
-            <weapon-proficiencies></weapon-proficiencies>
+        <div class="col-sm-4">
+            <div class="row">
+                <!--Defenses-->
+                <h3>Defenses</h3>
+                <defenses></defenses>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row">
+                <!--Movement-->
+                <h3>Movement</h3>
+                <movement></movement>
+            </div>
+            <div class="row">
+                <!--Initiative-->
+                <h3>Initiative</h3>
+                <initiative></initiative>
+            </div>
+            <div class="row">
+                <!--Weapon Proficiencies-->
+                <h3>Weapon Proficiencies</h3>
+                <weapon-proficiencies></weapon-proficiencies>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
