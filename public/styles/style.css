@@ -1,7 +1,9 @@
+/* Index Styles */
 .underlined {
 	text-decoration: underline;
 }
 
+/* Basic Info Styles */
 input {
 	width: 100%;
 	border: 1px solid black;
@@ -16,4 +18,42 @@ input[type="text"] {
     border-right: none;
     border-bottom: solid 1px;
     padding: 3px 10px;
+}
+
+/* Defenses Styles */
+.defenses table {
+    font-family: arial, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+}
+.defenses th {
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding:2px;
+}
+
+.defenses td {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.defenses .score {
+    border: 1px solid black;
+}
+
+.defenses .def {
+    text-align: center;
+    padding: 2px;
+    background-color: #2d2d2d;
+    border: 1px solid black;
+    font-size: 18px;
+    color: white;
+}
+
+.defenses #rating {
+    text-align: center;
+    border: none;
+    font-size: 22px;
 }
