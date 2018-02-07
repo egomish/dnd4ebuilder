@@ -3,7 +3,7 @@
     font-size: 10px;
     border-collapse: collapse;
     border-bottom: 1px solid black;
-    width: 80%;
+    width: 74%;
 }
 .healthAndSavingThrows th {
     border: 1px solid black;
@@ -19,9 +19,16 @@
     font-size: 20px;
 }
 
-.healthAndSavingThrows input, textarea {
+.healthAndSavingThrows input {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.healthAndSavingThrows textarea {
   text-align: center;
   vertical-align: bottom;
   width: 100%;
   height: 100%;
+  font-size: 16px;
 }
