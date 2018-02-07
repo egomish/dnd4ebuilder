@@ -45,3 +45,11 @@ app.directive('weaponProficiencies', function() {
         controller: 'weaponProficienciesController'
     };
 });
+
+app.directive('healthAndSavingThrows', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/healthAndSavingThrows.html',
+        controller: 'healthAndSavingThrowsController'
+    };
+});
