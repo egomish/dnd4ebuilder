@@ -17,3 +17,7 @@ input[type="text"] {
     border-bottom: solid 1px;
     padding: 3px 10px;
 }
+
+.line1{
+    width:25%;
+}
