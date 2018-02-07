@@ -1,0 +1,16 @@
+/* Basic Info Styles */
+.basicInfo input {
+	width: 100%;
+	border: 1px solid black;
+}
+
+.basicInfo input[type="text"] {
+    background-color: transparent;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px;
+    padding: 3px 10px;
+}
