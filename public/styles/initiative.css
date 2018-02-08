@@ -1,0 +1,33 @@
+/* Initiative Styles */
+
+.initiative input {
+    width: 100%;
+    border: 1px solid black;
+}
+.initiative table {
+    width: 80%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+}
+.initiative th {
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 15px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.initiative td {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.initiative textarea {
+    width: 80%;
+    height: 50px;
+    font-size: 12px;
+    border: 1px solid black;
+}
