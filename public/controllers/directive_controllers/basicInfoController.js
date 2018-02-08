@@ -1,5 +1,5 @@
 app.controller('basicInfoController', ['$scope', '$http', function($scope, $http) {
-	$scope.init = function() {
+	$scope.initBasicInfo = function() {
 		$scope.ddch.level0.name = undefined;
 		$scope.ddch.level0.level = undefined;
 		$scope.ddch.level0.class = undefined;
