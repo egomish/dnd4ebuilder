@@ -45,3 +45,11 @@ app.directive('weaponProficiencies', function() {
         controller: 'weaponProficienciesController'
     };
 });
+
+app.directive('powers', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/powers.html',
+        controller: 'powersController'
+    };
+});
