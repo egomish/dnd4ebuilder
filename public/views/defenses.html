@@ -14,7 +14,7 @@
             <th>MISC</th>
         </tr>
         <tr ng-repeat="defense in ddch.level0.defenses">
-            <td class="score"><input id="rating" ng-model="defense.score"></td>
+            <td class="score" id="rating" ng-bind="defense.score"></td>
             <td class="def" ng-bind="defense.def"></td>
             <td ng-bind="defense.lvl"></td>
             <td ng-bind="defense.armor"></td>

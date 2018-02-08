@@ -45,3 +45,11 @@ app.directive('weaponProficiencies', function() {
         controller: 'weaponProficienciesController'
     };
 });
+
+app.directive('raceFeatures', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/raceFeatures.html',
+        controller: 'raceFeaturesController'
+    };
+});

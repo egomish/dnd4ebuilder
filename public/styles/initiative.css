@@ -5,7 +5,7 @@
     border: 1px solid black;
 }
 .initiative table {
-    width: 80%;
+    width: 90%;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     border-bottom: 1px solid black;
@@ -26,7 +26,7 @@
 }
 
 .initiative textarea {
-    width: 80%;
+    width: 90%;
     height: 50px;
     font-size: 12px;
     border: 1px solid black;
