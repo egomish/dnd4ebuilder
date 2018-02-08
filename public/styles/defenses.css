@@ -4,6 +4,7 @@
     border: 1px solid black;
 }
 .defenses table {
+    width: 65%;
     font-family: arial, sans-serif;
     font-size: 10px;
     border-collapse: collapse;
