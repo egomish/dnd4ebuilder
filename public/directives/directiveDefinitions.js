@@ -53,3 +53,11 @@ app.directive('raceFeatures', function() {
         controller: 'raceFeaturesController'
     };
 });
+
+app.directive('healthAndSavingThrows', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/healthAndSavingThrows.html',
+        controller: 'healthAndSavingThrowsController'
+    };
+});
