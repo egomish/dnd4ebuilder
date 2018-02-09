@@ -1,35 +1,20 @@
-app.controller('basicInfoController', ['$scope', '$http', 'characterInfo', function($scope, $http, characterInfo) {
-	$scope.init = function() {
-		//instantiate the object to contain data bindings
-		$scope.localProperties = {
-			level0: {
-				name: undefined,
-				level: undefined,
-				class: undefined,
-				paragonPath: undefined,
-				epicDestiny: undefined,
-				totalXP: undefined,
-				race: undefined,
-				size: undefined,
-				age: undefined,
-				gender: undefined,
-				height: undefined,
-				weight: undefined,
-				alignment: undefined,
-				deity: undefined,
-				rpgaNumber: undefined
-			}
-		};
-		//send original attribute states to the characterInfo service
-		for(var level in $scope.localProperties) {
-			for(var attr in $scope.localProperties[level]) {
-				characterInfo.set(level, attr, $scope.localProperties[level][attr]);
-			}
-		}
+app.controller('basicInfoController', ['$scope', '$http', function($scope, $http) {
+	$scope.initBasicInfo = function() {
+		$scope.ddch.level0.name = undefined;
+		$scope.ddch.level0.level = undefined;
+		$scope.ddch.level0.class = undefined;
+		$scope.ddch.level0.paragonPath = undefined;
+		$scope.ddch.level0.epicDestiny = undefined;
+		$scope.ddch.level0.totalXP = undefined;
+		$scope.ddch.level0.race = undefined;
+		$scope.ddch.level0.size = undefined;
+		$scope.ddch.level0.age = undefined;
+		$scope.ddch.level0.gender = undefined;
+		$scope.ddch.level0.height = undefined;
+		$scope.ddch.level0.weight = undefined;
+		$scope.ddch.level0.alignment = undefined;
+		$scope.ddch.level0.deity = undefined;
+		$scope.ddch.level0.rpgaNumber = undefined;
 	};
-
-    $scope.updateCharacterInfo = function(level, attr) {
-   		characterInfo.set(level, attr, $scope.localProperties[level][attr]);
-    };
 }]);
 

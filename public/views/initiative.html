@@ -1,7 +1,20 @@
-<div>
-    <div class="col-sm-4">
-        Intiative: 0
-        <br>
-        Conditional Modifiers:
-    </div>
+<link rel="stylesheet" href="styles/initiative.css">
+
+<div class="initiative" ng-init="initInitiative()">
+	<table>
+		<tr>
+			<th>Score</th>
+			<th>DEX</th>
+			<th>1/2<br>LVL</th>
+			<th>MISC</th>
+		</tr>
+		<tr>
+			<td ng-bind="ddch.level0.initiative.score"></td>
+			<td ng-bind="ddch.level0.initiative.dex"></td>
+			<td ng-bind="ddch.level0.initiative.lvl"></td>
+			<td ng-bind="ddch.level0.initiative.misc"></td>
+		</tr>
+	</table>
+
+	<textarea>Conditional Bonuses:</textarea>
 </div>
