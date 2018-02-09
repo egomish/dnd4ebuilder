@@ -1,24 +1,18 @@
-<div class="healthAndSavingThrows">
+<link rel="stylesheet" href="styles/healthAndSavingThrowsStyle.css">
+
+<div class="healthAndSavingThrows" ng-init="initHealthAndSavingThrows()">
   <table>
     <tr>
       <th>Max HP</th>
       <th>Bloodied</th>
-      <th>Surges/Day</th>
       <th>Surge Value</th>
+      <th>Surges/Day</th>
     </tr>
     <tr>
-      <td>
-        <input type="text"/>
-      </td>
-      <td>
-        <input type="text"/>
-      </td>
-      <td>
-        <input type="text"/>
-      </td>
-      <td>
-        <input type="text"/>
-      </td>
+      <td ng-bind="ddch.level0.healthAndSavingThrows.maxHP"></td>
+      <td ng-bind="ddch.level0.healthAndSavingThrows.bloodiedHP"></td>
+      <td ng-bind="ddch.level0.healthAndSavingThrows.surgeValue"></td>
+      <td ng-bind="ddch.level0.healthAndSavingThrows.surgesPerDay"></td>
     </tr>
   </table>
   <table>
@@ -26,9 +20,13 @@
       <th>Saving Throws</th>
     </tr>
     <tr>
-      <td>
-        <textarea rows="6"></textarea>
-      </td>
+      <td id="savesAndResists" ng-bind="ddch.level0.healthAndSavingThrows.savingThrowMods"></td>
+    </tr>
+    <tr>
+      <th>Resistances</th>
+    </tr>
+    <tr>
+      <td id="savesAndResists" ng-bind="ddch.level0.healthAndSavingThrows.resistances"></td>
     </tr>
   </table>
 </div>
