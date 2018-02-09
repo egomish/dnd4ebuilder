@@ -1,29 +1,75 @@
 <div>
-    <div class="col-sm-2 left">
-        STR
+    <div class="col-sm-4 left">
+        <button ng-click="base_str = base_str+1" ng-init="base_str=10">
+            +
+        </button> 
+        STR 
+        <button ng-click="base_str = base_str-1">
+            -
+        </button> 
+
         <br>
+
+        <button ng-click="base_con = base_con+1" ng-init="base_con=10">
+            +
+        </button> 
         CON
+        <button ng-click="base_con = base_con-1">
+            -
+        </button> 
+        
         <br>
+        
+        <button ng-click="base_str = base_dex+1" ng-init="base_dex=10">
+            +
+        </button>
         DEX
+        <button ng-click="base_dex = base_dex-1">
+            -
+        </button> 
+        
         <br>
+        
+        <button ng-click="base_int = base_int+1" ng-init="base_int=10">
+            +
+        </button>
         INT
+        <button ng-click="base_int = base_int-1">
+            -
+        </button> 
+        
         <br>
+        
+        <button ng-click="base_wis = base_wis+1" ng-init="base_wis=10">
+            +
+        </button>
         WIS
+        <button ng-click="base_wis = base_wis-1">
+            -
+        </button> 
+        
         <br>
+        
+        <button ng-click="base_cha = base_cha+1" ng-init="base_cha=10">
+            +
+        </button>
         CHA
+        <button ng-click="base_cha = base_cha-1">
+            -
+        </button> 
     </div>
     <div class="col-sm-1">
-        10
+        {{base_str}}
         <br>
-        14
+        {{base_con}}
         <br>
-        11
+        {{base_dex}}
         <br>
-        20
+        {{base_int}}
         <br>
-        10
+        {{base_wis}}
         <br>
-        8
+        {{base_cha}}
     </div>
     <div class="col-sm-1">
         0
