@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="styles/powers.css">
 
-<div class="powers">
+<div class="powers" ng-init="initPowers()">
   <table>
     <tr>
       <th>
@@ -8,14 +8,10 @@
       </th>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level1.atWillPower1"></td>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level1.atWillPower2"></td>
     </tr>
     <tr>
       <td>
@@ -46,19 +42,13 @@
       </th>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level1.encounterPower"></td>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level3.encounterPower"></td>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level7.encounterPower"></td>
     </tr>
     <tr>
       <td>
@@ -84,19 +74,13 @@
       </th>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level1.dailyPower"></td>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level5.dailyPower"></td>
     </tr>
     <tr>
-      <td>
-        <input type="text">
-      </td>
+      <td ng-bind="ddch.level9.dailyPower"></td>
     </tr>
     <tr>
       <td>
@@ -122,29 +106,20 @@
       </th>
     </tr>
     <tr>
+      <td ng-bind="ddch.level2.utilityPower"></td>
+    </tr>
+    <tr>
+      <td ng-bind="ddch.level6.utilityPower"></td>
+    </tr>
+    <tr>
+      <td ng-bind="ddch.level10.utilityPower"></td>
+    </tr>
+    <tr>
       <td>
         <input type="text">
       </td>
     </tr>
-      <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-      <tr>
-      <td>
-        <input type="text">
-      </td>
-      <td>
-        <input type="checkbox">
-      </td>
-    </tr>
-      <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-      <tr>
+    <tr>
       <td>
         <input type="text">
       </td>
