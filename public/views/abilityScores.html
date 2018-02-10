@@ -1,6 +1,7 @@
-<div>
-    <div class="col-sm-4 left">
-        <button ng-click="base_str = base_str+1" ng-init="base_str=10">
+<link rel="stylesheet" href="styles/score.css">
+
+<div ng-init="initScores()">
+    <!-- <button ng-click="base_str = base_str+1" >
             +
         </button> 
         STR 
@@ -52,11 +53,38 @@
         
         <button ng-click="base_cha = base_cha+1" ng-init="base_cha=10">
             +
-        </button>
-        CHA
-        <button ng-click="base_cha = base_cha-1">
-            -
-        </button> 
+        </button> -->
+    <div class="col-sm-4 left">
+        <table>
+            <tr>
+                <th>Score</th>
+                <th>Ability</th>
+            </tr>
+            <tr ng-repeat="strength in ddch.level0.str_score">
+                <td class="table_box" ng-bind="strength.base_score"></td>
+                <td class="abilityType">STR</td>
+            </tr>
+            <tr ng-repeat="constitution in ddch.level0.con_score">
+                <td class="table_box" ng-bind="constitution.base_score"></td>
+                <td class="abilityType">CON</td>
+            </tr>
+            <tr ng-repeat="dexterity in ddch.level0.dex_score">
+                <td class="table_box" ng-bind="dexterity.base_score"></td>
+                <td class="abilityType">DEX</td>
+            </tr>
+            <tr ng-repeat="intelligence in ddch.level0.int_score">
+                <td class="table_box" ng-bind="intelligence.base_score"></td>
+                <td class="abilityType">INT</td>
+            </tr>
+            <tr ng-repeat="wisdom in ddch.level0.wis_score">
+                <td class="table_box" ng-bind="wisdom.base_score"></td>
+                <td class="abilityType">WIS</td>
+            </tr>
+            <tr ng-repeat="charisma in ddch.level0.cha_score">
+                <td class="table_box" ng-bind="charisma.base_score"></td>
+                <td class="abilityType">CHA</td>
+            </tr>
+        </table>
     </div>
     <div class="col-sm-1">
         {{base_str}}
