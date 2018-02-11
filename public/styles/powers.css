@@ -12,14 +12,14 @@
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 13px;
     padding:2px;
 }
 
 .powers td {
     text-align: center;
     border: 1px solid black;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .powers input {
