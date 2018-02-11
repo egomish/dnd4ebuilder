@@ -1,101 +1,87 @@
-<h3>Ability Scores</h3>
-<div>
+
+<link rel="stylesheet" href="styles/score.css">
+
+<div class="scores">
     <div class="col-sm-4 left">
-        <button ng-click="base_str = base_str+1" ng-init="base_str=10">
-            +
-        </button> 
-        STR 
-        <button ng-click="base_str = base_str-1">
-            -
-        </button> 
-
-        <br>
-
-        <button ng-click="base_con = base_con+1" ng-init="base_con=10">
-            +
-        </button> 
-        CON
-        <button ng-click="base_con = base_con-1">
-            -
-        </button> 
-        
-        <br>
-        
-        <button ng-click="base_str = base_dex+1" ng-init="base_dex=10">
-            +
-        </button>
-        DEX
-        <button ng-click="base_dex = base_dex-1">
-            -
-        </button> 
-        
-        <br>
-        
-        <button ng-click="base_int = base_int+1" ng-init="base_int=10">
-            +
-        </button>
-        INT
-        <button ng-click="base_int = base_int-1">
-            -
-        </button> 
-        
-        <br>
-        
-        <button ng-click="base_wis = base_wis+1" ng-init="base_wis=10">
-            +
-        </button>
-        WIS
-        <button ng-click="base_wis = base_wis-1">
-            -
-        </button> 
-        
-        <br>
-        
-        <button ng-click="base_cha = base_cha+1" ng-init="base_cha=10">
-            +
-        </button>
-        CHA
-        <button ng-click="base_cha = base_cha-1">
-            -
-        </button> 
+        <table>
+            <tr>
+                <th>Score</th>
+                <th>Ability</th>
+            </tr>
+            <tr ng-repeat="strength in ddch.level0.str_score">
+                <td class="table_box" ng-bind="strength.base_score"></td>
+                <td class="abilityType">STR</td>
+            </tr>
+            <tr ng-repeat="constitution in ddch.level0.con_score">
+                <td class="table_box" ng-bind="constitution.base_score"></td>
+                <td class="abilityType">CON</td>
+            </tr>
+            <tr ng-repeat="dexterity in ddch.level0.dex_score">
+                <td class="table_box" ng-bind="dexterity.base_score"></td>
+                <td class="abilityType">DEX</td>
+            </tr>
+            <tr ng-repeat="intelligence in ddch.level0.int_score">
+                <td class="table_box" ng-bind="intelligence.base_score"></td>
+                <td class="abilityType">INT</td>
+            </tr>
+            <tr ng-repeat="wisdom in ddch.level0.wis_score">
+                <td class="table_box" ng-bind="wisdom.base_score"></td>
+                <td class="abilityType">WIS</td>
+            </tr>
+            <tr ng-repeat="charisma in ddch.level0.cha_score">
+                <td class="table_box" ng-bind="charisma.base_score"></td>
+                <td class="abilityType">CHA</td>
+            </tr>
+        </table>
     </div>
-    <div class="col-sm-1">
-        {{base_str}}
-        <br>
-        {{base_con}}
-        <br>
-        {{base_dex}}
-        <br>
-        {{base_int}}
-        <br>
-        {{base_wis}}
-        <br>
-        {{base_cha}}
+    <div class="col-sm-3">
+        <table>
+            <tr>
+                <th>Abil Mod</th>
+            </tr>
+            <tr ng-repeat="strength in ddch.level0.str_score">
+                <td class="table_box" ng-bind="strength.abil_mod"></td>
+            </tr>
+            <tr ng-repeat="constitution in ddch.level0.con_score">
+                <td class="table_box" ng-bind="constitution.abil_mod"></td>
+            </tr>
+            <tr ng-repeat="dexterity in ddch.level0.dex_score">
+                <td class="table_box" ng-bind="dexterity.abil_mod"></td>
+            </tr>
+            <tr ng-repeat="intelligence in ddch.level0.int_score">
+                <td class="table_box" ng-bind="intelligence.abil_mod"></td>
+            </tr>
+            <tr ng-repeat="wisdom in ddch.level0.wis_score">
+                <td class="table_box" ng-bind="wisdom.abil_mod"></td>
+            </tr>
+            <tr ng-repeat="charisma in ddch.level0.cha_score">
+                <td class="table_box" ng-bind="charisma.abil_mod"></td>
+            </tr>
+        </table>
     </div>
-    <div class="col-sm-1">
-        0
-        <br>
-        2
-        <br>
-        0
-        <br>
-        5
-        <br>
-        0
-        <br>
-        -1
-    </div>
-    <div class="col-sm-1">
-        0
-        <br>
-        2
-        <br>
-        0
-        <br>
-        5
-        <br>
-        0
-        <br>
-        -1
+    <div class="col-sm-3">
+        <table>
+            <tr>
+                <th>Mod+1/2lvl</th>
+            </tr>
+            <tr ng-repeat="strength in ddch.level0.str_score">
+                <td class="table_box" ng-bind="strength.lvl_mod"></td>
+            </tr>
+            <tr ng-repeat="constitution in ddch.level0.con_score">
+                <td class="table_box" ng-bind="constitution.lvl_mod"></td>
+            </tr>
+            <tr ng-repeat="dexterity in ddch.level0.dex_score">
+                <td class="table_box" ng-bind="dexterity.lvl_mod"></td>
+            </tr>
+            <tr ng-repeat="intelligence in ddch.level0.int_score">
+                <td class="table_box" ng-bind="intelligence.lvl_mod"></td>
+            </tr>
+            <tr ng-repeat="wisdom in ddch.level0.wis_score">
+                <td class="table_box" ng-bind="wisdom.lvl_mod"></td>
+            </tr>
+            <tr ng-repeat="charisma in ddch.level0.cha_score">
+                <td class="table_box" ng-bind="charisma.lvl_mod"></td>
+            </tr>
+        </table>
     </div>
 </div>
