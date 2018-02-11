@@ -46,7 +46,16 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     desc: 'Can move 1 less when being forced to move.'
                 }
             ],
-            abilityScores: []
+            abilityScores: [
+                { 
+                    base_str: 10,
+                    base_con: 10,
+                    base_dex: 10,
+                    base_int: 10,
+                    base_wis: 10,
+                    base_cha: 10
+                }
+            ]
         },
         level1: {
             ddclass: "",
@@ -100,18 +109,18 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 misc: 0
             },
             abilityScores: {
-                strTotal: 0,
-                conTotal: 0,
-                dexTotal: 0,
-                intTotal: 0,
-                wisTotal: 0,
-                chaTotal: 0,
+                strTotal: 10,
+                conTotal: 10,
+                dexTotal: 10,
+                intTotal: 10,
+                wisTotal: 10,
+                chaTotal: 10,
                 strMod: 0,
                 conMod: 0,
                 dexMod: 0,
                 intMod: 0,
                 wisMod: 0,
-                chaMod: 0,
+                chaMod: 0
             },
             healthAndSavingThrows: {
                 maxHP: 0,
