@@ -9,109 +9,36 @@
     <div class="container" ng-controller="mainController">
         <h2 class="text-center underlined">Dungeons and Dragons 4e Character Builder</h2>
         <br>
-        <div class="row"> <!-- Top Row -->
-            <!--Basic Info-->
-            <basic-info></basic-info>
-        </div>
+        <div class="row" ng-include="'views/basicInfo.html'"></div>
         <br>
         <div class="col-sm-4"> <!-- First Column -->
-            <div class="row">
-                <!--Ability Scores-->
-                <h3>Ability Scores</h3>
-                <ability-scores></ability-scores>
-            </div>
-            <div class="row">
-                <!--Health and Saving Throws-->
-                <h3>Health and Saving Throws</h3>
-                <health-and-saving-throws></health-and-saving-throws>
-            </div>
-            <div class="row">
-                <!--Skills-->
-                <h3>Skills</h3>
-            </div>
-            <div class="row">
-                <!--Powers-->
-                <h3>Powers</h3>
-            </div>
-            <div class="row">
-                <!--Other Equipment-->
-                <h3>Other Equipment</h3>
-            </div>
-            <div class="row">
-                <!--Wealth-->
-                <h3>Wealth</h3>
-            </div>
+                <div class="row" ng-include="'views/abilityScores.html'"></div>
+                <div class="row" ng-include="'views/healthAndSavingThrows.html'"></div>
+                <div class="row" ng-include="'views/skills.html'"></div>
+                <div class="row" ng-include="'views/powers.html'"></div>
+                <div class="row" ng-include="'views/equipment.html'"></div>
+                <div class="row" ng-include="'views/wealth.html'"></div>
         </div>
         <div class="col-sm-4"> <!--Second Column -->
-            <div class="row">
-                <!--Defenses-->
-                <h3>Defenses</h3>
-                <defenses></defenses>
-            </div>
-            <div class="row">
-                <!--Race Features-->
-                <h3>Race Features</h3>
-                <race-features></race-features>
-            </div>
-            <div class="row">
-                <!--Class/Path/Destiny Features-->
-                <h3>Class/Path/Destiny Features</h3>
-            </div>
-            <div class="row">
-                <!--Magic Items-->
-                <h3>Magic Items</h3>
-            </div>
-            <div class="row">
-                <!--Rituals-->
-                <h3>Rituals</h3>
-            </div>
+                <div class="row" ng-include="'views/defenses.html'"></div>
+                <div class="row" ng-include="'views/raceFeatures.html'"></div>
+                <div class="row" ng-include="'views/classFeatures.html'"></div>
+                <div class="row" ng-include="'views/magicItems.html'"></div>
+                <div class="row" ng-include="'views/rituals.html'"></div>
         </div>
         <div class="col-sm-4"> <!--Third Column -->
-            <div class="row">
-                <!--Movement-->
-                <h3>Movement</h3>
-                <movement></movement>
-            </div>
-            <div class="row">
-                <!--Initiative-->
-                <h3>Initiative</h3>
-                <initiative></initiative>
-            </div>
-            <div class="row">
-                <!--Weapon Proficiencies-->
-                <h3>Weapon Proficiencies</h3>
-                <weapon-proficiencies></weapon-proficiencies>
-            </div>
-            <div class="row">
-                <!--Feats-->
-                <h3>Feats</h3>
-            </div>
-            <div class="row">
-                <!--Portrait-->
-                <h3>Portrait</h3>
-            </div>
-            <div class="row">
-                <!--Languages-->
-                <h3>Languages</h3>
-            </div>
-            <div class="row">
-                <!--Character Details-->
-                <h3>Character Details</h3>
-                <character-details></character-details>
-            </div>
+                <div class="row" ng-include="'views/movement.html'"></div>
+                <div class="row" ng-include="'views/initiative.html'"></div>
+                <div class="row" ng-include="'views/weaponProficiencies.html'"></div>
+                <div class="row" ng-include="'views/feats.html'"></div>
+                <div class="row" ng-include="'views/portrait.html'"></div>
+                <div class="row" ng-include="'views/languages.html'"></div>
+                <div class="row" ng-include="'views/characterDetails.html'"></div>
         </div>
-        <button ng-click="log()">Click me</button>
+        <button ng-click="log()">Click me to log</button>
+        <button ng-click="set_ddch()">Get ddch</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="controllers/mainController.js"></script>
-    <script src="controllers/directive_controllers/basicInfoController.js"></script>
-    <script src="controllers/directive_controllers/abilityScoresController.js"></script>
-    <script src="controllers/directive_controllers/defensesController.js"></script>
-    <script src="controllers/directive_controllers/movementController.js"></script>
-    <script src="controllers/directive_controllers/initiativeController.js"></script>
-    <script src="controllers/directive_controllers/weaponProficienciesController.js"></script>
-    <script src="controllers/directive_controllers/raceFeaturesController.js"></script>
-    <script src="controllers/directive_controllers/healthAndSavingThrowsController.js"></script>
-    <script src="directives/directiveDefinitions.js"></script>
 </body>
 </html>
