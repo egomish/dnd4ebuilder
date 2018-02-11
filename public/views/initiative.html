@@ -10,9 +10,13 @@
 			<th>MISC</th>
 		</tr>
 		<tr>
-			<td>{{ddch.calculatedValues.initiative.dex + ddch.calculatedValues.initiative.halflevel + ddch.calculatedValues.initiative.misc}}</td>
+			<td>{{
+				ddch.calculatedValues.initiative.dex + 
+				ddch.halflevel + 
+				ddch.calculatedValues.initiative.misc
+			}}</td>
 			<td ng-bind="ddch.calculatedValues.initiative.dex"></td>
-			<td ng-bind="ddch.calculatedValues.initiative.halflevel"></td>
+			<td ng-bind="ddch.halflevel"></td>
 			<td ng-bind="ddch.calculatedValues.initiative.misc"></td>
 		</tr>
 	</table>
