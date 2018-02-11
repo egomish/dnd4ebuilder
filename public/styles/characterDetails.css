@@ -15,11 +15,20 @@
 
 .characterDetails textarea {
     vertical-align: bottom;
+    text-align: center;
     border: 1px solid black;
     font-size: 12px;
     width: 100%;
+    resize: none;
 }
 
 #allies {
-  text-align: center;
+  border-right: solid 0.5px;
+  border-bottom: solid 0.5px;
+  border-top: solid 0.5px;
+}
+
+#allyNotes {
+  border-bottom: solid 0.5px;
+  border-top: solid 0.5px;
 }
