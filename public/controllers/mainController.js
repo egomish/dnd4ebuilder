@@ -2,6 +2,7 @@ var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	$scope.ddch = {
         characterLevel: 1,
+        halflevel: 0,
         level0: {
             name: "",
             age: 0,
