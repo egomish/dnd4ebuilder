@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="styles/healthAndSavingThrowsStyle.css">
+
+<h3>Health and Saving Throws</h3>
+<div class="healthAndSavingThrows">
+  <table>
+    <tr>
+      <th>Max HP</th>
+      <th>Bloodied</th>
+      <th>Surge Value</th>
+      <th>Surges/Day</th>
+    </tr>
+    <tr>
+      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.maxHP"></td>
+      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.bloodiedValue"></td>
+      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.surgeValue"></td>
+      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.surgesPerDay"></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Saving Throws</th>
+    </tr>
+    <tr>
+      <td id="savesAndResists" ng-bind="ddch.calculatedValues.healthAndSavingThrows.savingThrowMods"></td>
+    </tr>
+    <tr>
+      <th>Resistances</th>
+    </tr>
+    <tr>
+      <td id="savesAndResists" ng-bind="ddch.calculatedValues.healthAndSavingThrows.resistances"></td>
+    </tr>
+  </table>
+</div>

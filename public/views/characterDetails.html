@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="styles/characterDetails.css">
+
+<h3>Character Details</h3>
+<div class="characterDetails">
+  <table>
+    <tr>
+      <th>Personality Traits</th>
+    </tr>
+    <tr>
+      <td ng-bind="ddch.level0.description.personalityTraits"></td>
+    </tr>
+    <tr>
+      <th>Mannerisms & Appearance</th>
+    </tr>
+    <tr>
+      <td ng-bind="ddch.level0.description.mannerisms"></td>
+    </tr>
+    <tr>
+      <th>Character Background</th>
+    </tr>
+    <tr>
+      <td id="characterBackground" ng-bind="ddch.level0.description.background"></td>
+    </tr>
+  </table>
+</div>
