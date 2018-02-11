@@ -13,22 +13,14 @@
     padding:2px;
 }
 
-.characterDetails textarea {
-    vertical-align: bottom;
+.characterDetails td {
     border: 1px solid black;
+    vertical-align: top;
     font-size: 12px;
     width: 100%;
-    resize: none;
+    height: 64px;
 }
 
-#allies {
-  border-right: solid 0.5px;
-  border-bottom: solid 0.5px;
-  border-top: solid 0.5px;
-}
-
-#allyNotes {
-  border-bottom: solid 0.5px;
-  border-top: solid 0.5px;
-  border-left: solid 0.5px;
+#characterBackground {
+  height: 376px;
 }
