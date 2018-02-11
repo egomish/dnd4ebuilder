@@ -9,7 +9,11 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             height: 0,
             weight: 0,
             size: "",
-            description: "",
+            description: {
+                personalityTraits: "",
+                mannerisms: "",
+                background: ""
+            },
             portrait: "",
 
             alignment: "",
@@ -21,11 +25,26 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             skillBonus1: "",
             skillBonus2: "",
             racialFeatures: [
-                { name: 'Dwarven Weapon Proficiency', desc: 'Proficient with hammers.' },
-                { name: 'Cast-Iron Stomach', desc: '+5 bonus to saving throws against poison.' },
-                { name: 'Encumbered Speed', desc: 'Armor or heavy load does not reduce your speed.' },
-                { name: 'Dwarven Resilience', desc: 'Second Wind is a minor action' },
-                { name: 'Stand Your Ground', desc: 'Can move 1 less when being forced to move.' }
+                {
+                    name: 'Dwarven Weapon Proficiency',
+                    desc: 'Proficient with hammers.'
+                    },
+                {
+                    name: 'Cast-Iron Stomach',
+                    desc: '+5 bonus to saving throws against poison.'
+                },
+                {
+                    name: 'Encumbered Speed',
+                    desc: 'Armor or heavy load does not reduce your speed.'
+                },
+                {
+                    name: 'Dwarven Resilience',
+                    desc: 'Second Wind is a minor action'
+                },
+                {
+                    name: 'Stand Your Ground',
+                    desc: 'Can move 1 less when being forced to move.'
+                }
             ],
             abilityScores: []
         },
@@ -75,19 +94,24 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             ddfeat: ""
         },
         calculatedValues: {
+            halfLevel: 0,
             initiative: {
                 dex: 0,
-                halflevel: 0,
                 misc: 0
             },
             abilityScores: {
+                strTotal: 0,
+                conTotal: 0,
+                dexTotal: 0,
+                intTotal: 0,
+                wisTotal: 0,
+                chaTotal: 0,
                 strMod: 0,
                 conMod: 0,
                 dexMod: 0,
                 intMod: 0,
                 wisMod: 0,
                 chaMod: 0,
-                halflevel: 0
             },
             healthAndSavingThrows: {
                 maxHP: 0,
@@ -106,7 +130,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             },
             defenses: {
                 ac: {
-                    tenPlusHalfLevel: 0,
                     armor: 0,
                     abilityMod: 0,
                     class: 0,
@@ -115,7 +138,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     misc: 0
                 },
                 fortitude: {
-                    tenPlusHalfLevel: 0,
                     abilityMod: 0,
                     class: 0,
                     feat: 0,
@@ -123,7 +145,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     misc: 0
                 },
                 reflex: {
-                    tenPlusHalfLevel: 0,
                     abilityMod: 0,
                     class: 0,
                     feat: 0,
@@ -131,7 +152,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     misc: 0
                 },
                 will: {
-                    tenPlusHalfLevel: 0,
                     abilityMod: 0,
                     class: 0,
                     feat: 0,
