@@ -1,100 +1,150 @@
 var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	$scope.ddch = {
-		level0: {
-            name: "Kriv",
-            level: "7",
-            class: "Paladin",
-            healthAndSavingThrows: {
-                maxHP: 100,
-                bloodiedHP: 50,
-                surgeValue: 25,
-                surgesPerDay: 8,
-                savingThrowMods: "+2 Vs. Life",
-                resistances: "Everything",
-            },
-            defenses: [
-                {
-                    score: 17,
-                    def: "AC",
-                    lvl: 10,
-                    armor: 6,
-                    class: undefined,
-                    feat: undefined,
-                    enh: undefined,
-                    misc: 1
-                },
-                {
-                    score: 15,
-                    def: "FORT",
-                    lvl: 10,
-                    armor: 4,
-                    class: 1,
-                    feat: undefined,
-                    enh: undefined,
-                    misc: undefined
-                },
-                {
-                    score: 13,
-                    def: "REF",
-                    lvl: 10,
-                    armor: 2,
-                    class: undefined,
-                    feat: undefined,
-                    enh: undefined,
-                    misc: 1
-                },
-                {
-                    score: 11,
-                    def: "WILL",
-                    lvl: 10,
-                    armor: undefined,
-                    class: 1,
-                    feat: undefined,
-                    enh: undefined,
-                    misc: undefined
-                }
-            ],
-            raceFeatures: [
-                {
-                    name: 'Dwarven Weapon Proficiency',
-                    desc: 'Proficient with hammers.'
-                },
-                {
-                    name: 'Cast-Iron Stomach',
-                    desc: '+5 bonus to saving throws against poison.'
-                },
-                {
-                    name: 'Encumbered Speed',
-                    desc: 'Armor or heavy load does not reduce your speed.'
-                },
-                {
-                    name: 'Dwarver Resilience',
-                    desc: 'Second Wind is a minor action'
-                },
-                {
-                    name: 'Stand Your Ground',
-                    desc: 'Can move 1 less when being forced to move.'
-                }
-            ],
-            initiative: {
-                score: 2,
-                dex: 0,
-                lvl: 0,
-                misc: 2
-            },
+        characterLevel: 1,
+        level0: {
+            name: "",
+            age: 0,
+            gender: "",
+            height: 0,
+            weight: 0,
+            description: "",
+            portrait: "",
+
+            alignment: "",
+            deity: "",
+
+            ddrace: "",
+            abilityBonus1: "",
+            abilityBonus2: "",
+            skillBonus1: "",
+            skillBonus2: "",
+            racialFeatures: [],
+            abilityScores: []
         },
-		level1: {},
-		level2: {},
-		level3: {},
-		level4: {},
-		level5: {},
-		level6: {},
-		level7: {},
-		level8: {},
-		level9: {},
-		level10: {}
+        level1: {
+            ddclass: "",
+            skillTrainings: [],
+            classFeatures: [],
+            ddfeat: "",
+            atwillPower1: "",
+            atwillPower2: "",
+            encounterPower: "",
+            dailyPower: "",
+            ddfeat: ""
+        },
+        level2: {
+            utilityPower: "",
+            ddfeat: ""
+        },
+        level3: {
+            encounterPower: ""
+        },
+        level4: {
+            abilityScoreBonus1: "",
+            abilityScoreBonus2: "",
+            ddfeat: ""
+        },
+        level5: {
+            dailyPower: ""
+        },
+        level6: {
+            utilityPower: "",
+            ddfeat: ""
+        },
+        level7: {
+            encounterPower: ""
+        },
+        level8: {
+            abilityScoreBonus1: "",
+            abilityScoreBonus2: "",
+            ddfeat: ""
+        },
+        level9: {
+            dailyPower: ""
+        },
+        level10: {
+            utilityPower: "",
+            ddfeat: ""
+        },
+        calculatedValues: {
+            initiative: {
+                dex: 0,
+                halflevel: 0,
+                misc: 0
+            },
+            abilityScores: {
+                strMod: 0,
+                conMod: 0,
+                dexMod: 0,
+                intMod: 0,
+                wisMod: 0,
+                chaMod: 0,
+                halflevel: 0
+            },
+            healthAndSavingThrows: {
+                maxHP: 0,
+                bloodiedValue: 0,
+                surgeValue: 0,
+                surgesPerDay: 0,
+                savingThrowMods: "",
+                resistances: ""
+            },
+            skills: {
+                totals: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                modifierBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                trainedBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                armorPenalties: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                miscBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            },
+            defenses: {
+                ac: {
+                    tenPlusHalfLevel: 0,
+                    armor: 0,
+                    abilityMod: 0,
+                    class: 0,
+                    feat: 0,
+                    enhancement: 0,
+                    misc: 0
+                },
+                fortitude: {
+                    tenPlusHalfLevel: 0,
+                    abilityMod: 0,
+                    class: 0,
+                    feat: 0,
+                    enhancement: 0,
+                    misc: 0
+                },
+                reflex: {
+                    tenPlusHalfLevel: 0,
+                    abilityMod: 0,
+                    class: 0,
+                    feat: 0,
+                    enhancement: 0,
+                    misc: 0
+                },
+                will: {
+                    tenPlusHalfLevel: 0,
+                    abilityMod: 0,
+                    class: 0,
+                    feat: 0,
+                    enhancement: 0,
+                    misc: 0
+                },
+            },
+            speed: {
+                armor: 0,
+                item: 0,
+                misc: 0
+            },
+            weaponProficiencies: {
+                toHit: [],
+                damageDice: [],
+                toDam: []
+            }
+        }
 	};
+
 	$scope.log = function() {
 		console.log($scope.ddch);
 	};
