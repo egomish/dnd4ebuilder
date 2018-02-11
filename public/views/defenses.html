@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/defenses.css">
 
 <h3>Defenses</h3>
-<div class="defenses" ng-init="initDefenses()">
+<div class="defenses">
     <table>
         <tr>
             <th>Score</th>
@@ -13,15 +13,45 @@
             <th>ENH</th>
             <th>MISC</th>
         </tr>
-        <tr ng-repeat="defense in ddch.level0.defenses">
-            <td class="score" id="rating" ng-bind="defense.score"></td>
-            <td class="def" ng-bind="defense.def"></td>
-            <td ng-bind="defense.lvl"></td>
-            <td ng-bind="defense.armor"></td>
-            <td ng-bind="defense.class"></td>
-            <td ng-bind="defense.feat"></td>
-            <td ng-bind="defense.enh"></td>
-            <td ng-bind="defense.misc"></td>
+        <tr>
+            <td class="score" id="rating">{{ddch.calculatedValues.defenses.ac.tenPlusHalfLevel + ddch.calculatedValues.defenses.ac.armor + ddch.calculatedValues.defenses.ac.abilityMod + ddch.calculatedValues.defenses.ac.class + ddch.calculatedValues.defenses.ac.feat + ddch.calculatedValues.defenses.ac.enhancement + ddch.calculatedValues.defenses.ac.misc}}</td>
+            <td class="def">AC</td>
+            <td ng-bind="ddch.calculatedValues.defenses.ac.tenPlusHalfLevel"></td>
+            <td>{{ddch.calculatedValues.defenses.ac.armor + ddch.calculatedValues.defenses.ac.abilityMod}}</td>
+            <td ng-bind="ddch.calculatedValues.defenses.ac.class"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.ac.feat"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.ac.enhancement"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.ac.misc"></td>
+        </tr>
+        <tr>
+            <td class="score" id="rating">{{ddch.calculatedValues.defenses.fortitude.tenPlusHalfLevel + ddch.calculatedValues.defenses.fortitude.abilityMod + ddch.calculatedValues.defenses.fortitude.class + ddch.calculatedValues.defenses.fortitude.feat + ddch.calculatedValues.defenses.fortitude.enhancement + ddch.calculatedValues.defenses.fortitude.misc}}</td>
+            <td class="def">FORT</td>
+            <td ng-bind="ddch.calculatedValues.defenses.fortitude.tenPlusHalfLevel"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.fortitude.abilityMod"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.fortitude.class"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.fortitude.feat"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.fortitude.enhancement"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.fortitude.misc"></td>  
+        </tr>
+        <tr>
+            <td class="score" id="rating">{{ddch.calculatedValues.defenses.reflex.tenPlusHalfLevel + ddch.calculatedValues.defenses.reflex.abilityMod + ddch.calculatedValues.defenses.reflex.class + ddch.calculatedValues.defenses.reflex.feat + ddch.calculatedValues.defenses.reflex.enhancement + ddch.calculatedValues.defenses.reflex.misc}}</td>
+            <td class="def">REF</td>
+            <td ng-bind="ddch.calculatedValues.defenses.reflex.tenPlusHalfLevel"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.reflex.abilityMod"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.reflex.class"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.reflex.feat"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.reflex.enhancement"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.reflex.misc"></td>  
+        </tr>
+        <tr>
+            <td class="score" id="rating">{{ddch.calculatedValues.defenses.will.tenPlusHalfLevel + ddch.calculatedValues.defenses.will.abilityMod + ddch.calculatedValues.defenses.will.class + ddch.calculatedValues.defenses.will.feat + ddch.calculatedValues.defenses.will.enhancement + ddch.calculatedValues.defenses.will.misc}}</td>
+            <td class="def">WILL</td>
+            <td ng-bind="ddch.calculatedValues.defenses.will.tenPlusHalfLevel"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.will.abilityMod"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.will.class"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.will.feat"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.will.enhancement"></td>
+            <td ng-bind="ddch.calculatedValues.defenses.will.misc"></td>  
         </tr>
     </table>
 </div>

@@ -8,6 +8,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             gender: "",
             height: 0,
             weight: 0,
+            size: "",
             description: "",
             portrait: "",
 
@@ -19,7 +20,13 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
-            racialFeatures: [],
+            racialFeatures: [
+                { name: 'Dwarven Weapon Proficiency', desc: 'Proficient with hammers.' },
+                { name: 'Cast-Iron Stomach', desc: '+5 bonus to saving throws against poison.' },
+                { name: 'Encumbered Speed', desc: 'Armor or heavy load does not reduce your speed.' },
+                { name: 'Dwarven Resilience', desc: 'Second Wind is a minor action' },
+                { name: 'Stand Your Ground', desc: 'Can move 1 less when being forced to move.' }
+            ],
             abilityScores: []
         },
         level1: {
