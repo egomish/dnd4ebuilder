@@ -61,3 +61,11 @@ app.directive('healthAndSavingThrows', function() {
         controller: 'healthAndSavingThrowsController'
     };
 });
+
+app.directive('characterDetails', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/characterDetails.html',
+        controller: 'characterDetailsController'
+    };
+});
