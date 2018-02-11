@@ -7,32 +7,38 @@
 </head>
 <body>
     <div class="container" ng-controller="mainController">
-        <h1>Dungeons and Dragons 4e Character Builder</h1>
+        <h2 class="text-center underlined">Dungeons and Dragons 4e Character Builder</h2>
         <br>
-        <basic-info></basic-info> <!--This is where the first 2 lines of UI are coming from.
-                                      look at views/basicInfo.html to see the markup.
-                                      The directive setup is inside directives/directives.js-->
-        <div>
-            <ability-scores></ability-scores>
+        <div class="row" ng-include="'views/basicInfo.html'"></div>
+        <br>
+        <div class="col-sm-4"> <!-- First Column -->
+                <div class="row" ng-include="'views/abilityScores.html'"></div>
+                <div class="row" ng-include="'views/healthAndSavingThrows.html'"></div>
+                <div class="row" ng-include="'views/skills.html'"></div>
+                <div class="row" ng-include="'views/powers.html'"></div>
+                <div class="row" ng-include="'views/equipment.html'"></div>
+                <div class="row" ng-include="'views/wealth.html'"></div>
         </div>
-        <div>
-            <defenses></defenses>
+        <div class="col-sm-4"> <!--Second Column -->
+                <div class="row" ng-include="'views/defenses.html'"></div>
+                <div class="row" ng-include="'views/raceFeatures.html'"></div>
+                <div class="row" ng-include="'views/classFeatures.html'"></div>
+                <div class="row" ng-include="'views/magicItems.html'"></div>
+                <div class="row" ng-include="'views/rituals.html'"></div>
         </div>
-        <div>
-            <movement></movement>
-            <initiative></initiative>
-            <weapon-proficiencies></weapon-proficiencies>
+        <div class="col-sm-4"> <!--Third Column -->
+                <div class="row" ng-include="'views/movement.html'"></div>
+                <div class="row" ng-include="'views/initiative.html'"></div>
+                <div class="row" ng-include="'views/weaponProficiencies.html'"></div>
+                <div class="row" ng-include="'views/feats.html'"></div>
+                <div class="row" ng-include="'views/portrait.html'"></div>
+                <div class="row" ng-include="'views/languages.html'"></div>
+                <div class="row" ng-include="'views/characterDetails.html'"></div>
         </div>
+        <button ng-click="log()">Click me to log</button>
+        <button ng-click="set_ddch()">Get ddch</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="controllers/mainController.js"></script>
-    <script src="controllers/directive_controllers/basicInfoController.js"></script>
-    <script src="controllers/directive_controllers/abilityScoresController.js"></script>
-    <script src="controllers/directive_controllers/defensesController.js"></script>
-    <script src="controllers/directive_controllers/movementController.js"></script>
-    <script src="controllers/directive_controllers/initiativeController.js"></script>
-    <script src="controllers/directive_controllers/weaponProficienciesController.js"></script>
-    <script src="directives/directiveDefinitions.js"></script>
-    <script src="services/characterInfoService.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="styles/raceFeatures.css">
+
+<h3>Race Features</h3>
+<div class="raceFeatures">
+    <ul>
+        <li ng-repeat="feat in ddch.level0.racialFeatures">
+            <label ng-bind="feat.name + ':'"></label>
+            <ul>
+                <li ng-bind="feat.desc"></li>
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -1,67 +1,64 @@
-<div class="row">
-    <div class="col-sm-2">
-        Character Name:<br>
-        <input ng-model="localProperties.characterName" ng-change="updateCharacterInfo('characterName')">
+<link rel="stylesheet" href="styles/basicInfo.css">
+
+<div class="basicInfo">
+    <div class="row">
+        <div class="col-sm-2">
+            <input type="text" ng-model="ddch.level0.name"><br>
+            <label>Character Name</label>
+        </div>
+        <div class="col-sm-1">
+            <input ng-model="ddch.characterLevel"><br>
+            <label>Level</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" ng-model="ddch.level1.ddclass"><br>
+            <label>Class</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text"><br>
+            <label>Paragon Path</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text"><br>
+            <label>Epic Destiny</label>
+        </div>
     </div>
-    <div class="col-sm-1">
-        Level:<br>
-        <input ng-model="localProperties.level" ng-change="updateCharacterInfo('level')">
-    </div>
-    <div class="col-sm-2">
-        Class:<br>
-        <input ng-model="localProperties.class" ng-change="updateCharacterInfo('class')">
-    </div>
-    <div class="col-sm-2">
-        Paragon Path:<br>
-        <input ng-model="localProperties.paragonPath" ng-change="updateCharacterInfo('paragonPath')">
-    </div>
-    <div class="col-sm-2">
-        Epic Destiny:<br>
-        <input ng-model="localProperties.epicDestiny" ng-change="updateCharacterInfo('epicDestiny')">
-    </div>
-    <div class="col-sm-2">
-        Total XP:<br>
-        <input ng-model="localProperties.totalXP" ng-change="updateCharacterInfo('totalXP')">
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.ddrace"><br>
+            <label>Race</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.size"><br>
+            <label>Size</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.age"><br>
+            <label>Age</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.gender"><br>
+            <label>Gender</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.height"><br>
+            <label>Height</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.weight"><br>
+            <label>Weight</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" ng-model="ddch.level0.alignment"><br>
+            <label>Alignment</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" ng-model="ddch.level0.deity"><br>
+            <label>Deity</label>
+        </div>
     </div>
 </div>
 
-<br>
-
-<div class="row">
-    <div class="col-sm-1">
-        Race:<br>
-        <input ng-model="localProperties.race" ng-change="updateCharacterInfo('race')">
-    </div>
-    <div class="col-sm-1">
-        Size:<br>
-        <input ng-model="localProperties.size" ng-change="updateCharacterInfo('size')">
-    </div>
-    <div class="col-sm-1">
-        Age:<br>
-        <input ng-model="localProperties.age" ng-change="updateCharacterInfo('age')">
-    </div>
-    <div class="col-sm-1">
-        Gender:<br>
-        <input ng-model="localProperties.gender" ng-change="updateCharacterInfo('gender')">
-    </div>
-    <div class="col-sm-1">
-        Height:<br>
-        <input ng-model="localProperties.height" ng-change="updateCharacterInfo('height')">
-    </div>
-    <div class="col-sm-1">
-        Weight:<br>
-        <input ng-model="localProperties.weight" ng-change="updateCharacterInfo('weight')">
-    </div>
-    <div class="col-sm-2">
-        Alignment:<br>
-        <input ng-model="localProperties.alignment" ng-change="updateCharacterInfo('alignment')">
-    </div>
-    <div class="col-sm-2">
-        Deity:<br>
-        <input ng-model="localProperties.deity" ng-change="updateCharacterInfo('deity')">
-    </div>
-    <div class="col-sm-2">
-        RPGA #:<br>
-        <input ng-model="localProperties.rpgaNumber" ng-change="updateCharacterInfo('rpgaNumber')">
-    </div>
-</div>

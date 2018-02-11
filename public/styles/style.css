@@ -1,3 +1,12 @@
-input {
-	width: 100%;
+/* Index Styles */
+.underlined {
+	text-decoration: underline;
 }
+
+h3 {
+	width: 90%;
+	text-align: center;
+	background-color: #2d2d2d;
+	color: white;
+}
+

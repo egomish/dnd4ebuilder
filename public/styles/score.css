@@ -1,0 +1,29 @@
+.scores .abilityType {
+	text-align: center;
+    padding: 2px;
+    background-color: #2d2d2d;
+    border: 1px solid black;
+    font-size: 18px;
+    color: white;
+}
+
+.scores th {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding:2px;
+    font-size: 10px;
+}
+
+.scores table {
+    width: 90%;
+    font-family: arial, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+}
+
+.scores .table_box {
+	text-align: center;
+    border: 1px solid black;
+    font-size: 21px;
+}

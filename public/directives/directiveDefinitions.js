@@ -45,3 +45,27 @@ app.directive('weaponProficiencies', function() {
         controller: 'weaponProficienciesController'
     };
 });
+
+app.directive('raceFeatures', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/raceFeatures.html',
+        controller: 'raceFeaturesController'
+    };
+});
+
+app.directive('healthAndSavingThrows', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/healthAndSavingThrows.html',
+        controller: 'healthAndSavingThrowsController'
+    };
+});
+
+app.directive('characterDetails', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/characterDetails.html',
+        controller: 'characterDetailsController'
+    };
+});

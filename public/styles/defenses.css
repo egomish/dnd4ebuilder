@@ -1,0 +1,47 @@
+/* Defenses Styles */
+.defenses input {
+    width: 100%;
+    border: 1px solid black;
+}
+.defenses table {
+    width: 90%;
+    font-family: arial, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+}
+.defenses th {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding:2px;
+}
+
+.defenses td {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.defenses .score {
+    border: 1px solid black;
+}
+
+.defenses .def {
+    text-align: center;
+    padding: 2px;
+    background-color: #2d2d2d;
+    border: 1px solid black;
+    font-size: 18px;
+    color: white;
+}
+
+.defenses #rating {
+    text-align: center;
+    font-size: 22px;
+}
+
+.defenses .conditionalBonuses {
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 10px;
+    border: none;
+}
