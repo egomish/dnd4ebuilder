@@ -61,17 +61,29 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         level1: {
             ddclass: "",
             skillTrainings: [],
-            classFeatures: [],
-            ddfeat: "",
+            classFeatures: [
+                {
+                    name: "Combat Leader",
+                    desc: "You and allies within 10 that see and hear you gain +2 to initiative."
+                },
+                {
+                    name: "Tactical Presence",
+                    desc: "Ally you can see that spends an action point to attack gains bonus to attack: 1/2 int mod."
+                },
+                {
+                    name: "Inspiring Word",
+                    desc: "Use inspiring word as an encounter (special) power, minor action."
+                }
+            ],
             atwillPower1: "",
             atwillPower2: "",
             encounterPower: "",
             dailyPower: "",
-            ddfeat: ""
+            ddfeat: { name: "Toughness", desc: "Gain 5 additional hit points per tier" }
         },
         level2: {
             utilityPower: "",
-            ddfeat: ""
+            ddfeat: { name: "", desc: "" }
         },
         level3: {
             encounterPower: ""
@@ -79,14 +91,14 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         level4: {
             abilityScoreBonus1: "",
             abilityScoreBonus2: "",
-            ddfeat: ""
+            ddfeat: { name: "", desc: "" }
         },
         level5: {
             dailyPower: ""
         },
         level6: {
             utilityPower: "",
-            ddfeat: ""
+            ddfeat: { name: "", desc: "" }
         },
         level7: {
             encounterPower: ""
@@ -94,14 +106,14 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         level8: {
             abilityScoreBonus1: "",
             abilityScoreBonus2: "",
-            ddfeat: ""
+            ddfeat: { name: "", desc: "" }
         },
         level9: {
             dailyPower: ""
         },
         level10: {
             utilityPower: "",
-            ddfeat: ""
+            ddfeat: { name: "", desc: "" }
         },
         calculatedValues: {
             halfLevel: 0,

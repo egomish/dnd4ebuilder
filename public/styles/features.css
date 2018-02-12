@@ -1,0 +1,24 @@
+.features {
+    border: 1px solid black;
+    width: 90%;
+    padding: 20px;
+}
+
+.features label {
+    font-size: 14px;
+}
+
+.features li {
+    width: 90%;
+    position: relative;
+    right: 20px;
+    bottom: 5px;
+}
+
+.classFeatures {
+    min-height: 500px;
+}
+
+.feats {
+    min-height: 500px;
+}
