@@ -1,0 +1,47 @@
+.movement {
+    width: 90%;
+}
+
+.movement input {
+    width: 60px;
+    float: left;
+    color: black;
+    text-align: center;
+}
+
+.movement table {
+    width: 100%;
+    font-family: arial, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+}
+
+.movement th {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 4px;
+}
+
+.movement td {
+    text-align: center;
+    border: 5px solid #2d2d2d;;
+    font-size: 20px;
+}
+
+.movement label {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.movement span {
+    font-size: 9px;
+    padding-left: 5px;
+}
+
+.movement textarea {
+    text-align: left;
+    font-size: 10px;
+    border: none;
+    width: 100%;
+    resize: none;
+}

@@ -105,6 +105,12 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         },
         calculatedValues: {
             halfLevel: 0,
+            movement: {
+                base: 5,
+                armor: 0,
+                item: 0,
+                misc: 0
+            },
             initiative: {
                 dex: 0,
                 misc: 0
