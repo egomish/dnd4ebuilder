@@ -79,11 +79,17 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             atwillPower2: "",
             encounterPower: "",
             dailyPower: "",
-            ddfeat: { name: "Toughness", desc: "Gain 5 additional hit points per tier" }
+            ddfeat: { 
+                name: "Toughness", 
+                desc: "Gain 5 additional hit points per tier" 
+            }
         },
         level2: {
             utilityPower: "",
-            ddfeat: { name: "", desc: "" }
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
         },
         level3: {
             encounterPower: ""
@@ -91,14 +97,20 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         level4: {
             abilityScoreBonus1: "",
             abilityScoreBonus2: "",
-            ddfeat: { name: "", desc: "" }
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
         },
         level5: {
             dailyPower: ""
         },
         level6: {
             utilityPower: "",
-            ddfeat: { name: "", desc: "" }
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
         },
         level7: {
             encounterPower: ""
@@ -106,14 +118,20 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         level8: {
             abilityScoreBonus1: "",
             abilityScoreBonus2: "",
-            ddfeat: { name: "", desc: "" }
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
         },
         level9: {
             dailyPower: ""
         },
         level10: {
             utilityPower: "",
-            ddfeat: { name: "", desc: "" }
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
         },
         calculatedValues: {
             halfLevel: 0,
