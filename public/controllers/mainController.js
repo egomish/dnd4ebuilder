@@ -19,6 +19,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 
             alignment: "",
             deity: "",
+            equipment: [""],
 
             ddrace: "",
             abilityBonus1: "",

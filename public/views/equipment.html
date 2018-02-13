@@ -1,1 +1,13 @@
+<link rel="stylesheet" href="styles/otherEquipment.css">
 <h3>Equipment</h3>
+
+<div class="otherEquipment">
+    <span ng-repeat="item in ddch.level0.equipment">
+      <!-- 
+        Separating items with commas without getting a
+        comma at the end was too hard, so I used three
+        spaces for separation instead
+      -->
+      <p ng-bind="item + '&nbsp &nbsp &nbsp'"></p>
+    </span>
+</div>
