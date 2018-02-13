@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
-	$scope.ddch = {
+    $scope.ddch = {
         characterLevel: 1,
         level0: {
             name: "",
@@ -279,13 +279,13 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 },
             ],
         }
-	};
+    };
 
-	$scope.log = function() {
-		console.log($scope.ddch);
-	};
-	$scope.set_ddch = function() {
-		console.log($scope.ddch);
+    $scope.log = function() {
+        console.log($scope.ddch);
+    };
+    $scope.set_ddch = function() {
+        console.log($scope.ddch);
         $scope.ddch.level0.healthAndSavingThrows.maxHP = "24";
-	}
+    }
 }]);
