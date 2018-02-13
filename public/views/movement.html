@@ -13,10 +13,10 @@
         <tr>
             <td style="text-align: left; background-color: #2d2d2d; color: white;">
                 <input type="text" disabled="disabled" 
-                       ng-bind="ddch.calculatedValues.movement.base + 
+                       value="{{ddch.calculatedValues.movement.base + 
                                 ddch.calculatedValues.movement.armor + 
                                 ddch.calculatedValues.movement.item +
-                                ddch.calculatedValues.movement.misc">
+                                ddch.calculatedValues.movement.misc}}">
                 <label>Speed<span>(Squares)</span></label>
             </td>
             <td ng-bind="ddch.calculatedValues.movement.base"></td>
@@ -25,5 +25,7 @@
             <td ng-bind="ddch.calculatedValues.movement.misc"></td>
         </tr>
     </table>
-    <textarea disabled="disabled" style="background-color:white;">Special Bonuses:</textarea>
+    <div class="special-bonuses">
+        Special Bonuses:
+    </div>
 </div>
