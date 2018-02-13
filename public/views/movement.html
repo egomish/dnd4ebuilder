@@ -13,10 +13,10 @@
         <tr>
             <td style="text-align: left; background-color: #2d2d2d; color: white;">
                 <input type="text" disabled="disabled" 
-                    ng-model="ddch.calculatedValues.movement.base + 
-                    ddch.calculatedValues.movement.armor +
-                    ddch.calculatedValues.movement.item +
-                    ddch.calculatedValues.movement.misc">
+                       ng-bind="ddch.calculatedValues.movement.base + 
+                                ddch.calculatedValues.movement.armor + 
+                                ddch.calculatedValues.movement.item +
+                                ddch.calculatedValues.movement.misc">
                 <label>Speed<span>(Squares)</span></label>
             </td>
             <td ng-bind="ddch.calculatedValues.movement.base"></td>
