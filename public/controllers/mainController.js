@@ -50,8 +50,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 head: '',
                 neck: '',
                 rings: [
-                    'Ring of Intellimagence',
-                    'Ring of Sbiffiness'
+                    '',
+                    ''
                 ],
                 waist: ''
             },
@@ -191,7 +191,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 savingThrowMods: "",
                 resistances: ""
             },
-            skillsArr: [
+            skills: [
                 [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
                 [0, "Arcana",        "INT", 0, 0, 0, 0],
                 [0, "Athletics",     "STR", 0, 0, 0, 0],
@@ -210,12 +210,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 [0, "Streetwise",    "CHA", 0, 0, 0, 0],
                 [0, "Thievery",      "DEX", 0, 0, 0, 0],
             ],
-            skills: {
-                modifierBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                trainedBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                armorPenalties: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                miscBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            },
             defenses: {
                 ac: {
                     armor: 0,

@@ -14,14 +14,14 @@
         </tr>
         <!--LISTING SKILLS IN CHARACTER SHEET ORDER, FILLING OUT ALL SPECIFICS ONE 
             AT A TIME-->
-        <tr ng-repeat="skill in ddch.calculatedValues.skillsArr">
+        <tr ng-repeat="skill in ddch.calculatedValues.skills">
             <td><input type="text" class="boxedB" value="{{skill[0]}}"></td>
             <td class="imp">{{skill[1]}}</td>
             <td class="impA">{{skill[2]}}</td>
             <td><input type="text" class="boxed" value="{{skill[3]}}"></td>
             <td><input type="text" class="boxed" value="{{skill[4]}}"></td>
-            <td><input type="text" class="boxedEndO" value="{{skill[5]}}"></td>
-            <td><input type="text" class="boxedEndO" value="{{skill[6]}}"></td>
+            <td><input type="text" class="boxedEnd" value="{{skill[5]}}"></td>
+            <td><input type="text" class="boxedEnd" value="{{skill[6]}}"></td>
         </tr>
     </table>
 </div>
