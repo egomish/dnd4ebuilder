@@ -2,20 +2,18 @@ var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	$scope.ddch = {
         characterLevel: 1,
-        halflevel: 0,
         level0: {
             name: "",
             age: 0,
             gender: "",
             height: 0,
             weight: 0,
-            size: "",
             description: {
                 personalityTraits: "",
                 mannerisms: "",
                 background: ""
             },
-            portrait: "",
+            portrait: "images/no-profile-pic.png",
 
             alignment: "",
             deity: "",
@@ -25,17 +23,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
-<<<<<<< Updated upstream
-            racialFeatures: [
-                {
-                    name: 'Dwarven Weapon Proficiency',
-                    desc: 'Proficient with hammers.'
-                    },
-                {
-                    name: 'Cast-Iron Stomach',
-                    desc: '+5 bonus to saving throws against poison.'
-                },
-=======
             abilityScores: [
                 { 
                     baseStr: 10,
@@ -63,8 +50,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 head: '',
                 neck: '',
                 rings: [
-                    'Ring of Intellimagence',
-                    'Ring of the BiffMister'
+                    '',
+                    ''
                 ],
                 waist: ''
             },
@@ -76,7 +63,89 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             ddclass: "",
             skillTrainings: [],
             classFeatures: [
->>>>>>> Stashed changes
+                {
+                    name: "Combat Leader",
+                    desc: "You and allies within 10 that see and hear you gain +2 to initiative."
+                },
+                {
+                    name: "Tactical Presence",
+                    desc: "Ally you can see that spends an action point to attack gains bonus to attack: 1/2 int mod."
+                },
+                {
+                    name: "Inspiring Word",
+                    desc: "Use inspiring word as an encounter (special) power, minor action."
+                }
+            ],
+            atwillPower1: "",
+            atwillPower2: "",
+            encounterPower: "",
+            dailyPower: "",
+            ddfeat: { 
+                name: "Toughness", 
+                desc: "Gain 5 additional hit points per tier" 
+            }
+        },
+        level2: {
+            utilityPower: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level3: {
+            encounterPower: ""
+        },
+        level4: {
+            abilityScoreBonus1: "",
+            abilityScoreBonus2: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level5: {
+            dailyPower: ""
+        },
+        level6: {
+            utilityPower: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level7: {
+            encounterPower: ""
+        },
+        level8: {
+            abilityScoreBonus1: "",
+            abilityScoreBonus2: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level9: {
+            dailyPower: ""
+        },
+        level10: {
+            utilityPower: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        calculatedValues: {
+            halfLevel: 0,
+            size: "M",
+            raceFeatures: [
+                {
+                    name: 'Dwarven Weapon Proficiency',
+                    desc: 'Proficient with hammers.'
+                    },
+                {
+                    name: 'Cast-Iron Stomach',
+                    desc: '+5 bonus to saving throws against poison.'
+                },
                 {
                     name: 'Encumbered Speed',
                     desc: 'Armor or heavy load does not reduce your speed.'
@@ -90,72 +159,29 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     desc: 'Can move 1 less when being forced to move.'
                 }
             ],
-            abilityScores: []
-        },
-        level1: {
-            ddclass: "",
-            skillTrainings: [],
-            classFeatures: [],
-            ddfeat: "",
-            atwillPower1: "",
-            atwillPower2: "",
-            encounterPower: "",
-            dailyPower: "",
-            ddfeat: ""
-        },
-        level2: {
-            utilityPower: "",
-            ddfeat: ""
-        },
-        level3: {
-            encounterPower: ""
-        },
-        level4: {
-            abilityScoreBonus1: "",
-            abilityScoreBonus2: "",
-            ddfeat: ""
-        },
-        level5: {
-            dailyPower: ""
-        },
-        level6: {
-            utilityPower: "",
-            ddfeat: ""
-        },
-        level7: {
-            encounterPower: ""
-        },
-        level8: {
-            abilityScoreBonus1: "",
-            abilityScoreBonus2: "",
-            ddfeat: ""
-        },
-        level9: {
-            dailyPower: ""
-        },
-        level10: {
-            utilityPower: "",
-            ddfeat: ""
-        },
-        calculatedValues: {
-            halfLevel: 0,
+            movement: {
+                base: 5,
+                armor: 0,
+                item: 0,
+                misc: 0
+            },
             initiative: {
                 dex: 0,
                 misc: 0
             },
             abilityScores: {
-                strTotal: 0,
-                conTotal: 0,
-                dexTotal: 0,
-                intTotal: 0,
-                wisTotal: 0,
-                chaTotal: 0,
+                strTotal: 10,
+                conTotal: 10,
+                dexTotal: 10,
+                intTotal: 10,
+                wisTotal: 10,
+                chaTotal: 10,
                 strMod: 0,
                 conMod: 0,
                 dexMod: 0,
                 intMod: 0,
                 wisMod: 0,
-                chaMod: 0,
+                chaMod: 0
             },
             healthAndSavingThrows: {
                 maxHP: 0,
@@ -165,6 +191,25 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 savingThrowMods: "",
                 resistances: ""
             },
+            skillsArr: [
+                [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
+                [0, "Arcana",        "INT", 0, 0, 0, 0],
+                [0, "Athletics",     "STR", 0, 0, 0, 0],
+                [0, "Bluff",         "CHA", 0, 0, 0, 0],
+                [0, "Diplomacy",     "CHA", 0, 0, 0, 0],
+                [0, "Dungeoneering", "WIS", 0, 0, 0, 0],
+                [0, "Endurance",     "CON", 0, 0, 0, 0],
+                [0, "Heal",          "WIS", 0, 0, 0, 0],
+                [0, "History",       "INT", 0, 0, 0, 0],
+                [0, "Insight",       "WIS", 0, 0, 0, 0],
+                [0, "Intimidate",    "CHA", 0, 0, 0, 0],
+                [0, "Nature",        "WIS", 0, 0, 0, 0],
+                [0, "Perception",    "WIS", 0, 0, 0, 0],
+                [0, "Religion",      "INT", 0, 0, 0, 0],
+                [0, "Stealth",       "DEX", 0, 0, 0, 0],
+                [0, "Streetwise",    "CHA", 0, 0, 0, 0],
+                [0, "Thievery",      "DEX", 0, 0, 0, 0],
+            ],
             skills: {
                 modifierBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 trainedBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
