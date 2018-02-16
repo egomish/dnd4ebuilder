@@ -16,7 +16,7 @@
     font-size: 12px;
 }
 
-tr:nth-child(even) {
+.skills tr:nth-child(even) {
     background: #cbcbcb
 }
 
