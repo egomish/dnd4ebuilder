@@ -2,20 +2,18 @@ var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	$scope.ddch = {
         characterLevel: 1,
-        halflevel: 0,
         level0: {
             name: "",
             age: 0,
             gender: "",
             height: 0,
             weight: 0,
-            size: "",
             description: {
                 personalityTraits: "",
                 mannerisms: "",
                 background: ""
             },
-            portrait: "",
+            portrait: "images/no-profile-pic.png",
 
             alignment: "",
             deity: "",
@@ -25,38 +23,41 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
-            racialFeatures: [
-                {
-                    name: 'Dwarven Weapon Proficiency',
-                    desc: 'Proficient with hammers.'
-                    },
-                {
-                    name: 'Cast-Iron Stomach',
-                    desc: '+5 bonus to saving throws against poison.'
-                },
-                {
-                    name: 'Encumbered Speed',
-                    desc: 'Armor or heavy load does not reduce your speed.'
-                },
-                {
-                    name: 'Dwarven Resilience',
-                    desc: 'Second Wind is a minor action'
-                },
-                {
-                    name: 'Stand Your Ground',
-                    desc: 'Can move 1 less when being forced to move.'
-                }
-            ],
             abilityScores: [
                 { 
-                    base_str: 10,
-                    base_con: 10,
-                    base_dex: 10,
-                    base_int: 10,
-                    base_wis: 10,
-                    base_cha: 10
+                    baseStr: 10,
+                    baseCon: 10,
+                    baseDex: 10,
+                    baseInt: 10,
+                    baseWis: 10,
+                    baseCha: 10
                 }
-            ]
+            ],
+
+            wealth: 0,
+            equipment: [""],
+            magicItems: {
+                weapons: [
+                    'Axe',
+                    'Long Sword',
+                    'Bigger Axe',
+                    'Longer Long Sword'
+                ],
+                armor: '',
+                arms: '',
+                feet: '',
+                hands: '',
+                head: '',
+                neck: '',
+                rings: [
+                    '',
+                    ''
+                ],
+                waist: ''
+            },
+
+            languages: ["Common", "Undercommon"],
+            rituals: [""],
         },
         level1: {
             ddclass: "",
@@ -135,6 +136,29 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         },
         calculatedValues: {
             halfLevel: 0,
+            size: "M",
+            raceFeatures: [
+                {
+                    name: 'Dwarven Weapon Proficiency',
+                    desc: 'Proficient with hammers.'
+                    },
+                {
+                    name: 'Cast-Iron Stomach',
+                    desc: '+5 bonus to saving throws against poison.'
+                },
+                {
+                    name: 'Encumbered Speed',
+                    desc: 'Armor or heavy load does not reduce your speed.'
+                },
+                {
+                    name: 'Dwarven Resilience',
+                    desc: 'Second Wind is a minor action'
+                },
+                {
+                    name: 'Stand Your Ground',
+                    desc: 'Can move 1 less when being forced to move.'
+                }
+            ],
             movement: {
                 base: 5,
                 armor: 0,
@@ -167,13 +191,25 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 savingThrowMods: "",
                 resistances: ""
             },
-            skills: {
-                totals: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                modifierBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                trainedBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                armorPenalties: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                miscBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            },
+            skills: [
+                [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
+                [0, "Arcana",        "INT", 0, 0, 0, 0],
+                [0, "Athletics",     "STR", 0, 0, 0, 0],
+                [0, "Bluff",         "CHA", 0, 0, 0, 0],
+                [0, "Diplomacy",     "CHA", 0, 0, 0, 0],
+                [0, "Dungeoneering", "WIS", 0, 0, 0, 0],
+                [0, "Endurance",     "CON", 0, 0, 0, 0],
+                [0, "Heal",          "WIS", 0, 0, 0, 0],
+                [0, "History",       "INT", 0, 0, 0, 0],
+                [0, "Insight",       "WIS", 0, 0, 0, 0],
+                [0, "Intimidate",    "CHA", 0, 0, 0, 0],
+                [0, "Nature",        "WIS", 0, 0, 0, 0],
+                [0, "Perception",    "WIS", 0, 0, 0, 0],
+                [0, "Religion",      "INT", 0, 0, 0, 0],
+                [0, "Stealth",       "DEX", 0, 0, 0, 0],
+                [0, "Streetwise",    "CHA", 0, 0, 0, 0],
+                [0, "Thievery",      "DEX", 0, 0, 0, 0],
+            ],
             defenses: {
                 ac: {
                     armor: 0,
@@ -214,7 +250,34 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 toHit: [],
                 damageDice: [],
                 toDam: []
-            }
+            },
+            powers: [
+                {
+                    name: "Commander's Strike",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "With a shout, you command an ally to attack.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
+                    ],
+                },
+                {
+                    name: "Overwhelming Force Trap",
+                    usage: "Encounter",
+                    actionType: "Immediate Interrupt",
+                    source: "Dr384",
+                    target: "Close burst 3",
+                    flavor: "You keep the order to spring the trap ready, allowing your allies sto spring into action on a moment's notice.",
+                    "elements": [
+                        ["Keywords", "Martial"],
+                        ["Trigger", "An ally in the burst makes a melee basic attack"],
+                        ["Effect", "The target uses one of their melee at-will attack powers instead of making a melee basic attack. If the attack hits, the subbect of the target's attack is also dazed until the end of the target's next turn."],
+                    ],
+                },
+            ],
         }
 	};
 

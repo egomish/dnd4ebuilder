@@ -17,14 +17,8 @@
 }
 
 .powers td {
-    text-align: center;
+    text-align: left;
     border: 1px solid black;
     font-size: 12px;
     height: 18px;
-}
-
-.powers input {
-  text-align: center;
-  width: 100%;
-  height: 18px;
 }

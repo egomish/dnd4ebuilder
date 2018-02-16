@@ -5,153 +5,16 @@
   <table>
     <tr>
       <th>
-        At-Will Powers
+        Name
       </th>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level1.atWillPower1"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level1.atWillPower2"></td>
-    </tr>
-  </table>
-  
-  <table>
-    <tr>
       <th>
-        Encounter Powers
+        Usage
       </th>
     </tr>
-    <tr>
-      <td ng-bind="ddch.level1.encounterPower"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level3.encounterPower"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level7.encounterPower"></td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-  </table>
-  
-  <table>
-    <tr>
-      <th>
-        Daily Powers
-      </th>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level1.dailyPower"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level5.dailyPower"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level9.dailyPower"></td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-  </table>
-  
-    <table>
-    <tr>
-      <th>
-        Utility Powers
-      </th>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level2.utilityPower"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level6.utilityPower"></td>
-    </tr>
-    <tr>
-      <td ng-bind="ddch.level10.utilityPower"></td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-  </table>
-  
-  <table>
-    <tr>
-      <th>
-        Additional Powers
-      </th>
-    </tr>
-    <tr>
-      <td>
-        Dragon Breath (Encounter)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Channel Divinity: Divine Mettle (Encounter)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Channel Divinity: Divine Strength (Encounter)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Divine Challenge (At-Will)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Lay on Hands (At-Will)
-      </td>
+    
+    <tr ng-repeat="power in ddch.calculatedValues.powers">
+      <td ng-bind="power.name"></td>
+      <td ng-bind="power.usage"></td>
     </tr>
   </table>
 </div>
