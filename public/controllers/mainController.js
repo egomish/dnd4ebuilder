@@ -15,7 +15,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 mannerisms: "",
                 background: ""
             },
-            portrait: "",
+            portrait: "images/no-profile-pic.png",
 
             alignment: "",
             deity: "",
