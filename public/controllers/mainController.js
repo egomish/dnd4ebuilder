@@ -60,61 +60,22 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             ],
             magicItems: {
                 weapons: [
-                    {
-                        name: 'Axe',
-                        checked: false
-                    },
-                    {
-                        name: 'Long Sword',
-                        checked: false
-                    },
-                    {
-                        name: 'Bigger Axe',
-                        checked: false
-                    },
-                    {
-                        name: 'Longer Long Sword',
-                        checked: false
-                    }
+                    'Axe',
+                    'Long Sword',
+                    'Bigger Axe',
+                    'Longer Long Sword'
                 ],
-                armor: {
-                    name: '',
-                    checked: false
-                },
-                arms: {
-                    name: '',
-                    checked: false
-                },
-                feet: {
-                    name: '',
-                    checked: false
-                },
-                hands: {
-                    name: '',
-                    checked: false
-                },
-                head: {
-                    name: '',
-                    checked: false
-                },
-                neck: {
-                    name: '',
-                    checked: false
-                },
+                armor: '',
+                arms: '',
+                feet: '',
+                hands: '',
+                head: '',
+                neck: '',
                 rings: [
-                    {
-                        name: '',
-                        checked: false
-                    },
-                    {
-                        name: '',
-                        checked: false
-                    }
+                    '',
+                    ''
                 ],
-                waist: {
-                    name: '',
-                    checked: false
-                }
+                waist: ''
             }
         },
         level1: {
