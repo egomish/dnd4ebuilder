@@ -55,6 +55,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 ],
                 waist: ''
             },
+
+            languages: ["Common", "Undercommon"],
             rituals: [""],
         },
         level1: {
