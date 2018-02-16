@@ -50,8 +50,13 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 head: '',
                 neck: '',
                 rings: [
+<<<<<<< HEAD
                     'Ring of Intellimagence',
                     'Ring of Sbiffiness'
+=======
+                    '',
+                    ''
+>>>>>>> 186fa324b6f5f45bff6acb593941a73b97023659
                 ],
                 waist: ''
             },
