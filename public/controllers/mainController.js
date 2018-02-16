@@ -57,7 +57,26 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     base_wis: 10,
                     base_cha: 10
                 }
-            ]
+            ],
+            magicItems: {
+                weapons: [
+                    'Axe',
+                    'Long Sword',
+                    'Bigger Axe',
+                    'Longer Long Sword'
+                ],
+                armor: '',
+                arms: '',
+                feet: '',
+                hands: '',
+                head: '',
+                neck: '',
+                rings: [
+                    '',
+                    ''
+                ],
+                waist: ''
+            }
         },
         level1: {
             ddclass: "",
