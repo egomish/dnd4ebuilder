@@ -25,6 +25,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
+<<<<<<< Updated upstream
             racialFeatures: [
                 {
                     name: 'Dwarven Weapon Proficiency',
@@ -34,6 +35,48 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     name: 'Cast-Iron Stomach',
                     desc: '+5 bonus to saving throws against poison.'
                 },
+=======
+            abilityScores: [
+                { 
+                    baseStr: 10,
+                    baseCon: 10,
+                    baseDex: 10,
+                    baseInt: 10,
+                    baseWis: 10,
+                    baseCha: 10
+                }
+            ],
+
+            wealth: 0,
+            equipment: [""],
+            magicItems: {
+                weapons: [
+                    'Axe',
+                    'Long Sword',
+                    'Bigger Axe',
+                    'Longer Long Sword'
+                ],
+                armor: '',
+                arms: '',
+                feet: '',
+                hands: '',
+                head: '',
+                neck: '',
+                rings: [
+                    'Ring of Intellimagence',
+                    'Ring of the BiffMister'
+                ],
+                waist: ''
+            },
+
+            languages: ["Common", "Undercommon"],
+            rituals: [""],
+        },
+        level1: {
+            ddclass: "",
+            skillTrainings: [],
+            classFeatures: [
+>>>>>>> Stashed changes
                 {
                     name: 'Encumbered Speed',
                     desc: 'Armor or heavy load does not reduce your speed.'
