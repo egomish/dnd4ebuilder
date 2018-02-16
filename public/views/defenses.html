@@ -15,7 +15,7 @@
         </tr>
         <tr>
             <td class="score" id="rating">{{
-                (ddch.halflevel + 10) + 
+                (ddch.calculatedValues.halflevel + 10) + 
                 ddch.calculatedValues.defenses.ac.armor + 
                 ddch.calculatedValues.defenses.ac.abilityMod + 
                 ddch.calculatedValues.defenses.ac.class + 
@@ -24,7 +24,7 @@
                 ddch.calculatedValues.defenses.ac.misc
             }}</td>
             <td class="def">AC</td>
-            <td>{{10 + ddch.halflevel}}</td>
+            <td>{{10 + ddch.calculatedValues.halflevel}}</td>
             <td>{{
                 ddch.calculatedValues.defenses.ac.armor + 
                 ddch.calculatedValues.defenses.ac.abilityMod
@@ -39,7 +39,7 @@
         </tr>
         <tr>
             <td class="score" id="rating">{{
-                (ddch.halflevel + 10) + 
+                (ddch.calculatedValues.halflevel + 10) + 
                 ddch.calculatedValues.defenses.fortitude.abilityMod + 
                 ddch.calculatedValues.defenses.fortitude.class + 
                 ddch.calculatedValues.defenses.fortitude.feat + 
@@ -47,7 +47,7 @@
                 ddch.calculatedValues.defenses.fortitude.misc
             }}</td>
             <td class="def">FORT</td>
-            <td>{{10 + ddch.halflevel}}</td>
+            <td>{{10 + ddch.calculatedValues.halflevel}}</td>
             <td ng-bind="ddch.calculatedValues.defenses.fortitude.abilityMod"></td>
             <td ng-bind="ddch.calculatedValues.defenses.fortitude.class"></td>
             <td ng-bind="ddch.calculatedValues.defenses.fortitude.feat"></td>
@@ -59,7 +59,7 @@
         </tr>
         <tr>
             <td class="score" id="rating">{{
-                (ddch.halflevel + 10) + 
+                (ddch.calculatedValues.halflevel + 10) + 
                 ddch.calculatedValues.defenses.reflex.abilityMod + 
                 ddch.calculatedValues.defenses.reflex.class + 
                 ddch.calculatedValues.defenses.reflex.feat + 
@@ -67,7 +67,7 @@
                 ddch.calculatedValues.defenses.reflex.misc
             }}</td>
             <td class="def">REF</td>
-            <td>{{10 + ddch.halflevel}}</td>
+            <td>{{10 + ddch.calculatedValues.halflevel}}</td>
             <td ng-bind="ddch.calculatedValues.defenses.reflex.abilityMod"></td>
             <td ng-bind="ddch.calculatedValues.defenses.reflex.class"></td>
             <td ng-bind="ddch.calculatedValues.defenses.reflex.feat"></td>
@@ -79,7 +79,7 @@
         </tr>
         <tr>
             <td class="score" id="rating">{{
-                (ddch.halflevel + 10) + 
+                (ddch.calculatedValues.halflevel + 10) + 
                 ddch.calculatedValues.defenses.will.abilityMod + 
                 ddch.calculatedValues.defenses.will.class + 
                 ddch.calculatedValues.defenses.will.feat + 
@@ -87,7 +87,7 @@
                 ddch.calculatedValues.defenses.will.misc
             }}</td>
             <td class="def">WILL</td>
-            <td>{{10 + ddch.halflevel}}</td>
+            <td>{{10 + ddch.calculatedValues.halflevel}}</td>
             <td ng-bind="ddch.calculatedValues.defenses.will.abilityMod"></td>
             <td ng-bind="ddch.calculatedValues.defenses.will.class"></td>
             <td ng-bind="ddch.calculatedValues.defenses.will.feat"></td>

@@ -2,14 +2,12 @@ var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	$scope.ddch = {
         characterLevel: 1,
-        halflevel: 0,
         level0: {
             name: "",
             age: 0,
             gender: "",
             height: 0,
             weight: 0,
-            size: "",
             description: {
                 personalityTraits: "",
                 mannerisms: "",
@@ -19,45 +17,25 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 
             alignment: "",
             deity: "",
-            equipment: [""],
 
             ddrace: "",
             abilityBonus1: "",
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
-            racialFeatures: [
-                {
-                    name: 'Dwarven Weapon Proficiency',
-                    desc: 'Proficient with hammers.'
-                    },
-                {
-                    name: 'Cast-Iron Stomach',
-                    desc: '+5 bonus to saving throws against poison.'
-                },
-                {
-                    name: 'Encumbered Speed',
-                    desc: 'Armor or heavy load does not reduce your speed.'
-                },
-                {
-                    name: 'Dwarven Resilience',
-                    desc: 'Second Wind is a minor action'
-                },
-                {
-                    name: 'Stand Your Ground',
-                    desc: 'Can move 1 less when being forced to move.'
-                }
-            ],
             abilityScores: [
                 { 
-                    base_str: 10,
-                    base_con: 10,
-                    base_dex: 10,
-                    base_int: 10,
-                    base_wis: 10,
-                    base_cha: 10
+                    baseStr: 10,
+                    baseCon: 10,
+                    baseDex: 10,
+                    baseInt: 10,
+                    baseWis: 10,
+                    baseCha: 10
                 }
             ],
+
+            wealth: 0,
+            equipment: [""],
             magicItems: {
                 weapons: [
                     'Axe',
@@ -76,7 +54,10 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     ''
                 ],
                 waist: ''
-            }
+            },
+
+            languages: ["Common", "Undercommon"],
+            rituals: [""],
         },
         level1: {
             ddclass: "",
@@ -155,6 +136,29 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         },
         calculatedValues: {
             halfLevel: 0,
+            size: "M",
+            raceFeatures: [
+                {
+                    name: 'Dwarven Weapon Proficiency',
+                    desc: 'Proficient with hammers.'
+                    },
+                {
+                    name: 'Cast-Iron Stomach',
+                    desc: '+5 bonus to saving throws against poison.'
+                },
+                {
+                    name: 'Encumbered Speed',
+                    desc: 'Armor or heavy load does not reduce your speed.'
+                },
+                {
+                    name: 'Dwarven Resilience',
+                    desc: 'Second Wind is a minor action'
+                },
+                {
+                    name: 'Stand Your Ground',
+                    desc: 'Can move 1 less when being forced to move.'
+                }
+            ],
             movement: {
                 base: 5,
                 armor: 0,
