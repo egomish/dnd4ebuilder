@@ -288,4 +288,4 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 		console.log($scope.ddch);
         $scope.ddch.level0.healthAndSavingThrows.maxHP = "24";
 	}
-}]);	
+}]);

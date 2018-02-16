@@ -46,6 +46,14 @@ app.directive('weaponProficiencies', function() {
     };
 });
 
+app.directive('powers', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/powers.html',
+        controller: 'powersController'
+    };
+});
+
 app.directive('raceFeatures', function() {
     return {
         restrict: 'E',
