@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
-	$scope.ddch = {
+    $scope.ddch = {
         characterLevel: 1,
         level0: {
             name: "",
@@ -191,7 +191,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 savingThrowMods: "",
                 resistances: ""
             },
-            skillsArr: [
+            skills: [
                 [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
                 [0, "Arcana",        "INT", 0, 0, 0, 0],
                 [0, "Athletics",     "STR", 0, 0, 0, 0],
@@ -210,12 +210,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 [0, "Streetwise",    "CHA", 0, 0, 0, 0],
                 [0, "Thievery",      "DEX", 0, 0, 0, 0],
             ],
-            skills: {
-                modifierBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                trainedBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                armorPenalties: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                miscBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            },
             defenses: {
                 ac: {
                     armor: 0,
@@ -256,15 +250,42 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 toHit: [],
                 damageDice: [],
                 toDam: []
-            }
+            },
+            powers: [
+                {
+                    name: "Commander's Strike",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "With a shout, you command an ally to attack.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
+                    ],
+                },
+                {
+                    name: "Overwhelming Force Trap",
+                    usage: "Encounter",
+                    actionType: "Immediate Interrupt",
+                    source: "Dr384",
+                    target: "Close burst 3",
+                    flavor: "You keep the order to spring the trap ready, allowing your allies sto spring into action on a moment's notice.",
+                    "elements": [
+                        ["Keywords", "Martial"],
+                        ["Trigger", "An ally in the burst makes a melee basic attack"],
+                        ["Effect", "The target uses one of their melee at-will attack powers instead of making a melee basic attack. If the attack hits, the subbect of the target's attack is also dazed until the end of the target's next turn."],
+                    ],
+                },
+            ],
         }
-	};
+    };
 
-	$scope.log = function() {
-		console.log($scope.ddch);
-	};
-	$scope.set_ddch = function() {
-		console.log($scope.ddch);
+    $scope.log = function() {
+        console.log($scope.ddch);
+    };
+    $scope.set_ddch = function() {
+        console.log($scope.ddch);
         $scope.ddch.level0.healthAndSavingThrows.maxHP = "24";
-	}
-}]);	
+    }
+}]);
