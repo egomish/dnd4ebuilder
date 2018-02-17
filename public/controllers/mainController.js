@@ -49,10 +49,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 hands: '',
                 head: '',
                 neck: '',
-                rings: [
-                    '',
-                    ''
-                ],
+                leftRing: '',
+                rightRing: '',
                 waist: ''
             },
 
