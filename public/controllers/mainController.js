@@ -252,27 +252,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     damageDice: "1d8",
                     damageMod: 2
                 },
-                {
-                    attack: "",
-                    defType: "",
-                    name: "",
-                    damageDice: "",
-                    damageMod: ""
-                },
-                {
-                    attack: "",
-                    defType: "",
-                    name: "",
-                    damageDice: "",
-                    damageMod: ""
-                },
-                {
-                    attack: "",
-                    defType: "",
-                    name: "",
-                    damageDice: "",
-                    damageMod: ""
-                },
             ],
             powers: [
                 {
