@@ -1,1 +1,20 @@
+<link rel="stylesheet" href="styles/powers.css">
+
 <h3>Powers</h3>
+<div class="powers" ng-init="initPowers()">
+  <table>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Usage
+      </th>
+    </tr>
+    
+    <tr ng-repeat="power in ddch.calculatedValues.powers">
+      <td ng-bind="power.name"></td>
+      <td ng-bind="power.usage"></td>
+    </tr>
+  </table>
+</div>
