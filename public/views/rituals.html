@@ -1,1 +1,12 @@
+<link rel="stylesheet" href="styles/rituals.css">
+
 <h3>Rituals</h3>
+<div class="rituals">
+	<table>
+		<tr ng-repeat="ritual in ddch.level0.rituals track by $index">
+			<td>
+			    <p>{{ritual}}</p>
+			</td>
+		</tr>
+	</table>
+</div>
