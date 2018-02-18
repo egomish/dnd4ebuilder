@@ -2,27 +2,32 @@
 
 <div class="wealth">
 	<h3>Coins and Other Wealth</h3>
-	<table>
-		<tr>
-			<td>
-				<div class="normalMoney">
-					<div class="currencyBit">	
-						<label>GP: </label>
-						<input type="text" class="inputClass" value="{{ddch.level0.wealth[0]}}">
-					</div>
-					<div class="currencyBit">
-						<label>SP: </label>
-						<input type="text" class="inputClass" value="{{ddch.level0.wealth[1]}}">
-					</div>
-					<div class="currencyBit">
-						<label>CP: </label>
-						<input type="text" class="inputClass" value="{{ddch.level0.wealth[2]}}">
-					</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td><input type="text" class="bigBox"></td>
-		</tr>
-	</table>
+    <div class="coin">
+        <span>
+            <span class="title">AD:</span>
+            {{ddch.level0.wealth.ad}}
+        </span>
+        <span>
+            <span class="title">PP:</span>
+            {{ddch.level0.wealth.pp}}
+        </span>
+        <span>
+            <span class="title">GP:</span>
+            {{ddch.level0.wealth.gp}}
+        </span>
+        <span>
+            <span class="title">SP:</span>
+            {{ddch.level0.wealth.sp}}
+        </span>
+        <span>
+            <span class="title">CP:</span>
+            {{ddch.level0.wealth.cp}}
+        </span>
+    </div>
+    <div class="bigBox">
+        <span ng-repeat="item in ddch.level0.wealth.other">
+            {{item}}
+            {{$last ? '': ','}}
+        </span>
+    </div>
 </div>

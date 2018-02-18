@@ -1,3 +1,11 @@
+.wealth .coin .title {
+    font-weight: bold;
+}
+
+.wealth .coin span + span {
+    padding: 18px;
+}
+
 .wealth table {
     width: 90%;
     border: solid black 1px;
