@@ -1,9 +1,26 @@
 .wealth table {
     width: 90%;
+    border: solid black 1px;
 }
 
 .wealth .bigBox {
+	border: none;
 	width: 100%;
 	height: 70px;
-	border: solid black 1px;
+}
+
+.wealth .normalMoney {
+	width:100%;
+	border-bottom: solid rgba(100,100,100,0.5) 1px;
+}
+
+.wealth .normalMoney .currencyBit {
+	display: inline-block;
+	width: 30%;
+	text-align: center
+}
+
+.wealth .normalMoney .currencyBit .inputClass {
+	width:20px;
+	border: none;
 }
