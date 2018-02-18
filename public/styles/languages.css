@@ -1,12 +1,16 @@
 .languages table {
     width: 90%;
-    font-family: arial, sans-serif;
-    font-size: 10px;
 }
 
-.languages .under {
-	border:none;
-	border-bottom: solid black 1px;
-	width: 100%;
-	height: 35px;
+.languages td {
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid black;
+}
+
+.languages p {
+	position: relative;
+    top: 17px;
+    font-weight: bold;
+    font-size: 12px;
 }
