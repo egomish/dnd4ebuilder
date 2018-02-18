@@ -244,11 +244,36 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 item: 0,
                 misc: 0
             },
-            weaponProficiencies: {
-                toHit: [],
-                damageDice: [],
-                toDam: []
-            },
+            weaponProficiencies: [
+                {
+                    attack: 2,
+                    defType: "AC",
+                    name: "QuarterStaff",
+                    damageDice: "1d8",
+                    damageMod: 2
+                },
+                {
+                    attack: "",
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: ""
+                },
+                {
+                    attack: "",
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: ""
+                },
+                {
+                    attack: "",
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: ""
+                },
+            ],
             powers: [
                 {
                     name: "Commander's Strike",
