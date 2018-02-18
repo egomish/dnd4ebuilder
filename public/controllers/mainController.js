@@ -13,7 +13,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 mannerisms: "",
                 background: ""
             },
-            portrait: "images/no-profile-pic.png",
+            portrait: "assets/no-profile-pic.png",
 
             alignment: "",
             deity: "",
@@ -287,7 +287,11 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         console.log($scope.ddch);
     };
     $scope.set_ddch = function() {
-        console.log($scope.ddch);
-        $scope.ddch.level0.healthAndSavingThrows.maxHP = "24";
+        $http.post('/character', $scope.ddch).then(function(response) {
+            $scope.ddch = response.data;
+        }, function (error) {
+            console.log('could not GET character from server.');
+        });
+
     }
 }]);
