@@ -3,14 +3,10 @@
 <h3>Languages Known</h3>
 <div class="languages">
 	<table>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
+		<tr ng-repeat="language in ddch.level0.languages track by $index">
+			<td>
+			    <p>{{language}}</p>
+			</td>
 		</tr>
 	</table>
 </div>
