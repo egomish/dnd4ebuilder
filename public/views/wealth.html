@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/wealth.css">
 
+<h3>Coins and Other Wealth</h3>
 <div class="wealth">
-	<h3>Coins and Other Wealth</h3>
     <div class="coin">
         <span>
             <span class="title">AD:</span>
@@ -25,6 +25,7 @@
         </span>
     </div>
     <div class="bigBox">
+    	<span class="title">Other:</span>
         <span ng-repeat="item in ddch.level0.wealth.other">
             {{item}}
             {{$last ? '': ','}}

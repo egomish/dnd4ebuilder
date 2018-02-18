@@ -1,4 +1,7 @@
 .languages {
     width: 90%;
     border-bottom: 1px solid black;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
 }
