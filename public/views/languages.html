@@ -1,1 +1,9 @@
-<h3>Languages</h3>
+<link rel="stylesheet" href="styles/languages.css">
+
+<h3>Languages Known</h3>
+<div class="languages">
+    <span ng-repeat="language in ddch.level0.languages">
+        {{language}}
+        {{$last ? '' : ','}}
+    </span>
+</div>

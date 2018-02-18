@@ -1,1 +1,27 @@
+<link rel="stylesheet" href="styles/skills.css">
+
 <h3>Skills</h3>
+<div class="skills">
+    <table>
+        <tr>
+            <th>BONUS</th>
+            <th>SKILL NAME</th>
+            <th></th>
+            <th>ABILMOD<br>+1/2LVL</th>
+            <th>TRND<br>(+5)</th>
+            <th>ARMOR<br>PENALTY</th>
+            <th>MISC</th>
+        </tr>
+        <!--LISTING SKILLS IN CHARACTER SHEET ORDER, FILLING OUT ALL SPECIFICS ONE 
+            AT A TIME-->
+        <tr ng-repeat="skill in ddch.calculatedValues.skills">
+            <td><input type="text" class="boxedB" value="{{skill[0]}}"></td>
+            <td class="imp">{{skill[1]}}</td>
+            <td class="impA">{{skill[2]}}</td>
+            <td><input type="text" class="boxed" value="{{skill[3]}}"></td>
+            <td><input type="text" class="boxed" value="{{skill[4]}}"></td>
+            <td><input type="text" class="boxedEnd" value="{{skill[5]}}"></td>
+            <td><input type="text" class="boxedEnd" value="{{skill[6]}}"></td>
+        </tr>
+    </table>
+</div>

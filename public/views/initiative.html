@@ -12,14 +12,16 @@
 		<tr>
 			<td>{{
 				ddch.calculatedValues.initiative.dex + 
-				ddch.halflevel + 
+				ddch.calcultaedValues.halfLevel + 
 				ddch.calculatedValues.initiative.misc
 			}}</td>
 			<td ng-bind="ddch.calculatedValues.initiative.dex"></td>
-			<td ng-bind="ddch.halflevel"></td>
+			<td ng-bind="ddch.calculatedValues.halfLevel"></td>
 			<td ng-bind="ddch.calculatedValues.initiative.misc"></td>
 		</tr>
 	</table>
 
-	<textarea>Conditional Bonuses:</textarea>
+	<div class="conditional-bonuses">
+		Conditional Bonuses:
+	</div>
 </div>

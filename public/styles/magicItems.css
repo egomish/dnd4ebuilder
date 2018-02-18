@@ -1,0 +1,26 @@
+.magicItems .line {
+    font-size: 10px;
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.magicItems input[type=checkbox] {
+    margin-left: auto;
+    display: block;
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+}
+
+.magicItems .name {
+    position: relative;
+    left: 40px;
+    font-weight: bold;
+    top:17px;
+    font-size: 12px;
+}
+
+.magicItems span {
+    position: relative;
+    top: 17px;
+}

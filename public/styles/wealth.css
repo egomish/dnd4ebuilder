@@ -1,0 +1,26 @@
+.wealth .coin .title {
+    font-weight: bold;
+}
+
+.wealth .bigBox .title {
+    font-weight: bold;
+}
+
+.wealth {
+	border:solid black 1px;
+	width: 90%;
+}
+
+.wealth .coin span + span {
+    padding: 18px;
+}
+
+.wealth .coin {
+    border-bottom: solid gray 1px;
+}
+
+.wealth .bigBox {
+	border: none;
+	width: 100%;
+	height: 70px;
+}

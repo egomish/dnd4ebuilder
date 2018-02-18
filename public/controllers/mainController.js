@@ -1,21 +1,19 @@
 var app = angular.module('app', []);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
-	$scope.ddch = {
+    $scope.ddch = {
         characterLevel: 1,
-        halflevel: 0,
         level0: {
             name: "",
             age: 0,
             gender: "",
             height: 0,
             weight: 0,
-            size: "",
             description: {
                 personalityTraits: "",
                 mannerisms: "",
                 background: ""
             },
-            portrait: "",
+            portrait: "assets/no-profile-pic.png",
 
             alignment: "",
             deity: "",
@@ -25,7 +23,121 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
-            racialFeatures: [
+            abilityScores: [
+                { 
+                    baseStr: 10,
+                    baseCon: 10,
+                    baseDex: 10,
+                    baseInt: 10,
+                    baseWis: 10,
+                    baseCha: 10
+                }
+            ],
+
+            wealth: {
+                cp: 5,
+                sp: 4,
+                gp: 73,
+                pp: 92,
+                ad: 4,
+                other: ["Crystal Ball (1000gp)", "Rubies (700gp)"]
+            },
+            equipment: [""],
+            magicItems: {
+                weapons: [],
+                armor: '',
+                arms: '',
+                feet: '',
+                hands: '',
+                head: '',
+                neck: '',
+                leftRing: '',
+                rightRing: '',
+                waist: ''
+            },
+
+            languages: ["Common", "Undercommon"],
+            rituals: ["",""],
+        },
+        level1: {
+            ddclass: "",
+            skillTrainings: [],
+            classFeatures: [
+                {
+                    name: "Combat Leader",
+                    desc: "You and allies within 10 that see and hear you gain +2 to initiative."
+                },
+                {
+                    name: "Tactical Presence",
+                    desc: "Ally you can see that spends an action point to attack gains bonus to attack: 1/2 int mod."
+                },
+                {
+                    name: "Inspiring Word",
+                    desc: "Use inspiring word as an encounter (special) power, minor action."
+                }
+            ],
+            atwillPower1: "",
+            atwillPower2: "",
+            encounterPower: "",
+            dailyPower: "",
+            ddfeat: { 
+                name: "Toughness", 
+                desc: "Gain 5 additional hit points per tier" 
+            }
+        },
+        level2: {
+            utilityPower: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level3: {
+            encounterPower: ""
+        },
+        level4: {
+            abilityScoreBonus1: "",
+            abilityScoreBonus2: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level5: {
+            dailyPower: ""
+        },
+        level6: {
+            utilityPower: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level7: {
+            encounterPower: ""
+        },
+        level8: {
+            abilityScoreBonus1: "",
+            abilityScoreBonus2: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        level9: {
+            dailyPower: ""
+        },
+        level10: {
+            utilityPower: "",
+            ddfeat: { 
+                name: "", 
+                desc: "" 
+            }
+        },
+        calculatedValues: {
+            halfLevel: 0,
+            size: "M",
+            raceFeatures: [
                 {
                     name: 'Dwarven Weapon Proficiency',
                     desc: 'Proficient with hammers.'
@@ -47,72 +159,29 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     desc: 'Can move 1 less when being forced to move.'
                 }
             ],
-            abilityScores: []
-        },
-        level1: {
-            ddclass: "",
-            skillTrainings: [],
-            classFeatures: [],
-            ddfeat: "",
-            atwillPower1: "",
-            atwillPower2: "",
-            encounterPower: "",
-            dailyPower: "",
-            ddfeat: ""
-        },
-        level2: {
-            utilityPower: "",
-            ddfeat: ""
-        },
-        level3: {
-            encounterPower: ""
-        },
-        level4: {
-            abilityScoreBonus1: "",
-            abilityScoreBonus2: "",
-            ddfeat: ""
-        },
-        level5: {
-            dailyPower: ""
-        },
-        level6: {
-            utilityPower: "",
-            ddfeat: ""
-        },
-        level7: {
-            encounterPower: ""
-        },
-        level8: {
-            abilityScoreBonus1: "",
-            abilityScoreBonus2: "",
-            ddfeat: ""
-        },
-        level9: {
-            dailyPower: ""
-        },
-        level10: {
-            utilityPower: "",
-            ddfeat: ""
-        },
-        calculatedValues: {
-            halfLevel: 0,
+            movement: {
+                base: 5,
+                armor: 0,
+                item: 0,
+                misc: 0
+            },
             initiative: {
                 dex: 0,
                 misc: 0
             },
             abilityScores: {
-                strTotal: 0,
-                conTotal: 0,
-                dexTotal: 0,
-                intTotal: 0,
-                wisTotal: 0,
-                chaTotal: 0,
+                strTotal: 10,
+                conTotal: 10,
+                dexTotal: 10,
+                intTotal: 10,
+                wisTotal: 10,
+                chaTotal: 10,
                 strMod: 0,
                 conMod: 0,
                 dexMod: 0,
                 intMod: 0,
                 wisMod: 0,
-                chaMod: 0,
+                chaMod: 0
             },
             healthAndSavingThrows: {
                 maxHP: 0,
@@ -122,13 +191,25 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 savingThrowMods: "",
                 resistances: ""
             },
-            skills: {
-                totals: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                modifierBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                trainedBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                armorPenalties: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                miscBonuses: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            },
+            skills: [
+                [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
+                [0, "Arcana",        "INT", 0, 0, 0, 0],
+                [0, "Athletics",     "STR", 0, 0, 0, 0],
+                [0, "Bluff",         "CHA", 0, 0, 0, 0],
+                [0, "Diplomacy",     "CHA", 0, 0, 0, 0],
+                [0, "Dungeoneering", "WIS", 0, 0, 0, 0],
+                [0, "Endurance",     "CON", 0, 0, 0, 0],
+                [0, "Heal",          "WIS", 0, 0, 0, 0],
+                [0, "History",       "INT", 0, 0, 0, 0],
+                [0, "Insight",       "WIS", 0, 0, 0, 0],
+                [0, "Intimidate",    "CHA", 0, 0, 0, 0],
+                [0, "Nature",        "WIS", 0, 0, 0, 0],
+                [0, "Perception",    "WIS", 0, 0, 0, 0],
+                [0, "Religion",      "INT", 0, 0, 0, 0],
+                [0, "Stealth",       "DEX", 0, 0, 0, 0],
+                [0, "Streetwise",    "CHA", 0, 0, 0, 0],
+                [0, "Thievery",      "DEX", 0, 0, 0, 0],
+            ],
             defenses: {
                 ac: {
                     armor: 0,
@@ -165,19 +246,54 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 item: 0,
                 misc: 0
             },
-            weaponProficiencies: {
-                toHit: [],
-                damageDice: [],
-                toDam: []
-            }
+            weaponProficiencies: [
+                {
+                    attack: 2,
+                    defType: "AC",
+                    name: "QuarterStaff",
+                    damageDice: "1d8",
+                    damageMod: 2
+                },
+            ],
+            powers: [
+                {
+                    name: "Commander's Strike",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "With a shout, you command an ally to attack.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
+                    ],
+                },
+                {
+                    name: "Overwhelming Force Trap",
+                    usage: "Encounter",
+                    actionType: "Immediate Interrupt",
+                    source: "Dr384",
+                    target: "Close burst 3",
+                    flavor: "You keep the order to spring the trap ready, allowing your allies sto spring into action on a moment's notice.",
+                    "elements": [
+                        ["Keywords", "Martial"],
+                        ["Trigger", "An ally in the burst makes a melee basic attack"],
+                        ["Effect", "The target uses one of their melee at-will attack powers instead of making a melee basic attack. If the attack hits, the subbect of the target's attack is also dazed until the end of the target's next turn."],
+                    ],
+                },
+            ],
         }
-	};
+    };
 
-	$scope.log = function() {
-		console.log($scope.ddch);
-	};
-	$scope.set_ddch = function() {
-		console.log($scope.ddch);
-        $scope.ddch.level0.healthAndSavingThrows.maxHP = "24";
-	}
-}]);	
+    $scope.log = function() {
+        console.log($scope.ddch);
+    };
+    $scope.set_ddch = function() {
+        $http.post('/character', $scope.ddch).then(function(response) {
+            $scope.ddch = response.data;
+        }, function (error) {
+            console.log('could not GET character from server.');
+        });
+
+    }
+}]);

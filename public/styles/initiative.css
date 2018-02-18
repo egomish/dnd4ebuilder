@@ -25,9 +25,8 @@
     font-size: 20px;
 }
 
-.initiative textarea {
+.initiative .conditional-bonuses {
+    font-size: 10px;
+    padding-bottom: 40px;
     width: 90%;
-    height: 50px;
-    font-size: 12px;
-    border: 1px solid black;
 }

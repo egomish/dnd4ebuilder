@@ -1,0 +1,68 @@
+/* Skills Styles */
+.skills table {
+    width: 90%;
+    font-family: arial, sans-serif;
+    font-size: 10px;
+}
+.skills th {
+    text-align: bottom;
+    text-align: left;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.skills td {
+    text-align: center;
+    font-size: 12px;
+}
+
+.skills tr:nth-child(even) {
+    background: #cbcbcb
+}
+
+tr:nth-child(odd) {
+    background: #FFF
+}
+
+.skills .imp {
+    font-weight: 900;
+    font-size: 12px;
+    text-align: left;
+    font-family: arial narrow, sans-serif;
+}
+
+.skills .impA {
+    font-weight: 900;
+    font-size: 8px;
+}
+
+.skills .boxed {
+    width: 22px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-width: 2px;
+    border-color: #9D9999;
+    border-style: groove;
+}
+
+.skills .boxedB {
+    width: 26px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-width: 2px;
+    border-color: #9D9999;
+    border-style: groove;
+}
+
+.skills .boxedEnd {
+    width: 26px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid black;
+    align-self: center;
+}

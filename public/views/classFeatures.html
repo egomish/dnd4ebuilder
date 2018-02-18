@@ -1,1 +1,13 @@
+<link rel="stylesheet" href="styles/features.css">
+
 <h3>Class Features</h3>
+<div class="features classFeatures">
+    <ul>
+        <li ng-repeat="feat in ddch.level1.classFeatures">
+            <label ng-bind="feat.name + ':'"></label>
+            <ul>
+                <li ng-bind="feat.desc"></li>
+            </ul>
+        </li>
+    </ul>
+</div>
