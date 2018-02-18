@@ -299,6 +299,18 @@
                         ["Effect", "The target can spend a healing surge and regain and additional 1d6 HP.  The amount of additional HP gained is 2d6 at 6th level, 3d6 at 11th level, 4d6 at 16th level, 5d6 at 21st level, 6d6 at 26th level."],
                     ],
                 },
+                {
+                    name: "Dragon Breath",
+                    usage: "Encounter",
+                    actionType: "Minor Action",
+                    source: "PHB1",
+                    target: "All creatures in Close Blast 3",
+                    flavor: "As you open your mouth with a roar, the deadly power of your draconic kin blasts forth to engulf your foes.",
+                    "elements": [
+                        ["Keywords", "Martial, Healing"],
+                        ["Effect", "Hit: 1d6 + Constiution modifier fire damage.  Increase to +4 bonus and 2d6 + Constiution modifier fire damage at 11th level, and to +6 and 3d6 + Constitution modifier fire damage at 21st level."],
+                    ],
+                }
               ]
     }
 };
