@@ -2,11 +2,8 @@
 
 <h3>Languages Known</h3>
 <div class="languages">
-	<table>
-		<tr ng-repeat="language in ddch.level0.languages track by $index">
-			<td>
-			    <p>{{language}}</p>
-			</td>
-		</tr>
-	</table>
+    <span ng-repeat="language in ddch.level0.languages">
+        {{language}}
+        {{$last ? '' : ','}}
+    </span>
 </div>
