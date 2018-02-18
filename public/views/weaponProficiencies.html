@@ -1,12 +1,21 @@
+<link rel="stylesheet" href="styles/weapons.css">
+
 <h3>Weapon Proficiencies</h3>
-<div>
-    <div class="col-sm-4">
-        Quarterstaff (Melee)
-        <br>
-        Staff
-        <br>
-        HIT WORKSPACE HERE
-        <br>
-        DAM WORKSPACE HERE
-    </div>
+<div class=weapons>
+    <table>
+    	<tr>
+    		<th>ATTACK</th>
+    		<th></th>
+    		<th>DEFENCE</th>
+    		<th>WEAPON</th>
+    		<th class="endHead">DAMAGE</th>
+    	</tr>
+    	<tr ng-repeat="weapon in ddch.calculatedValues.weaponProficiencies">
+    		<td><input type="text" class="vsbox" value="{{weapon.attack}}"></td>
+            <td class="vs">VS</td>
+            <td><input type="text" class="vsbox" value="{{weapon.defType}}"></td>
+            <td class="spacing"><input type="text" class="lined" value="{{weapon.name}}"></td>
+            <td class="spacing"><input type="text" class="end" value="{{weapon.damageDice}} + {{weapon.damageMod}}"></td>
+    	</tr>
+    </table>
 </div>

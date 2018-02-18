@@ -13,7 +13,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 mannerisms: "",
                 background: ""
             },
-            portrait: "images/no-profile-pic.png",
+            portrait: "assets/no-profile-pic.png",
 
             alignment: "",
             deity: "",
@@ -34,7 +34,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 }
             ],
 
-            wealth: 0,
+            wealth: [0,0,0],
             equipment: [""],
             magicItems: {
                 weapons: [
@@ -54,8 +54,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 waist: ''
             },
 
-            languages: ["Common", "Undercommon"],
-            rituals: [""],
+            languages: ["Common", "Undercommon", ""],
+            rituals: ["","","","","","","","","",""],
         },
         level1: {
             ddclass: "",
@@ -244,11 +244,36 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 item: 0,
                 misc: 0
             },
-            weaponProficiencies: {
-                toHit: [],
-                damageDice: [],
-                toDam: []
-            },
+            weaponProficiencies: [
+                {
+                    attack: 2,
+                    defType: "AC",
+                    name: "QuarterStaff",
+                    damageDice: "1d8",
+                    damageMod: 2
+                },
+                {
+                    attack: "",
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: ""
+                },
+                {
+                    attack: "",
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: ""
+                },
+                {
+                    attack: "",
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: ""
+                },
+            ],
             powers: [
                 {
                     name: "Commander's Strike",
