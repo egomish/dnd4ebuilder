@@ -55,7 +55,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             },
 
             languages: ["Common", "Undercommon"],
-            rituals: [""],
+            rituals: ["","","","","","","","","",""],
         },
         level1: {
             ddclass: "",
