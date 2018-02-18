@@ -17,10 +17,9 @@
 .wealth .normalMoney .currencyBit {
 	display: inline-block;
 	width: 30%;
-	text-align: center
 }
 
 .wealth .normalMoney .currencyBit .inputClass {
-	width:20px;
+	width:70px;
 	border: none;
 }
