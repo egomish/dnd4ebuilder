@@ -3,35 +3,10 @@
 <h3>Rituals</h3>
 <div class="rituals">
 	<table>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
-		</tr>
-		<tr>
-			<td><input type="text" class="under"></td>
+		<tr ng-repeat="ritual in ddch.level0.rituals track by $index">
+			<td>
+			    <p>{{ritual}}</p>
+			</td>
 		</tr>
 	</table>
 </div>
