@@ -37,12 +37,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             wealth: [0,0,0],
             equipment: [""],
             magicItems: {
-                weapons: [
-                    'Axe',
-                    'Long Sword',
-                    'Bigger Axe',
-                    'Longer Long Sword'
-                ],
+                weapons: [],
                 armor: '',
                 arms: '',
                 feet: '',
