@@ -1,0 +1,316 @@
+{
+    "characterLevel": 1,
+    "level0": {
+        "name": "Phila Kumako",
+        "age": 20,
+        "gender": "Male",
+        "height": 76,
+        "weight": 220,
+        "description": {
+            "personalityTraits": "Confident, Gullible, Justice-Lover, Mercy-giver",
+            "mannerisms": "Booming voice, Imperious tone, Sits at the head of the table",
+            "background": "Acolyte of Bahamut"
+        },
+        "portrait": "images/no-profile-pic.png",
+
+        "alignment": "Lawful Good",
+        "deity": "Bahamut",
+
+        "ddrace": "Dragonborn",
+        "abilityBonus1": "STR",
+        "abilityBonus2": "CHA",
+        "skillBonus1": "History",
+        "skillBonus2": "Intimidate",
+        "abilityScores": [
+            { 
+                "baseStr": 16,
+                "baseCon": 12,
+                "baseDex": 11,
+                "baseInt": 11,
+                "baseWis": 8,
+                "baseCha": 16
+            }
+        ],
+
+        "wealth": 0,
+        "equipment": ["Chainmail", "Longsword", "Light Shield"],
+        "magicItems": {
+            "weapons": [
+            ],
+            "armor": "",
+            "arms": "",
+            "feet": "",
+            "hands": "",
+            "head": "",
+            "neck": "",
+            "rings": [
+                "",
+                ""
+            ],
+            "waist": ""
+        },
+
+        "languages": ["Common", "Draconic"],
+        "rituals": [""],
+    },
+    "level1": {
+        "ddclass": "Warlord",
+        "skillTrainings": ["Athletics", "Diplomacy", 
+                           "Endurance", "History"],
+        "atwillPower1": "Commander's Strike",
+        "atwillPower2": "Furious Smash",
+        "encounterPower": "Hammer and Anvil",
+        "dailyPower": "Pin the Foe",
+        "ddfeat": { 
+            "name": "Dragonborn Frenzy", 
+            "desc": "+2 damage when Bloodied"
+        }
+    },
+    "level2": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level3": {
+        "encounterPower": ""
+    },
+    "level4": {
+        "abilityScoreBonus1": "",
+        "abilityScoreBonus2": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level5": {
+        "dailyPower": ""
+    },
+    "level6": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level7": {
+        "encounterPower": ""
+    },
+    "level8": {
+        "abilityScoreBonus1": "",
+        "abilityScoreBonus2": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level9": {
+        "dailyPower": ""
+    },
+    "level10": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "calculatedValues": {
+        "halfLevel": 0,
+        "size": "M",
+        "classFeatures": [
+            {
+                "name": "Combat Leader",
+                "desc": "You and allies within 10 squares that see and hear you gain +2 to initiative."
+            },
+            {
+                "name": "Inspiring Presence",
+                "desc": "If an Ally that can see you spends an Action Point to take an Extra Action, they regain HP equal to your Charisma modifier + half your level."
+            },
+            {
+                "name": "Inspiring Word",
+                "desc": "Use inspiring word as an encounter (special) power, minor action."
+            }
+        ],
+        "raceFeatures": [
+            {
+                "name": "Dragonborn Fury",
+                "desc": "+1 racial bonus to Attack Rolls when Bloodied."
+                },
+            {
+                "name": "Draconic Heritage",
+                "desc": "Add your Constiution modifier to your Surge Value."
+            },
+            {
+                "name": "Dragon Breath",
+                "desc": "Dragon Breath encounter power."
+            },
+        ],
+        "movement": {
+            "base": 6,
+            "armor": -1,
+            "item": 0,
+            "misc": 0
+        },
+        "initiative": {
+            "dex": 0,
+            "misc": 2
+        },
+        "abilityScores: {
+            "strTotal": 18,
+            "conTotal": 12,
+            "dexTotal": 11,
+            "intTotal": 11,
+            ""wisTotal": 8,
+            "chaTotal": 18,
+            "strMod": 0,
+            "conMod": 0,
+            "dexMod": 0,
+            "intMod": 0,
+            "wisMod": 0,
+            "chaMod": 0
+        },
+        "healthAndSavingThrows": {
+            "maxHP": 24,
+            "bloodiedValue": 12,
+            "surgeValue": 7,
+            "surgesPerDay": 8,
+            "savingThrowMods": "",
+            "resistances": ""
+        },
+        "skills": [
+            [-1, "Acrobatics",    "DEX", 0, 0, -1, 0],
+            [0, "Arcana",        "INT", 0, 0, 0, 0],
+            [8, "Athletics",     "STR", 4, 5, -1, 0],
+            [4, "Bluff",         "CHA", 4, 0, 0, 0],
+            [9, "Diplomacy",     "CHA", 4, 5, 0, 0],
+            [-1, "Dungeoneering", "WIS", -1, 0, 0, 0],
+            [5, "Endurance",     "CON", 1, 5, -1, 0],
+            [-1, "Heal",          "WIS", -1, 0, 0, 0],
+            [7, "History",       "INT", 0, 5, 0, 2],
+            [-1, "Insight",       "WIS", -1, 0, 0, 0],
+            [6, "Intimidate",    "CHA", 4, 0, 0, 2],
+            [-1, "Nature",        "WIS", -1, 0, 0, 0],
+            [-1, "Perception",    "WIS", -1, 0, 0, 0],
+            [0, "Religion",      "INT", 0, 0, 0, 0],
+            [-1, "Stealth",       "DEX", 0, 0, -1, 0],
+            [4, "Streetwise",    "CHA", 4, 0, 0, 0],
+            [-1, "Thievery",      "DEX", 0, 0, -1, 0],
+        ],
+        "defenses": {
+            "ac": {
+                "armor": 6,
+                "abilityMod": 0,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 1
+            },
+            "fortitude": {
+                "abilityMod": 4,
+                "class": 1,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "reflex": {
+                "abilityMod": 0,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "will": {
+                "abilityMod": 4,
+                "class": 1,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+        },
+        "speed": {
+            "armor": -1,
+            "item": 0,
+            "misc": 0
+        },
+        "weaponProficiencies": {
+            "toHit": [],
+            "damageDice": [],
+            "toDam": []
+        }
+        "powers": [
+                {
+                    name: "Furious Smash",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "You slam your shield into your enemy, bash them with your weapon's haft, or drive your shoulder into their gut.  Your attack doesn't do much damage—but your anger inspires your ally to match your ferocity.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: Deal damage equal to your Strength modifier, and then choose one ally adjacent to either you or the target.  This ally applies your Charisma modifier as a power bonus to the attack and damage rolls of their next attack against the target.  If the ally does not attack the target by the end of their next turn, the bonus is lost."],
+                    ],
+                },
+                {
+                    name: "Commander's Strike",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "With a shout, you command an ally to attack.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
+                    ],
+                },
+                {
+                    name: "Hammer and Anvil",
+                    usage: "Encounter",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "You land a ringing blow against your foe, inspiring a nearby ally to strike a blow of their own.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 1[W] + Strength modifier damage.  One ally adjacent to the target makes a melee basic attack against it as a free action.  The ally adds your Charisma modifier to the damage."],
+                    ],
+                },
+                {
+                    name: "Pin the Foe",
+                    usage: "Daily",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "No matter where your foe turns, one of your allies is waiting for them.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 3[W] + Strength modifier damage.  Until the end of the encounter, the target cannot shift if at least two of your allies (or you and one ally) are adjacent to it."],
+                    ],
+                },
+                {
+                    name: "Inspiring Word",
+                    usage: "Encounter",
+                    actionType: "Minor Action",
+                    source: "PHB1",
+                    target: "You or one ally in Close Burst 5",
+                    flavor: "You call out to a wounded ally and offer inspiring words of courage and determination that helps that ally heal.",
+                    "elements": [
+                        ["Keywords", "Martial, Healing"],
+                        ["Effect", "The target can spend a healing surge and regain and additional 1d6 HP.  The amount of additional HP gained is 2d6 at 6th level, 3d6 at 11th level, 4d6 at 16th level, 5d6 at 21st level, 6d6 at 26th level."],
+                    ],
+                },
+                {
+                    name: "Dragon Breath",
+                    usage: "Encounter",
+                    actionType: "Minor Action",
+                    source: "PHB1",
+                    target: "All creatures in Close Blast 3",
+                    flavor: "As you open your mouth with a roar, the deadly power of your draconic kin blasts forth to engulf your foes.",
+                    "elements": [
+                        ["Keywords", "Martial, Healing"],
+                        ["Effect", "Hit: 1d6 + Constiution modifier fire damage.  Increase to +4 bonus and 2d6 + Constiution modifier fire damage at 11th level, and to +6 and 3d6 + Constitution modifier fire damage at 21st level."],
+                    ],
+                }
+              ]
+    }
+};
