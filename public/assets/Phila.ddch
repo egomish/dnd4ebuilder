@@ -238,5 +238,67 @@
             "damageDice": [],
             "toDam": []
         }
+        "powers": [
+                {
+                    name: "Furious Smash",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "You slam your shield into your enemy, bash them with your weapon's haft, or drive your shoulder into their gut.  Your attack doesn't do much damage—but your anger inspires your ally to match your ferocity.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: Deal damage equal to your Strength modifier, and then choose one ally adjacent to either you or the target.  This ally applies your Charisma modifier as a power bonus to the attack and damage rolls of their next attack against the target.  If the ally does not attack the target by the end of their next turn, the bonus is lost."],
+                    ],
+                },
+                {
+                    name: "Commander's Strike",
+                    usage: "At-Will",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "With a shout, you command an ally to attack.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
+                    ],
+                },
+                {
+                    name: "Hammer and Anvil",
+                    usage: "Encounter",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "You land a ringing blow against your foe, inspiring a nearby ally to strike a blow of their own.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 1[W] + Strength modifier damage.  One ally adjacent to the target makes a melee basic attack against it as a free action.  The ally adds your Charisma modifier to the damage."],
+                    ],
+                },
+                {
+                    name: "Pin the Foe",
+                    usage: "Daily",
+                    actionType: "Standard Action",
+                    source: "PHB1",
+                    target: "One creature",
+                    flavor: "No matter where your foe turns, one of your allies is waiting for them.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 3[W] + Strength modifier damage.  Until the end of the encounter, the target cannot shift if at least two of your allies (or you and one ally) are adjacent to it."],
+                    ],
+                },
+                {
+                    name: "Inspiring Word",
+                    usage: "Encounter",
+                    actionType: "Minor Action",
+                    source: "PHB1",
+                    target: "You or one ally in Close Burst 5",
+                    flavor: "You call out to a wounded ally and offer inspiring words of courage and determination that helps that ally heal.",
+                    "elements": [
+                        ["Keywords", "Martial, Healing"],
+                        ["Effect", "The target can spend a healing surge and regain and additional 1d6 HP.  The amount of additional HP gained is 2d6 at 6th level, 3d6 at 11th level, 4d6 at 16th level, 5d6 at 21st level, 6d6 at 26th level."],
+                    ],
+                },
+              ]
     }
 };
