@@ -1,0 +1,9 @@
+.wealth table {
+    width: 90%;
+}
+
+.wealth .bigBox {
+	width: 100%;
+	height: 70px;
+	border: solid black 1px;
+}
