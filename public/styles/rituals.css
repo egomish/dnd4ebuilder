@@ -1,0 +1,12 @@
+.rituals table {
+    width: 90%;
+    font-family: arial, sans-serif;
+    font-size: 10px;
+}
+
+.rituals .under {
+	border:none;
+	border-bottom: solid black 1px;
+	width: 100%;
+	height: 35px;
+}
