@@ -34,7 +34,14 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 }
             ],
 
-            wealth: [0,0,0],
+            wealth: {
+                cp: 5,
+                sp: 4,
+                gp: 73,
+                pp: 92,
+                ad: 4,
+                other: ["Crystal Ball (1000gp)", "Rubies (700gp)"]
+            },
             equipment: [""],
             magicItems: {
                 weapons: [],
@@ -49,8 +56,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 waist: ''
             },
 
-            languages: ["Common", "Undercommon", ""],
-            rituals: ["","","","","","","","","",""],
+            languages: ["Common", "Undercommon"],
+            rituals: ["",""],
         },
         level1: {
             ddclass: "",
