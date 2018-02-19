@@ -1,0 +1,300 @@
+{
+    "characterLevel": 1,
+    "level0": {
+        "name": "Kordon Billbats",
+        "age": 33,
+        "gender": "Male",
+        "height": 50,
+        "weight": 200,
+        "description": {
+            "personalityTraits": "Rude and Brash to strangers, Kind to friends",
+            "mannerisms": "Hearty laugh, Surly tone, Deep voice",
+            "background": "Bogstandard mercenary"
+        },
+        "portrait": "assets/no-profile-pic.png",
+
+        "alignment": "Good",
+        "deity": "Kord",
+
+        "ddrace": "Dwarf",
+        "abilityBonus1": "CON",
+        "abilityBonus2": "WIS",
+        "skillBonus1": "Dungeoneering",
+        "skillBonus2": "Endurance",
+        "abilityScores": [
+            { 
+                "baseStr": 16,
+                "baseCon": 15,
+                "baseDex": 14,
+                "baseInt": 11,
+                "baseWis": 10,
+                "baseCha": 8
+            }
+        ],
+
+        "wealth": 0,
+        "equipment": ["Scale Mail", "Greatsword", "Crossbow"],
+        "magicItems": {
+            "weapons": [
+            ],
+            "armor": "",
+            "arms": "",
+            "feet": "",
+            "hands": "",
+            "head": "",
+            "neck": "",
+            "rings": [
+                "",
+                ""
+            ],
+            "waist": ""
+        },
+
+        "languages": ["Common", "Dwarven"],
+        "rituals": [""]
+    },
+    "level1": {
+        "ddclass": "Fighter",
+        "skillTrainings": ["Athletics", 
+                           "Endurance", "Heal"],
+        "atwillPower1": "Sure Strike",
+        "atwillPower2": "Cleave",
+        "encounterPower": "Spinning Sweep",
+        "dailyPower": "Brute Strike",
+        "ddfeat": { 
+            "name": "Toughness", 
+            "desc": "+5 HP per tier."
+        }
+    },
+    "level2": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level3": {
+        "encounterPower": ""
+    },
+    "level4": {
+        "abilityScoreBonus1": "",
+        "abilityScoreBonus2": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level5": {
+        "dailyPower": ""
+    },
+    "level6": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level7": {
+        "encounterPower": ""
+    },
+    "level8": {
+        "abilityScoreBonus1": "",
+        "abilityScoreBonus2": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level9": {
+        "dailyPower": ""
+    },
+    "level10": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "calculatedValues": {
+        "halfLevel": 0,
+        "size": "M",
+        "classFeatures": [
+            {
+                "name": "Combat Challenge",
+                "desc": "Mark foes you attack.  They get -2 to attacks not targeting you, and you can make a basic melee attack on them if they shift or don't target you in an attack.  The effect lasts until the end of your next turn or they're marked by another."
+            },
+            {
+                "name": "Combat Superiority",
+                "desc": "Add your Wisdom modifier to opportunity attacks, and halt movement of targets of your successful opportunity attacks."
+            },
+            {
+                "name": "Fighter Talent",
+                "desc": "+1 to hit with Two-handed weapons."
+            }
+        ],
+        "raceFeatures": [
+            {
+                "name": "Cast-Iron Stomach",
+                "desc": "+5 racial bonus to saving throws against poison."
+                },
+            {
+                "name": "Dwarven Resilience",
+                "desc": "Can use Second Wind as a Minor Action."
+            },
+            {
+                "name": "Dwarven Weapon Proficiency",
+                "desc": "You gain proficiency with the throwing hammer and warhammer."
+            },
+            {
+                "name": "Encumbered Speed",
+                "desc": "You move at your normal speed even when it would be reduced by armor or a heavy load.  Other speed-limiting effects affect you normally."
+            },
+            {
+                "name": "Stand Your Ground",
+                "desc": "You can move one square less when forced to move.  As well, when an attack would knock you prone, you may make a saving throw to avoid falling prone."
+            }
+        ],
+        "movement": {
+            "base": 5,
+            "armor": 0,
+            "item": 0,
+            "misc": 0
+        },
+        "initiative": {
+            "dex": 2,
+            "misc": 0
+        },
+        "abilityScores": {
+            "strTotal": 16,
+            "conTotal": 17,
+            "dexTotal": 14,
+            "intTotal": 11,
+            "wisTotal": 12,
+            "chaTotal": 8,
+            "strMod": 3,
+            "conMod": 3,
+            "dexMod": 2,
+            "intMod": 0,
+            "wisMod": 1,
+            "chaMod": 0
+        },
+        "healthAndSavingThrows": {
+            "maxHP": 37,
+            "bloodiedValue": 18,
+            "surgeValue": 9,
+            "surgesPerDay": 12,
+            "savingThrowMods": "+5 vs. Poison",
+            "resistances": ""
+        },
+        "skills": [
+            [2, "Acrobatics",    "DEX", 2, 0, 0, 0],
+            [0, "Arcana",        "INT", 0, 0, 0, 0],
+            [8, "Athletics",     "STR", 3, 5, 0, 0],
+            [-1, "Bluff",         "CHA", -1, 0, 0, 0],
+            [-1, "Diplomacy",     "CHA", -1, 0, 0, 0],
+            [3, "Dungeoneering", "WIS", 1, 0, 0, 2],
+            [10, "Endurance",     "CON", 3, 5, 0, 2],
+            [6, "Heal",          "WIS", 1, 5, 0, 0],
+            [0, "History",       "INT", 0, 0, 0, 0],
+            [1, "Insight",       "WIS", 1, 0, 0, 0],
+            [-1, "Intimidate",    "CHA", -1, 0, 0, 0],
+            [1, "Nature",        "WIS", 1, 0, 0, 0],
+            [1, "Perception",    "WIS", 1, 0, 0, 0],
+            [0, "Religion",      "INT", 0, 0, 0, 0],
+            [2, "Stealth",       "DEX", 2, 0, 0, 0],
+            [-1, "Streetwise",    "CHA", -1, 0, 0, 0],
+            [2, "Thievery",      "DEX", 2, 0, 0, 0]
+        ],
+        "defenses": {
+            "ac": {
+                "armor": 7,
+                "abilityMod": 0,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "fortitude": {
+                "abilityMod": 3,
+                "class": 2,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "reflex": {
+                "abilityMod": 2,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "will": {
+                "abilityMod": 1,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            }
+        },
+        "speed": {
+            "armor": 0,
+            "item": 0,
+            "misc": 0
+        },
+        "weaponProficiencies": {
+            "toHit": [],
+            "damageDice": [],
+            "toDam": []
+        },
+        "powers": [
+                {
+                    "name": "Sure Strike",
+                    "usage": "At-Will",
+                    "actionType": "Immediate Interrput",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "You trade power for precision.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 1[W] damage.  Increase to 2[W] at 21st level."]
+                    ]
+                },
+                {
+                    "name": "Cleave",
+                    "usage": "At-Will",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "You hit one enemy, then cleave into another",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 1[W] + Strength modifier damage, and an adjacent to you takes damage equal to your Strength modifier."]
+                    ]
+                },
+                {
+                    "name": "Spinning Sweep",
+                    "usage": "Encounter",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "You spin beneath your enemy's guard with a long, powerful cut, and then sweep your leg through his an instant later to knock him head over heels.",
+                    "elements": [
+                        ["Keywords", "Martial, Weapon"],
+                        ["Effect", "Hit: 1[W] + Strength modifier damage, and you knock the target prone."]
+                    ]
+                },
+                {
+                    "name": "Brute Strike",
+                    "usage": "Daily",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "You shatter armor and bone with a ringing blow.",
+                    "elements": [
+                        ["Keywords", "Martial, Reliable, Weapon"],
+                        ["Effect", "Hit: 3[W] + Strength modifier damage."]
+                    ]
+                }
+              ]
+    }
+}

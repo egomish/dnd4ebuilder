@@ -11,7 +11,7 @@
             "mannerisms": "Booming voice, Imperious tone, Sits at the head of the table",
             "background": "Acolyte of Bahamut"
         },
-        "portrait": "images/no-profile-pic.png",
+        "portrait": "assets/no-profile-pic.png",
 
         "alignment": "Lawful Good",
         "deity": "Bahamut",
