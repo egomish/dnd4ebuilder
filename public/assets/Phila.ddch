@@ -32,7 +32,14 @@
             }
         ],
 
-        "wealth": 0,
+        "wealth": {
+          "cp": 0,
+          "sp": 0,
+          "gp": 0,
+          "pp": 0,
+          "ad": 0,
+          "other": [""]
+        },
         "equipment": ["Chainmail", "Longsword", "Light Shield"],
         "magicItems": {
             "weapons": [
@@ -233,11 +240,29 @@
             "item": 0,
             "misc": 0
         },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        },
+        "weaponProficiencies": [
+            {
+              "attack": 7,
+              "defType": "AC",
+              "name": "Longsword",
+              "damageDice": "1d8",
+              "damageMod": 4
+            },
+            {
+              "attack": 2,
+              "defType": "AC",
+              "name": "Hand Crossbow",
+              "damageDice": "1d6",
+              "damageMod": 0
+            },
+            {
+              "attack": 4,
+              "defType": "AC",
+              "name": "Unarmed",
+              "damageDice": "1d4",
+              "damageMod": 4
+            }
+        ],
         "powers": [
                 {
                     "name": "Furious Smash",
