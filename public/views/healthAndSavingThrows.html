@@ -20,14 +20,14 @@
     <tr>
       <th>Saving Throws</th>
     </tr>
-    <tr ng-repeat="throws in ddch.calculatedValues.healthAndSavingThrows.savingThrowMods">
-      <td id="savesAndResists" value ="{{throws}}"></td>
+    <tr ng-repeat="throw in ddch.calculatedValues.healthAndSavingThrows.savingThrowMods">
+      <td id="savesAndResists">{{throw}}</td>
     </tr>
     <tr>
       <th>Resistances</th>
     </tr>
     <tr ng-repeat="resist in ddch.calculatedValues.healthAndSavingThrows.resistances">
-      <td id="savesAndResists" value="{{resist}}"></td>
+      <td id="savesAndResists">{{resist}}</td>
     </tr>
   </table>
 </div>
