@@ -225,11 +225,6 @@
                 "misc": 0
             }
         },
-        "speed": {
-            "armor": 2,
-            "item": 0,
-            "misc": 0
-        },
         "weaponProficiencies": {
             "toHit": [],
             "damageDice": [],
