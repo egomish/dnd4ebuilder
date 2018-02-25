@@ -218,7 +218,7 @@
                 "misc": 0
             }
         },
-        "weaponProficiencies": {
+        "weaponProficiencies": [
                 {
                     "attack": 2,
                     "defType": "AC",
@@ -226,7 +226,7 @@
                     "damageDice": "1d8",
                     "damageMod": 2
                 }
-        },
+        ],
         "powers": [
             {
                 "name": "Power Name",
