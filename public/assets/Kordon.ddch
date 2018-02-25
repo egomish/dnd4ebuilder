@@ -23,16 +23,23 @@
         "skillBonus2": "Endurance",
         "abilityScores": [
             { 
-                "baseStr": 16,
-                "baseCon": 15,
-                "baseDex": 14,
-                "baseInt": 11,
-                "baseWis": 10,
-                "baseCha": 8
+              "baseStr": 16,
+              "baseCon": 15,
+              "baseDex": 14,
+              "baseInt": 11,
+              "baseWis": 10,
+              "baseCha": 8
             }
         ],
 
-        "wealth": 0,
+        "wealth": {
+          "cp": 0,
+          "sp": 0,
+          "gp": 0,
+          "pp": 0,
+          "ad": 0,
+          "other": [""]
+        },
         "equipment": ["Scale Mail", "Greatsword", "Crossbow"],
         "magicItems": {
             "weapons": [
@@ -241,11 +248,29 @@
             "item": 0,
             "misc": 0
         },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        },
+        "weaponProficiencies": [
+            {
+              "attack": 7,
+              "defType": "AC",
+              "name": "Greatsword",
+              "damageDice": "1d10",
+              "damageMod": 3
+            },
+            {
+              "attack": 5,
+              "defType": "AC",
+              "name": "Crossbow",
+              "damageDice": "1d8",
+              "damageMod": 2
+            },
+            {
+              "attack": 3,
+              "defType": "AC",
+              "name": "Unarmed",
+              "damageDice": "1d4",
+              "damageMod": 3
+            }
+        ],
         "powers": [
                 {
                     "name": "Sure Strike",
