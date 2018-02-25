@@ -242,11 +242,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     misc: 0
                 },
             },
-            speed: {
-                armor: 0,
-                item: 0,
-                misc: 0
-            },
             weaponProficiencies: [
                 {
                     attack: 2,
