@@ -3,7 +3,7 @@
     "level0": {
         "name": "Perrin",
         "age": 21,
-        "gender": "Male",
+        "gender": "M",
         "height": 47,
         "weight": 79,
         "description": {
@@ -43,26 +43,24 @@
             "hands": "",
             "head": "",
             "neck": "",
-            "rings": [
-                "",
-                ""
-            ],
+            "leftRing": "",
+            "rightRing": "",
             "waist": ""
         },
 
         "languages": ["Common", "Draconic"],
-        "rituals": [""],
+        "rituals": []
     },
     "level1": {
         "ddclass": "Rogue",
-        "skillTrainings": ["Acrobatics", "Bluff", "Intimidate", 
+        "skillTrainings": ["Acrobatics", "Bluff", "Intimidate",
                            "Stealth", "Streetwise", "Thievery"],
         "atwillPower1": "Deft Strike",
         "atwillPower2": "Piercing Strike",
         "encounterPower": "Dazing Strike",
         "dailyPower": "Easy Target",
-        "ddfeat": { 
-            "name": "Two-Weapon Fighting", 
+        "ddfeat": {
+            "name": "Two-Weapon Fighting",
             "desc": "This is a feat description."
         }
     },
@@ -118,21 +116,9 @@
     "calculatedValues": {
         "halfLevel": 0,
         "size": "M",
-        "classFeatures": [
-            {
-                "name": "Combat Leader",
-                "desc": "You and allies within 10 that see and hear you gain +2 to initiative."
-            },
-            {
-                "name": "Tactical Presence",
-                "desc": "Ally you can see that spends an action point to attack gains bonus to attack: 1/2 int mod."
-            },
-            {
-                "name": "Inspiring Word",
-                "desc": "Use inspiring word as an encounter (special) power, minor action."
-            }
-        ],
-        "raceFeatures": [
+
+
+"raceFeatures": [
             {
                 "name": "Bold",
                 "desc": "+5 racial bonus against fear."
@@ -144,10 +130,10 @@
             {
                 "name": "Second Chance",
                 "desc": "Second Chance encounter power."
-            },
+            }
         ],
         "movement": {
-            "base": 5,
+            "base": 6,
             "armor": 0,
             "item": 0,
             "misc": 0
@@ -156,66 +142,70 @@
             "dex": 0,
             "misc": 0
         },
-        "abilityScores: {
+        "abilityScores": {
             "strTotal": 10,
-            "conTotal": 10,
-            "dexTotal": 10,
+            "conTotal": 12,
+            "dexTotal": 18,
             "intTotal": 10,
-            ""wisTotal": 10,
-            "chaTotal": 10,
+            "wisTotal": 10,
+            "chaTotal": 18,
             "strMod": 0,
-            "conMod": 0,
-            "dexMod": 0,
+            "conMod": 1,
+            "dexMod": 4,
             "intMod": 0,
             "wisMod": 0,
-            "chaMod": 0
+            "chaMod": 4
         },
         "healthAndSavingThrows": {
-            "maxHP": 0,
-            "bloodiedValue": 0,
-            "surgeValue": 0,
-            "surgesPerDay": 0,
-            "savingThrowMods": "",
-            "resistances": ""
+            "maxHP": 24,
+            "bloodiedValue": 12,
+            "surgeValue": 6,
+            "surgesPerDay": 7,
+            "savingThrowMods": [
+                "+5 racial bonus against fear."
+            ],
+            "resistances": [
+                ""
+            ]
         },
         "skills": [
-            [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
-            [0, "Arcana",        "INT", 0, 0, 0, 0],
-            [0, "Athletics",     "STR", 0, 0, 0, 0],
-            [0, "Bluff",         "CHA", 0, 0, 0, 0],
-            [0, "Diplomacy",     "CHA", 0, 0, 0, 0],
-            [0, "Dungeoneering", "WIS", 0, 0, 0, 0],
-            [0, "Endurance",     "CON", 0, 0, 0, 0],
-            [0, "Heal",          "WIS", 0, 0, 0, 0],
-            [0, "History",       "INT", 0, 0, 0, 0],
-            [0, "Insight",       "WIS", 0, 0, 0, 0],
-            [0, "Intimidate",    "CHA", 0, 0, 0, 0],
-            [0, "Nature",        "WIS", 0, 0, 0, 0],
-            [0, "Perception",    "WIS", 0, 0, 0, 0],
-            [0, "Religion",      "INT", 0, 0, 0, 0],
-            [0, "Stealth",       "DEX", 0, 0, 0, 0],
-            [0, "Streetwise",    "CHA", 0, 0, 0, 0],
-            [0, "Thievery",      "DEX", 0, 0, 0, 0],
+            [10, "Acrobatics",    "DEX", 4, 5, 0, 2],
+            [10, "Arcana",        "INT", 0, 0, 0, 0],
+            [10, "Athletics",     "STR", 1, 0, 0, 0],
+            [10, "Bluff",         "CHA", 4, 5, 0, 0],
+            [10, "Diplomacy",     "CHA", 4, 0, 0, 0],
+            [10, "Dungeoneering", "WIS", 0, 0, 0, 0],
+            [10, "Endurance",     "CON", 0, 0, 0, 0],
+            [10, "Heal",          "WIS", 0, 0, 0, 0],
+            [10, "History",       "INT", 0, 0, 0, 0],
+            [10, "Insight",       "WIS", 0, 0, 0, 0],
+            [10, "Intimidate",    "CHA", 4, 5, 0, 0],
+            [10, "Nature",        "WIS", 0, 0, 0, 0],
+            [10, "Perception",    "WIS", 0, 0, 0, 0],
+            [10, "Religion",      "INT", 0, 0, 0, 0],
+            [10, "Stealth",       "DEX", 4, 5, 0, 0],
+            [10, "Streetwise",    "CHA", 4, 5, 0, 0],
+            [10, "Thievery",      "DEX", 4, 5, 0, 2]
         ],
         "defenses": {
             "ac": {
-                "armor": 0,
-                "abilityMod": 0,
+                "armor": 2,
+                "abilityMod": 4,
                 "class": 0,
                 "feat": 0,
                 "enhancement": 0,
                 "misc": 0
             },
             "fortitude": {
-                "abilityMod": 0,
+                "abilityMod": 1,
                 "class": 0,
                 "feat": 0,
                 "enhancement": 0,
                 "misc": 0
             },
             "reflex": {
-                "abilityMod": 0,
-                "class": 0,
+                "abilityMod": 4,
+                "class": 2,
                 "feat": 0,
                 "enhancement": 0,
                 "misc": 0
@@ -226,17 +216,30 @@
                 "feat": 0,
                 "enhancement": 0,
                 "misc": 0
-            },
+            }
         },
-        "speed": {
-            "armor": 0,
-            "item": 0,
-            "misc": 0
-        },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        }
+        "weaponProficiencies": [
+                {
+                    "attack": 2,
+                    "defType": "AC",
+                    "name": "QuarterStaff",
+                    "damageDice": "1d8",
+                    "damageMod": 2
+                }
+        ],
+        "powers": [
+            {
+                "name": "Power Name",
+                "usage": "Encounter",
+                "actionType": "Minor Action",
+                "source": "PHB3",
+                "target": "Close burst 5",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "This is the effect of the power."]
+                ]
+            }
+        ]
     }
-};
+}

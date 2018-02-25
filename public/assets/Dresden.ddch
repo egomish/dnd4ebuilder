@@ -1,66 +1,80 @@
 {
-    "characterLevel": 1,
-    "level0": {
-        "name": "TestChar",
-        "age": 100,
-        "gender": "U",
-        "height": 100,
-        "weight": 100,
-        "description": {
-            "personalityTraits": "No personality traits.",
-            "mannerisms": "No mannerisms.",
-            "background": "No background."
+	"characterLevel": 10,
+	"level0": {
+		"name": "Dresden",
+		"age": "",
+		"gender": "Male",
+		"height": "",
+		"weight": "",
+		"description": {
+            "personalityTraits": "",
+            "mannerisms": "",
+            "background": ""
         },
-        "portrait": "assets/no-profile-pic.png",
+        "portrait": "images/no-profile-pic.png",
 
-        "alignment": "Lawful Evil",
-        "deity": "Vecna",
+        "alignment": "Evil",
+        "deity": "The Raven Queen",
 
-        "ddrace": "Human",
-        "abilityBonus1": "",
-        "abilityBonus2": "",
-        "skillBonus1": "",
-        "skillBonus2": "",
+        "ddrace": "Shadar-kai",
+        "abilityBonus1": "DEX",
+        "abilityBonus2": "INT",
+        "skillBonus1": "Acrobatics",
+        "skillBonus2": "Stealth",
         "abilityScores": [
             { 
-                "baseStr": 20,
-                "baseCon": 20,
-                "baseDex": 20,
-                "baseInt": 20,
-                "baseWis": 20,
-                "baseCha": 20
+                "baseStr": 10,
+                "baseCon": 13,
+                "baseDex": 10,
+                "baseInt": 18,
+                "baseWis": 13,
+                "baseCha": 8
             }
         ],
 
-        "wealth": 0,
+        "wealth": {
+          "cp": 0,
+          "sp": 0,
+          "gp": 20,
+          "pp": 0,
+          "ad": 0
+        },
         "equipment": [""],
         "magicItems": {
             "weapons": [
-                "Magic Rod",
-                "Magic Dagger"
+                "Magic Staff + 3"
             ],
-            "armor": "Dwarven Chainmail",
-            "arms": "",
+            "armor": "Shadowdance Leather Armor + 2",
+            "arms": "Bracers of the Perfect Shot (heroic tier)",
             "feet": "",
             "hands": "",
             "head": "",
-            "neck": "",
+            "neck": "Medallion of Death Deferred + 2",
             "leftRing": "",
             "rightRing": "",
-            "waist": ""
+            "waist": "Belt of Vim (heroic tier)"
         },
 
-        "languages": ["Common", "Dwarven"],
-        "rituals": ["Gentle Repose"]
+        "languages": ["Common", "Primordial"],
+        "rituals": [
+            "Create Campsite",
+            "Magic Mouth",
+            "Brew Potion"
+        ]
     },
     "level1": {
-        "ddclass": "Fighter",
+        "ddclass": "Wizard",
         "skillTrainings": [],
         "classFeatures": [
             {
-                "name": "Class Feature",
-                "desc": "This is a class feature."
+                "name": "Arcane Implement Mastery",
+                "desc": "Choose Orb of Imposition, Staff of Defense, or Wand of Accuracy."
+            },
+            {
+                "name": "Staff of Defense",
+                "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage (encounter, immediate interrupt)"
             }
+
         ],
         "atwillPower1": "",
         "atwillPower2": "",
@@ -121,7 +135,7 @@
         }
     },
     "calculatedValues": {
-        "halfLevel": 0,
+        "halfLevel": 5,
         "size": "M",
         "raceFeatures": [
             {
@@ -140,49 +154,50 @@
             "misc": 0
         },
         "abilityScores": {
-            "strTotal": 22,
-            "conTotal": 22,
-            "dexTotal": 22,
+            "strTotal": 10,
+            "conTotal": 13,
+            "dexTotal": 12,
             "intTotal": 22,
-            "wisTotal": 22,
-            "chaTotal": 22,
-            "strMod": 2,
-            "conMod": 2,
-            "dexMod": 2,
-            "intMod": 2,
+            "wisTotal": 15,
+            "chaTotal": 8,
+            "strMod": 0,
+            "conMod": 1,
+            "dexMod": 1,
+            "intMod": 6,
             "wisMod": 2,
-            "chaMod": 2
+            "chaMod": -1
         },
         "healthAndSavingThrows": {
-            "maxHP": 100,
+            "maxHP": 64,
             "bloodiedValue": 50,
-            "surgeValue": 25,
-            "surgesPerDay": 15,
+            "surgeValue": 16,
+            "surgesPerDay": 7,
             "savingThrowMods": [
-                "+1 against something"
+                "+2 Racial bonus against the unconscious condition",
+                "+2 to all death saving throws"
             ],
             "resistances": [
                 ""
             ]
         },
         "skills": [
-            [10, "Acrobatics",    "DEX", 0, 10, 0, 0],
-            [10, "Arcana",        "INT", 0, 10, 0, 0],
-            [10, "Athletics",     "STR", 0, 10, 0, 0],
-            [10, "Bluff",         "CHA", 0, 10, 0, 0],
-            [10, "Diplomacy",     "CHA", 0, 10, 0, 0],
-            [10, "Dungeoneering", "WIS", 0, 10, 0, 0],
-            [10, "Endurance",     "CON", 0, 10, 0, 0],
-            [10, "Heal",          "WIS", 0, 10, 0, 0],
-            [10, "History",       "INT", 0, 10, 0, 0],
-            [10, "Insight",       "WIS", 0, 10, 0, 0],
-            [10, "Intimidate",    "CHA", 0, 10, 0, 0],
-            [10, "Nature",        "WIS", 0, 10, 0, 0],
-            [10, "Perception",    "WIS", 0, 10, 0, 0],
-            [10, "Religion",      "INT", 0, 10, 0, 0],
-            [10, "Stealth",       "DEX", 0, 10, 0, 0],
-            [10, "Streetwise",    "CHA", 0, 10, 0, 0],
-            [10, "Thievery",      "DEX", 0, 10, 0, 0]
+            [ 8, "Acrobatics",    "DEX", 0, 10, 0, 0],
+            [16, "Arcana",        "INT", 0, 10, 0, 0],
+            [ 5, "Athletics",     "STR", 0, 10, 0, 0],
+            [ 4, "Bluff",         "CHA", 0, 10, 0, 0],
+            [ 4, "Diplomacy",     "CHA", 0, 10, 0, 0],
+            [ 7, "Dungeoneering", "WIS", 0, 10, 0, 0],
+            [ 6, "Endurance",     "CON", 0, 10, 0, 0],
+            [ 7, "Heal",          "WIS", 0, 10, 0, 0],
+            [16, "History",       "INT", 0, 10, 0, 0],
+            [ 7, "Insight",       "WIS", 0, 10, 0, 0],
+            [ 4, "Intimidate",    "CHA", 0, 10, 0, 0],
+            [12, "Nature",        "WIS", 0, 10, 0, 0],
+            [ 7, "Perception",    "WIS", 0, 10, 0, 0],
+            [16, "Religion",      "INT", 0, 10, 0, 0],
+            [ 8, "Stealth",       "DEX", 0, 10, 0, 0],
+            [ 4, "Streetwise",    "CHA", 0, 10, 0, 0],
+            [ 6, "Thievery",      "DEX", 0, 10, 0, 0]
         ],
         "defenses": {
             "ac": {
@@ -216,7 +231,13 @@
             }
         },
         "weaponProficiencies": [
-            
+            {
+              "attack": 10,
+              "defType": "AC",
+              "name": "Magic Staff + 3(Melee)",
+              "damageDice": "1d8",
+              "damageMod": 3
+            }
         ],
         "powers": [
             {

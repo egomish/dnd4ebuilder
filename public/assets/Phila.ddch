@@ -11,7 +11,7 @@
             "mannerisms": "Booming voice, Imperious tone, Sits at the head of the table",
             "background": "Acolyte of Bahamut"
         },
-        "portrait": "images/no-profile-pic.png",
+        "portrait": "assets/no-profile-pic.png",
 
         "alignment": "Lawful Good",
         "deity": "Bahamut",
@@ -32,7 +32,14 @@
             }
         ],
 
-        "wealth": 0,
+        "wealth": {
+          "cp": 0,
+          "sp": 0,
+          "gp": 0,
+          "pp": 0,
+          "ad": 0,
+          "other": [""]
+        },
         "equipment": ["Chainmail", "Longsword", "Light Shield"],
         "magicItems": {
             "weapons": [
@@ -51,7 +58,7 @@
         },
 
         "languages": ["Common", "Draconic"],
-        "rituals": [""],
+        "rituals": [""]
     },
     "level1": {
         "ddclass": "Warlord",
@@ -144,7 +151,7 @@
             {
                 "name": "Dragon Breath",
                 "desc": "Dragon Breath encounter power."
-            },
+            }
         ],
         "movement": {
             "base": 6,
@@ -156,27 +163,31 @@
             "dex": 0,
             "misc": 2
         },
-        "abilityScores: {
+        "abilityScores": {
             "strTotal": 18,
             "conTotal": 12,
             "dexTotal": 11,
             "intTotal": 11,
-            ""wisTotal": 8,
+            "wisTotal": 8,
             "chaTotal": 18,
-            "strMod": 0,
-            "conMod": 0,
+            "strMod": 4,
+            "conMod": 1,
             "dexMod": 0,
             "intMod": 0,
-            "wisMod": 0,
-            "chaMod": 0
+            "wisMod": -1,
+            "chaMod": 4
         },
         "healthAndSavingThrows": {
             "maxHP": 24,
             "bloodiedValue": 12,
             "surgeValue": 7,
             "surgesPerDay": 8,
-            "savingThrowMods": "",
-            "resistances": ""
+            "savingThrowMods": [
+                ""
+            ],
+            "resistances": [
+                ""
+            ]
         },
         "skills": [
             [-1, "Acrobatics",    "DEX", 0, 0, -1, 0],
@@ -195,7 +206,7 @@
             [0, "Religion",      "INT", 0, 0, 0, 0],
             [-1, "Stealth",       "DEX", 0, 0, -1, 0],
             [4, "Streetwise",    "CHA", 4, 0, 0, 0],
-            [-1, "Thievery",      "DEX", 0, 0, -1, 0],
+            [-1, "Thievery",      "DEX", 0, 0, -1, 0]
         ],
         "defenses": {
             "ac": {
@@ -226,91 +237,109 @@
                 "feat": 0,
                 "enhancement": 0,
                 "misc": 0
-            },
+            }
         },
         "speed": {
             "armor": -1,
             "item": 0,
             "misc": 0
         },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        }
+        "weaponProficiencies": [
+            {
+              "attack": 7,
+              "defType": "AC",
+              "name": "Longsword",
+              "damageDice": "1d8",
+              "damageMod": 4
+            },
+            {
+              "attack": 2,
+              "defType": "AC",
+              "name": "Hand Crossbow",
+              "damageDice": "1d6",
+              "damageMod": 0
+            },
+            {
+              "attack": 4,
+              "defType": "AC",
+              "name": "Unarmed",
+              "damageDice": "1d4",
+              "damageMod": 4
+            }
+        ],
         "powers": [
                 {
-                    name: "Furious Smash",
-                    usage: "At-Will",
-                    actionType: "Standard Action",
-                    source: "PHB1",
-                    target: "One creature",
-                    flavor: "You slam your shield into your enemy, bash them with your weapon's haft, or drive your shoulder into their gut.  Your attack doesn't do much damage—but your anger inspires your ally to match your ferocity.",
+                    "name": "Furious Smash",
+                    "usage": "At-Will",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "You slam your shield into your enemy, bash them with your weapon's haft, or drive your shoulder into their gut.  Your attack doesn't do much damage—but your anger inspires your ally to match your ferocity.",
                     "elements": [
                         ["Keywords", "Martial, Weapon"],
-                        ["Effect", "Hit: Deal damage equal to your Strength modifier, and then choose one ally adjacent to either you or the target.  This ally applies your Charisma modifier as a power bonus to the attack and damage rolls of their next attack against the target.  If the ally does not attack the target by the end of their next turn, the bonus is lost."],
-                    ],
+                        ["Effect", "Hit: Deal damage equal to your Strength modifier, and then choose one ally adjacent to either you or the target.  This ally applies your Charisma modifier as a power bonus to the attack and damage rolls of their next attack against the target.  If the ally does not attack the target by the end of their next turn, the bonus is lost."]
+                    ]
                 },
                 {
-                    name: "Commander's Strike",
-                    usage: "At-Will",
-                    actionType: "Standard Action",
-                    source: "PHB1",
-                    target: "One creature",
-                    flavor: "With a shout, you command an ally to attack.",
+                    "name": "Commander's Strike",
+                    "usage": "At-Will",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "With a shout, you command an ally to attack.",
                     "elements": [
                         ["Keywords", "Martial, Weapon"],
-                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
-                    ],
+                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."]
+                    ]
                 },
                 {
-                    name: "Hammer and Anvil",
-                    usage: "Encounter",
-                    actionType: "Standard Action",
-                    source: "PHB1",
-                    target: "One creature",
-                    flavor: "You land a ringing blow against your foe, inspiring a nearby ally to strike a blow of their own.",
+                    "name": "Hammer and Anvil",
+                    "usage": "Encounter",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "You land a ringing blow against your foe, inspiring a nearby ally to strike a blow of their own.",
                     "elements": [
                         ["Keywords", "Martial, Weapon"],
-                        ["Effect", "Hit: 1[W] + Strength modifier damage.  One ally adjacent to the target makes a melee basic attack against it as a free action.  The ally adds your Charisma modifier to the damage."],
-                    ],
+                        ["Effect", "Hit: 1[W] + Strength modifier damage.  One ally adjacent to the target makes a melee basic attack against it as a free action.  The ally adds your Charisma modifier to the damage."]
+                    ]
                 },
                 {
-                    name: "Pin the Foe",
-                    usage: "Daily",
-                    actionType: "Standard Action",
-                    source: "PHB1",
-                    target: "One creature",
-                    flavor: "No matter where your foe turns, one of your allies is waiting for them.",
+                    "name": "Pin the Foe",
+                    "usage": "Daily",
+                    "actionType": "Standard Action",
+                    "source": "PHB1",
+                    "target": "One creature",
+                    "flavor": "No matter where your foe turns, one of your allies is waiting for them.",
                     "elements": [
                         ["Keywords", "Martial, Weapon"],
-                        ["Effect", "Hit: 3[W] + Strength modifier damage.  Until the end of the encounter, the target cannot shift if at least two of your allies (or you and one ally) are adjacent to it."],
-                    ],
+                        ["Effect", "Hit: 3[W] + Strength modifier damage.  Until the end of the encounter, the target cannot shift if at least two of your allies (or you and one ally) are adjacent to it."]
+                    ]
                 },
                 {
-                    name: "Inspiring Word",
-                    usage: "Encounter",
-                    actionType: "Minor Action",
-                    source: "PHB1",
-                    target: "You or one ally in Close Burst 5",
-                    flavor: "You call out to a wounded ally and offer inspiring words of courage and determination that helps that ally heal.",
+                    "name": "Inspiring Word",
+                    "usage": "Encounter",
+                    "actionType": "Minor Action",
+                    "source": "PHB1",
+                    "target": "You or one ally in Close Burst 5",
+                    "flavor": "You call out to a wounded ally and offer inspiring words of courage and determination that helps that ally heal.",
                     "elements": [
                         ["Keywords", "Martial, Healing"],
-                        ["Effect", "The target can spend a healing surge and regain and additional 1d6 HP.  The amount of additional HP gained is 2d6 at 6th level, 3d6 at 11th level, 4d6 at 16th level, 5d6 at 21st level, 6d6 at 26th level."],
-                    ],
+                        ["Effect", "The target can spend a healing surge and regain and additional 1d6 HP.  The amount of additional HP gained is 2d6 at 6th level, 3d6 at 11th level, 4d6 at 16th level, 5d6 at 21st level, 6d6 at 26th level."]
+                    ]
                 },
                 {
-                    name: "Dragon Breath",
-                    usage: "Encounter",
-                    actionType: "Minor Action",
-                    source: "PHB1",
-                    target: "All creatures in Close Blast 3",
-                    flavor: "As you open your mouth with a roar, the deadly power of your draconic kin blasts forth to engulf your foes.",
+                    "name": "Dragon Breath",
+                    "usage": "Encounter",
+                    "actionType": "Minor Action",
+                    "source": "PHB1",
+                    "target": "All creatures in Close Blast 3",
+                    "flavor": "As you open your mouth with a roar, the deadly power of your draconic kin blasts forth to engulf your foes.",
                     "elements": [
                         ["Keywords", "Martial, Healing"],
-                        ["Effect", "Hit: 1d6 + Constiution modifier fire damage.  Increase to +4 bonus and 2d6 + Constiution modifier fire damage at 11th level, and to +6 and 3d6 + Constitution modifier fire damage at 21st level."],
-                    ],
+                        ["Effect", "Hit: 1d6 + Constiution modifier fire damage.  Increase to +4 bonus and 2d6 + Constiution modifier fire damage at 11th level, and to +6 and 3d6 + Constitution modifier fire damage at 21st level."]
+                    ]
                 }
               ]
     }
-};
+}
