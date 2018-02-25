@@ -17,10 +17,10 @@
         "deity": "The Raven Queen",
 
         "ddrace": "Shadar-kai",
-        "abilityBonus1": "",
-        "abilityBonus2": "",
-        "skillBonus1": "",
-        "skillBonus2": "",
+        "abilityBonus1": "DEX",
+        "abilityBonus2": "INT",
+        "skillBonus1": "Acrobatics",
+        "skillBonus2": "Stealth",
         "abilityScores": [
             { 
                 "baseStr": 10,
@@ -33,36 +33,48 @@
         ],
 
         "wealth": {
-            "gp": 20
+          "cp": 0,
+          "sp": 0,
+          "gp": 20,
+          "pp": 0,
+          "ad": 0
         },
         "equipment": [""],
         "magicItems": {
             "weapons": [
-                "Magic Rod",
-                "Magic Dagger"
+                "Magic Staff + 3"
             ],
-            "armor": "Dwarven Chainmail",
-            "arms": "",
+            "armor": "Shadowdance Leather Armor + 2",
+            "arms": "Bracers of the Perfect Shot (heroic tier)",
             "feet": "",
             "hands": "",
             "head": "",
-            "neck": "",
+            "neck": "Medallion of Death Deferred + 2",
             "leftRing": "",
             "rightRing": "",
-            "waist": ""
+            "waist": "Belt of Vim (heroic tier)"
         },
 
-        "languages": ["Common", "Dwarven"],
-        "rituals": ["Gentle Repose"]
+        "languages": ["Common", "Primordial"],
+        "rituals": [
+            "Create Campsite",
+            "Magic Mouth",
+            "Brew Potion"
+        ]
     },
     "level1": {
         "ddclass": "Wizard",
         "skillTrainings": [],
         "classFeatures": [
             {
-                "name": "Class Feature",
-                "desc": "This is a class feature."
+                "name": "Arcane Implement Mastery",
+                "desc": "Choose Orb of Imposition, Staff of Defense, or Wand of Accuracy."
+            },
+            {
+                "name": "    Staff of Defense",
+                "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage (encounter, immediate interrupt)"
             }
+
         ],
         "atwillPower1": "",
         "atwillPower2": "",
