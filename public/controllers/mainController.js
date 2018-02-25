@@ -53,7 +53,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 neck: '',
                 leftRing: '',
                 rightRing: '',
-                waist: ''
+                waist: '',
+                misc: []
             },
 
             languages: ["Common", "Undercommon"],
