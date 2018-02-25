@@ -37,6 +37,27 @@ app.post('/uploadfile', function(req, res) {
 	}
 });
 
+app.post('/calculateValues', function(req, res) {
+  var ddch = req.body;
+  var cv = {}; //cv = Calculated Values
+    
+  cv.halfLevel = Math.floor(ddch.characterLevel / 2);
+  cv.size = "Size Stuff";
+  cv.raceFeatures = "Race Stuff";
+  cv.movement = "Movement Stuff";
+  cv.initiative = "Initiative Stuff";
+  cv.abilityScores = "Ability Stuff";
+  cv.healthAndSavingThrows = "Health Stuff";
+  cv.skills = "Skills Stuff";
+  cv.defenses = "Defense Stuff";
+  cv.weaponProficiencies = "Weapon Stuff";
+  cv.powers = "Power Stuff";
+  
+  console.log(cv);
+  ddch.calculatedValues = cv;
+  res.json(ddch);
+});
+
 app.listen(port, function() {
     console.log('Server app listening on port ' + port);
 });

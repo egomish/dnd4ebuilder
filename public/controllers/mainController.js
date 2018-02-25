@@ -294,7 +294,14 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         }, function (error) {
             console.log('could not GET character from server.');
         });
-
+    }
+    $scope.calc_values = function() {
+      $http.post('/calculateValues', $scope.ddch).then(function(response) {
+          $scope.ddch = response.data;
+          console.log($scope.ddch);
+      }, function (error) {
+          console.log("Error calculating values.");
+      });
     }
     $(document).ready(function() {
         $("form#data").submit(function(e) {
