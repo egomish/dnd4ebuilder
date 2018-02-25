@@ -31,6 +31,11 @@ app.post('/uploadfile', function(req, res) {
 			} else {
 				var contents = fs.readFileSync("uploads/" + filetoupload);
 				var jsonContent = JSON.parse(contents);
+				fs.unlink('uploads/'+filetoupload, function(err) {
+					if (err) {
+						throw err;
+					}
+				});
 				res.json(jsonContent);
 			}
 		});
