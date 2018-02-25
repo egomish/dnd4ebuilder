@@ -53,7 +53,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 neck: '',
                 leftRing: '',
                 rightRing: '',
-                waist: ''
+                waist: '',
+                misc: []
             },
 
             languages: ["Common", "Undercommon"],
@@ -188,8 +189,12 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 bloodiedValue: 0,
                 surgeValue: 0,
                 surgesPerDay: 0,
-                savingThrowMods: "",
-                resistances: ""
+                savingThrowMods: [
+                    ""
+                ],
+                resistances: [
+                    ""
+                ]
             },
             skills: [
                 [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
@@ -241,11 +246,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     misc: 0
                 },
             },
-            speed: {
-                armor: 0,
-                item: 0,
-                misc: 0
-            },
             weaponProficiencies: [
                 {
                     attack: 2,
@@ -296,4 +296,23 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         });
 
     }
+    $(document).ready(function() {
+        $("form#data").submit(function(e) {
+            e.preventDefault();    
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '/uploadfile',
+                type: 'POST',
+                data: formData,
+                success: function (data) {
+                    $scope.ddch = data;
+                    $scope.$apply();
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+    });
 }]);

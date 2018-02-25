@@ -11,7 +11,7 @@
             "mannerisms": "No mannerisms.",
             "background": "No background."
         },
-        "portrait": "images/no-profile-pic.png",
+        "portrait": "assets/no-profile-pic.png",
 
         "alignment": "Lawful Evil",
         "deity": "Vecna",
@@ -158,8 +158,12 @@
             "bloodiedValue": 50,
             "surgeValue": 25,
             "surgesPerDay": 15,
-            "savingThrowMods": "+1 against something",
-            "resistances": ""
+            "savingThrowMods": [
+                "+1 against something"
+            ],
+            "resistances": [
+                ""
+            ]
         },
         "skills": [
             [10, "Acrobatics",    "DEX", 0, 10, 0, 0],
@@ -211,16 +215,9 @@
                 "misc": 0
             }
         },
-        "speed": {
-            "armor": 2,
-            "item": 0,
-            "misc": 0
-        },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        },
+        "weaponProficiencies": [
+            
+        ],
         "powers": [
             {
                 "name": "Power Name",
