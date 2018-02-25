@@ -20,7 +20,7 @@ app.post('/character', function(req, res) {
     res.json(jsonData);
 });
 
-app.post('/', function(req, res) {
+app.post('/uploadfile', function(req, res) {
 	if(req.files) {
 		var file = req.files.filetoupload;
 		var filetoupload = file.name;

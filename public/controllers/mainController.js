@@ -320,7 +320,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             var formData = new FormData(this);
 
             $.ajax({
-                url: window.location.pathname,
+                url: '/uploadfile',
                 type: 'POST',
                 data: formData,
                 success: function (data) {
