@@ -189,10 +189,10 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 surgeValue: 0,
                 surgesPerDay: 0,
                 savingThrowMods: [
-                    
+                    ""
                 ],
                 resistances: [
-                    
+                    ""
                 ]
             },
             skills: [
