@@ -1,4 +1,22 @@
 var app = angular.module('app', []);
+app.directive("fileread", [function () {
+    return {
+        scope: {
+            fileread: "="
+        },
+        link: function (scope, element, attributes) {
+            element.bind("change", function (changeEvent) {
+                var reader = new FileReader();
+                reader.onload = function (loadEvent) {
+                    scope.$apply(function () {
+                        scope.fileread = loadEvent.target.result;
+                    });
+                }
+                reader.readAsDataURL(changeEvent.target.files[0]);
+            });
+        }
+    }
+}]);
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
     $scope.ddch = {
         characterLevel: 1,
@@ -296,4 +314,23 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         });
 
     }
+    $(document).ready(function() {
+        $("form#data").submit(function(e) {
+            e.preventDefault();    
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: formData,
+                success: function (data) {
+                    $scope.ddch = data;
+                    $scope.$apply();
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+    });
 }]);

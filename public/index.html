@@ -36,9 +36,20 @@
                 <div class="row" ng-include="'views/characterDetails.html'"></div>
         </div>
         <button ng-click="log()">Click me to log</button>
-        <button ng-click="set_ddch()">Get ddch</button>
+        <button ng-click="set_ddch()">Get ddch</button><br>
+        <form id="data" name="uploadForm"  action="/" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="file" name="filetoupload">
+                </div>
+                <div class="col-sm-4">
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="controllers/mainController.js"></script>
 </body>
 </html>
