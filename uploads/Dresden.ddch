@@ -71,7 +71,7 @@
                 "desc": "Choose Orb of Imposition, Staff of Defense, or Wand of Accuracy."
             },
             {
-                "name": "    Staff of Defense",
+                "name": "Staff of Defense",
                 "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage (encounter, immediate interrupt)"
             }
 
@@ -172,7 +172,9 @@
             "bloodiedValue": 50,
             "surgeValue": 16,
             "surgesPerDay": 7,
-            "savingThrowMods": "+1 against something",
+            "savingThrowMods": [
+                "+2 Racial bonus against the unconscious condition",
+                "+2 to all death saving throws"
             "resistances": ""
         },
         "skills": [
@@ -225,16 +227,15 @@
                 "misc": 0
             }
         },
-        "speed": {
-            "armor": 2,
-            "item": 3,
-            "misc": 6
-        },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        },
+        "weaponProficiencies": [
+            {
+              "attack": 10,
+              "defType": "AC",
+              "name": "Magic Staff + 3(Melee)",
+              "damageDice": "1d8",
+              "damageMod": 3
+            }
+        ],
         "powers": [
             {
                 "name": "Power Name",

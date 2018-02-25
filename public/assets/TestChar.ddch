@@ -11,7 +11,7 @@
             "mannerisms": "No mannerisms.",
             "background": "No background."
         },
-        "portrait": "images/no-profile-pic.png",
+        "portrait": "assets/no-profile-pic.png",
 
         "alignment": "Lawful Evil",
         "deity": "Vecna",
@@ -211,11 +211,9 @@
                 "misc": 0
             }
         },
-        "weaponProficiencies": {
-            "toHit": [],
-            "damageDice": [],
-            "toDam": []
-        },
+        "weaponProficiencies": [
+            
+        ],
         "powers": [
             {
                 "name": "Power Name",

@@ -190,8 +190,12 @@
             "bloodiedValue": 18,
             "surgeValue": 9,
             "surgesPerDay": 12,
-            "savingThrowMods": "+5 vs. Poison",
-            "resistances": ""
+            "savingThrowMods": [
+                "+5 vs. Poison"
+            ],
+            "resistances": [
+                ""
+            ]
         },
         "skills": [
             [2, "Acrobatics",    "DEX", 2, 0, 0, 0],

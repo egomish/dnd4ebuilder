@@ -161,8 +161,12 @@
             "bloodiedValue": 12,
             "surgeValue": 6,
             "surgesPerDay": 7,
-            "savingThrowMods": "+5 racial bonus against fear.",
-            "resistances": ""
+            "savingThrowMods": [
+                "+5 racial bonus against fear."
+            ],
+            "resistances": [
+            
+            ]
         },
         "skills": [
             [10, "Acrobatics",    "DEX", 4, 5, 0, 2],

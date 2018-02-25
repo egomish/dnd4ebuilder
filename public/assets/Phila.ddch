@@ -182,8 +182,12 @@
             "bloodiedValue": 12,
             "surgeValue": 7,
             "surgesPerDay": 8,
-            "savingThrowMods": "",
-            "resistances": ""
+            "savingThrowMods": [
+
+            ],
+            "resistances": [
+                
+            ]
         },
         "skills": [
             [-1, "Acrobatics",    "DEX", 0, 0, -1, 0],
