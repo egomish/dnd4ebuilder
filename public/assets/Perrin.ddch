@@ -118,7 +118,7 @@
         "size": "M",
 
 
-"raceFeatures": [
+    "raceFeatures": [
             {
                 "name": "Bold",
                 "desc": "+5 racial bonus against fear."

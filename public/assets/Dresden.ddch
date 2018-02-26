@@ -33,13 +33,18 @@
         ],
 
         "wealth": {
-          "cp": 0,
-          "sp": 0,
-          "gp": 20,
-          "pp": 0,
-          "ad": 0
+            "cp": 0,
+            "sp": 0,
+            "gp": 20,
+            "pp": 0,
+            "ad": 0,
+            "other": [
+                ""
+            ]
         },
-        "equipment": [""],
+        "equipment": [
+            "Spellbook"
+        ],
         "magicItems": {
             "weapons": [
                 "Magic Staff + 3"
@@ -52,7 +57,10 @@
             "neck": "Medallion of Death Deferred + 2",
             "leftRing": "",
             "rightRing": "",
-            "waist": "Belt of Vim (heroic tier)"
+            "waist": "Belt of Vim (heroic tier)",
+            "misc": [
+                "Potion of Healing (heroic tier) (2)"
+            ]
         },
 
         "languages": ["Common", "Primordial"],
@@ -64,7 +72,12 @@
     },
     "level1": {
         "ddclass": "Wizard",
-        "skillTrainings": [],
+        "skillTrainings": [
+            "Arcana",
+            "History",
+            "Nature",
+            "Religion"
+        ],
         "classFeatures": [
             {
                 "name": "Arcane Implement Mastery",
@@ -72,65 +85,76 @@
             },
             {
                 "name": "Staff of Defense",
-                "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage (encounter, immediate interrupt)"
+                "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage(encounter, immediate interrupt)."
+            },
+            {
+                "name": "Cantrips",
+                "desc": "Use ghost sound, light, mage hand, and prestidgitation as at-will powers."
+            },
+            {
+                "name": "Ritual Casting",
+                "desc": "Gain Ritual Caster as a bonus feat."
+            },
+            {
+                "name": "Spellbook",
+                "desc": "Three 1st level rituals, plus more at higher levels. Also, twice the daily and utility spells you can use; choose from among these at each extended rest."
             }
-
         ],
-        "atwillPower1": "",
-        "atwillPower2": "",
-        "encounterPower": "",
-        "dailyPower": "",
+        "atwillPower1": "Magic Missile",
+        "atwillPower2": "Thunderwave",
+        "encounterPower": "Force Orb",
+        "dailyPower": "Wizard's Fury",
         "ddfeat": { 
-            "name": "Level 1 Feat", 
-            "desc": "This is a feat description."
+            "name": "Reaper's Touch", 
+            "desc": "You gain a benefit with some attack powers."
         }
     },
     "level2": {
-        "utilityPower": "",
+        "utilityPower": "Guardian Blades",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Armor Proficiency(Leather)", 
+            "desc": "Training with leather armor" 
         }
     },
     "level3": {
-        "encounterPower": ""
+        "encounterPower": "Color Spray"
     },
     "level4": {
-        "abilityScoreBonus1": "",
-        "abilityScoreBonus2": "",
+        "abilityScoreBonus1": "Intelligence",
+        "abilityScoreBonus2": "Wisdom",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Implement Expertise(staff)", 
+            "desc": "+1 to attack rolls with staffs" 
         }
     },
     "level5": {
-        "dailyPower": ""
+        "dailyPower": "Bigby's Icy Grasp"
     },
     "level6": {
-        "utilityPower": "",
+        "utilityPower": "Dispel Magic",
         "ddfeat": { 
-            "name": "", 
+            "name": "White Lotus Riposte", 
             "desc": "" 
         }
     },
     "level7": {
-        "encounterPower": ""
+        "encounterPower": "Fire Burst"
     },
     "level8": {
-        "abilityScoreBonus1": "",
-        "abilityScoreBonus2": "",
+        "abilityScoreBonus1": "Intelligence",
+        "abilityScoreBonus2": "Wisdom",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Toughness", 
+            "desc": "Gain 5 additional hit points per tier" 
         }
     },
     "level9": {
-        "dailyPower": ""
+        "dailyPower": "Visions of Ruin"
     },
     "level10": {
-        "utilityPower": "",
+        "utilityPower": "Tactician's Measure",
         "ddfeat": { 
-            "name": "", 
+            "name": "Devious Jaunt", 
             "desc": "" 
         }
     },
@@ -139,8 +163,16 @@
         "size": "M",
         "raceFeatures": [
             {
-                "name": "Race Feature",
-                "desc": "This is a race feature."
+                "name": "Shadow Jaunt",
+                "desc": "Use shadowjaunt as an encounter power"
+            },
+            {
+                "name": "Winterkin",
+                "desc": "+1 to Fortitude"
+            },
+            {
+                "name": "Shadow Origin",
+                "desc": "Your origin is shadow creature"
             }
         ],
         "movement": {
@@ -150,7 +182,7 @@
             "misc": 0
         },
         "initiative": {
-            "dex": 0,
+            "dex": 1,
             "misc": 0
         },
         "abilityScores": {
