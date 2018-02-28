@@ -42,6 +42,8 @@ app.listen(port, function() {
 });
 
 // Value Calculation Stuff, maybe move to another file?
+
+// Ability Scores
 function getAbilityBonus(ddch, ability) {
   var bonus = 0;
   if (ddch.abilityBonus1 === ability || ddch.abilityBonus2 === ability) {
@@ -73,6 +75,7 @@ function calcAbilityScores(ddch) {
   return cv;
 }
 
+// General Use
 function getAbilityMod(abilityScores, abilityUsed) {
   if (abilityUsed == "STR") {
     return abilityScores.strMod;
@@ -98,6 +101,7 @@ function getArmorCheckPenalty(ddch, abilityUsed) {
   return 0;
 }
 
+// Skills
 function getOtherSkillBonuses(ddch, skillName) {
   bonuses = 0;
   bonuses += 2 * (ddch.level0.skillBonus1 == skillName);
@@ -137,24 +141,83 @@ function calcSkills(ddch, abilityScores, halfLevel) {
   return allSkills;
 }
 
+// Defenses
+function getArmorBonus(ddch) {
+  return 5;
+}
+
+function getHigherAbilityMod(abilityScores, abOne, abTwo) {
+  var modOne = getAbilityMod(abilityScores, abOne);
+  var modTwo = getAbilityMod(abilityScores, abTwo);
+  if (modOne > modTwo) {
+    return modOne;
+  }
+  else {
+    return modTwo;
+  }
+}
+
+function getClassDefenses(ddch, defName) {
+  return 1;
+}
+
+function getFeatDefenses(ddch, defName) {
+  return 2;
+}
+
+function getDefenseEnchacements(ddch, defName) {
+  return 0;
+}
+
+function getDefenseMiscellany(ddch, defName) {
+  return 1;
+}
+
+function calcDefenses(ddch, abilityScores) {
+  var allDefenses = {};
+  var defenseData = [["ac", "DEX", "DEX"],
+                     ["fortitude", "STR", "CON"],
+                     ["reflex", "DEX", "INT"],
+                     ["will", "WIS", "CHA"]];
+  
+  // A range-based for loop didn't work here for some reason.
+  for (var i = 0; i < 4; i++) {
+    defData = defenseData[i];
+    var defense = {};
+    if (defData[0] == "ac") {
+      defense.armor = getArmorBonus(ddch);
+    }
+    defense.abilityMod = getHigherAbilityMod(abilityScores, defData[1], defData[2]);
+    defense.class = getClassDefenses(ddch, defData[0]);
+    defense.feat = getFeatDefenses(ddch, defData[0]);
+    defense.enhancement = getDefenseEnchacements(ddch, defData[0]);
+    defense.misc = getDefenseMiscellany(ddch, defData[0]);
+    allDefenses[defData[0]] = defense;
+  }
+  
+  console.log(allDefenses);
+  return allDefenses;
+}
+
+// Calculation Home Function
 app.post('/calculateValues', function(req, res) {
   var ddch = req.body;
   var cv = {}; //cv = Calculated Values
   
   // Placeholder Variables
-  getSizeFromDataBase = 'M'
+  getSizeFromDatabase = 'M'
     
   cv.halfLevel = Math.floor(ddch.characterLevel / 2);
   cv.abilityScores = calcAbilityScores(ddch);
-  cv.size = getSizeFromDataBase;
-  cv.raceFeatures = "Race Stuff";
-  cv.movement = "Movement Stuff";
-  cv.initiative = "Initiative Stuff";
-  cv.healthAndSavingThrows = "Health Stuff";
+  cv.size = getSizeFromDatabase;
+  cv.raceFeatures = {};
+  cv.movement = {};
+  cv.initiative = {};
+  cv.healthAndSavingThrows = {};
   cv.skills = calcSkills(ddch, cv.abilityScores, cv.halfLevel);
-  cv.defenses = "Defense Stuff";
-  cv.weaponProficiencies = "Weapon Stuff";
-  cv.powers = "Power Stuff";
+  cv.defenses = calcDefenses(ddch, cv.abilityScores);
+  cv.weaponProficiencies = {};
+  cv.powers = {};
   
   ddch.calculatedValues = cv;
   res.json(ddch);
