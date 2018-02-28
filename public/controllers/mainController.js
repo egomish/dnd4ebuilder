@@ -1,5 +1,5 @@
 var app = angular.module('app', []);
-app.controller('mainController', ['$scope', '$http', function($scope, $http) {
+app.controller('mainController', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.ddch = {
         characterLevel: 1,
         level0: {
@@ -296,6 +296,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         });
 
     }
+
+    //file uploading
     $(document).ready(function() {
         $("form#data").submit(function(e) {
             e.preventDefault();    
@@ -315,4 +317,38 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             });
         });
     });
+
+    // file downloading
+    $scope.download = function () {
+        var data = $scope.ddch;
+        delete data['calculatedValues'];
+        var filename = $scope.ddch.level0.name + '.ddch';
+
+        if (!data) {
+            console.error('No data');
+            return;
+        }
+
+        if (typeof data === 'object') {
+            data = JSON.stringify(data, undefined, 2);
+        }
+
+        var blob = new Blob([data], {type: 'text/json'});
+
+        // FOR IE:
+
+        if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+            window.navigator.msSaveOrOpenBlob(blob, filename);
+        }
+        else{
+            var e = document.createEvent('MouseEvents'),
+            a = document.createElement('a');
+
+            a.download = filename;
+            a.href = window.URL.createObjectURL(blob);
+            a.dataset.downloadurl = ['text/json', a.download, a.href].join(':');
+            e.initEvent('click');
+            a.dispatchEvent(e);
+        }
+    };
 }]);
