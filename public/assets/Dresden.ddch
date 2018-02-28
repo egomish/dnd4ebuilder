@@ -233,32 +233,32 @@
         ],
         "defenses": {
             "ac": {
-                "armor": 4,
-                "abilityMod": 0,
+                "armor": 2,
+                "abilityMod": 6,
                 "class": 0,
                 "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "enhancement": 2,
+                "misc": 1
             },
             "fortitude": {
-                "abilityMod": 2,
+                "abilityMod": 1,
                 "class": 0,
                 "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "enhancement": 2,
+                "misc": 2
             },
             "reflex": {
-                "abilityMod": -1,
+                "abilityMod": 6,
                 "class": 0,
                 "feat": 0,
-                "enhancement": 0,
+                "enhancement": 2,
                 "misc": 0
             },
             "will": {
-                "abilityMod": 0,
-                "class": 0,
-                "feat": 1,
-                "enhancement": 0,
+                "abilityMod": 2,
+                "class": 2,
+                "feat": 0,
+                "enhancement": 2,
                 "misc": 0
             }
         },
