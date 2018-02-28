@@ -269,6 +269,27 @@
               "name": "Magic Staff + 3(Melee)",
               "damageDice": "1d8",
               "damageMod": 3
+            },
+            {
+              "attack": 15,
+              "defType": "Ref",
+              "name": "Magic Missile(Magic Staff + 3)",
+              "damageDice": "2d4",
+              "damageMod": 11
+            },
+            {
+              "attack": 5,
+              "defType": "AC",
+              "name": "Unarmed(Melee)",
+              "damageDice": "1d4",
+              "damageMod": 0
+            },
+            {
+              "attack": 6,
+              "defType": "AC",
+              "name": "Unarmed(Range)",
+              "damageDice": "1d4",
+              "damageMod": 3
             }
         ],
         "powers": [
