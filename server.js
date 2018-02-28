@@ -73,14 +73,6 @@ function calcAbilityScores(ddch) {
   return cv;
 }
 
-function getSkillName(index) {
-  return "Acrobatics";
-}
-
-function getSkillAbility(index) {
-  return "DEX";
-}
-
 function getAbilityMod(abilityScores, abilityUsed) {
   if (abilityUsed == "STR") {
     return abilityScores.strMod;
@@ -114,19 +106,31 @@ function getOtherSkillBonuses(ddch, skillName) {
 }
 
 function calcSkills(ddch, abilityScores, halfLevel) {
-  allSkills = []
-  trainings = ddch.level1.skillTrainings;
+  var allSkills = []
+  var trainings = ddch.level1.skillTrainings;
+  
+  var skillNames = ["Acrobatics", "Arcana", "Athletics",
+                    "Bluff", "Diplomacy", "Dungeoneering",
+                    "Endurance", "Heal", "History",
+                    "Insight", "Intimidate", "Nature",
+                    "Perception", "Religion", "Stealth",
+                    "Streetwise", "Thievery"];
+  
+  var skillAbilitites = ["DEX", "INT", "STR",
+                         "CHA", "CHA", "WIS",
+                         "CON", "WIS", "INT",
+                         "WIS", "CHA", "WIS",
+                         "WIS", "INT", "DEX",
+                         "CHA", "DEX"];
+  
   for (var i = 0; i < 17; i++) {
     var skill = [];
-    skillName = getSkillName(i);
-    abilityUsed = getSkillAbility(i);
-    
-    skill.push(skillName);
-    skill.push(abilityUsed);
-    skill.push(getAbilityMod(abilityScores, abilityUsed) + halfLevel);
-    skill.push(5 * ddch.level1.skillTrainings.includes(skillName));
-    skill.push(getArmorCheckPenalty(ddch, abilityUsed));
-    skill.push(getOtherSkillBonuses(ddch, skillName));
+    skill.push(skillNames[i]);
+    skill.push(skillAbilitites[i]);
+    skill.push(getAbilityMod(abilityScores, skillAbilitites[i]) + halfLevel);
+    skill.push(5 * ddch.level1.skillTrainings.includes(skillNames[i]));
+    skill.push(getArmorCheckPenalty(ddch, skillAbilitites[i]));
+    skill.push(getOtherSkillBonuses(ddch, skillNames[i]));
     skill.unshift(skill[2] + skill[3] + skill[4] + skill[5])
     allSkills.push(skill);
   }
