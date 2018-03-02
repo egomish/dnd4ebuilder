@@ -8,6 +8,11 @@ var bodyParser = require('body-parser');
 var abilityScores = require('./valueCalculation/calcAbilities.js');
 var defenses = require('./valueCalculation/calcDefenses.js');
 var skills = require('./valueCalculation/calcSkills.js');
+var movement = require('./valueCalculation/calcMovement.js');
+var initiative = require('./valueCalculation/calcInitiative.js');
+var healthAndSavingThrows = require('./valueCalculation/calcHealthAndSaves.js');
+var weaponProficiencies = require('./valueCalculation/calcWeaponProficiencies.js');
+var powers = require('./valueCalculation/calcPowers.js');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -52,18 +57,19 @@ app.post('/calculateValues', function(req, res) {
   
   // Placeholder Variables
   getSizeFromDatabase = 'M'
+  getRaceFeaturesFromDatabase = {};
     
   cv.halfLevel = Math.floor(ddch.characterLevel / 2);
   cv.abilityScores = abilityScores.calculate(ddch);
   cv.size = getSizeFromDatabase;
-  cv.raceFeatures = {};
-  cv.movement = {};
-  cv.initiative = {};
-  cv.healthAndSavingThrows = {};
+  cv.raceFeatures = getRaceFeaturesFromDatabase;
+  cv.movement = movement.calculate(ddch);
+  cv.initiative = initiative.calculate(ddch, cv.abilityScores);
+  cv.healthAndSavingThrows = healthAndSavingThrows.calculate(ddch, cv.abilityScores);
   cv.skills = skills.calculate(ddch, cv.abilityScores, cv.halfLevel);
   cv.defenses = defenses.calculate(ddch, cv.abilityScores);
-  cv.weaponProficiencies = {};
-  cv.powers = {};
+  cv.weaponProficiencies = weaponProficiencies.calculate(ddch, cv.abilityScores, cv.halfLevel);
+  cv.powers = powers.calculate(ddch, cv);
   
   ddch.calculatedValues = cv;
   res.json(ddch);
