@@ -294,15 +294,75 @@
         ],
         "powers": [
             {
-                "name": "Power Name",
-                "usage": "Encounter",
-                "actionType": "Minor Action",
-                "source": "PHB3",
-                "target": "Close burst 5",
+                "name": "Ghost Sound",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Light",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
                 "flavor": "This is flavor text.",
                 "elements": [
                     ["Keywords", "Arcane"],
-                    ["Effect", "This is the effect of the power."]
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Mage Hand",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Prestidigitation",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Magic Missile",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Thunderwave",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
                 ]
             }
         ]
