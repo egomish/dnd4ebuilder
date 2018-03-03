@@ -137,3 +137,45 @@ VALUES(
 	choose from among these at each extended rest.",
 	NULL
 );
+
+ INSERT INTO powers(
+ 	name,
+ 	powerUsage,
+ 	actionType,
+ 	powerType,
+ 	kind,
+ 	source,
+ 	flavor,
+ 	level,
+ 	hit,
+ 	miss,
+ 	effect,
+ 	special,
+ 	keyWords,
+ 	target,
+ 	requirement,
+ 	attack,
+ 	powerTrigger
+ )
+ VALUES(
+ 	'Magic Missile',
+ 	'at-will',
+ 	'standard',
+ 	'attack',
+ 	'class',
+ 	'PHB1',
+ 	'You launch a silvery bolt of force at an enemy.',
+ 	1,
+ 	'2d4 + Intelligence modifier force damage.
+	Increase damage to 4d4 + Intelligence modifier at 21st level.',
+ 	NULL,
+ 	NULL,
+ 	'This power counts as a ranged basic attack. When
+	a power allows you to make a ranged basic attack, you can use this power.',
+ 	NULL,
+ 	NULL,
+ 	NULL,
+ 	NULL,
+ 	NULL
+
+ );
