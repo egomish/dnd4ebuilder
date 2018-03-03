@@ -138,7 +138,7 @@ VALUES(
 	NULL
 );
 
- INSERT INTO powers(
+INSERT INTO powers(
  	name,
  	powerUsage,
  	actionType,
@@ -156,8 +156,8 @@ VALUES(
  	requirement,
  	attack,
  	powerTrigger
- )
- VALUES(
+)
+VALUES(
  	'Magic Missile',
  	'at-will',
  	'standard',
@@ -177,5 +177,122 @@ VALUES(
  	NULL,
  	NULL,
  	NULL
+);
 
+INSERT INTO powers(
+ 	name,
+ 	powerUsage,
+ 	actionType,
+ 	powerType,
+ 	kind,
+ 	source,
+ 	flavor,
+ 	level,
+ 	hit,
+ 	miss,
+ 	effect,
+ 	special,
+ 	keyWords,
+ 	target,
+ 	requirement,
+ 	attack,
+ 	powerTrigger
+ )
+VALUES(
+ 	'Thunderwave',
+ 	'at-will',
+ 	'standard',
+ 	'attack',
+ 	'class',
+ 	'PHB1',
+ 	'You create a whip-crack of sonic power that lashes up from the
+	ground.',
+ 	1,
+ 	'1d6 + Intelligence modifier thunder damage, and you push the target a number of squares equal to your Wis- dom modifier.
+	Increase damage to 2d6 + Intelligence modifier at 21st level.', /* hit */
+ 	NULL, /* miss */
+ 	NULL, /* effect */
+ 	NULL, /* special */
+ 	NULL, /* keyWords */
+ 	'Each creature in blast',  /* target */
+ 	NULL,	/* requirement */
+ 	'Intelligence vs. Fortitude', /* attack */
+ 	NULL /* trigger */
  );
+
+INSERT INTO powers(
+ 	name,
+ 	powerUsage,
+ 	actionType,
+ 	powerType,
+ 	kind,
+ 	source,
+ 	flavor,
+ 	level,
+ 	hit,
+ 	miss,
+ 	effect,
+ 	special,
+ 	keyWords,
+ 	target,
+ 	requirement,
+ 	attack,
+ 	powerTrigger
+ )
+VALUES(
+ 	'Force Orb',
+ 	'encounter',
+ 	'standard',
+ 	'attack',
+ 	'class',
+ 	'PHB1',
+ 	'You hurl an orb of magical force at an enemy. 
+ 	It bursts against the target and throws off razor-sharp shards of force that cut nearby enemies to ribbons.',
+ 	1,
+ 	'Hit: 1d6 + Intelligence modifier thunder damage, and you push the target a number of squares equal to your Wis- dom modifier.
+	Increase damage to 2d6 + Intelligence modifier at 21st level. Secondary Hit: 1d10 + Intelligence modifier force damage.', /* hit */
+ 	NULL, /* miss */
+ 	NULL, /* effect */
+ 	NULL, /* special */
+ 	NULL, /* keyWords */
+ 	'Primary Target: One creature or object. Secondary Target: Each enemy adjacent to the primary target',  /* target */
+ 	NULL,	/* requirement */
+ 	'Attack: Intelligence vs Secondary Attack: Reflex. Intelligence vs. Reflex', /* attack */
+ 	NULL /* trigger */
+ );
+
+INSERT INTO deities(
+	name,
+	alignment,
+	description
+)
+VALUES(
+	'The Raven Queen',
+	'Unaligned',
+	'The name of the god of death is long forgotten, but she is called the Raven Queen. 
+	She is the spinner of fate and the patron of winter. She marks the end of each mortal life, 
+	and mourn- ers call upon her during funeral rites, in the hope that she will guard the departed 
+	from the curse of undeath. She expects her followers to abide by these commandments:
+	✦ Hold no pity for those who suffer and die, for death is the natural end of life.
+	✦ Bring down the proud who try to
+	cast off the chains of fate. As the instru- ment of the Raven Queen, you must punish hubris where you find it.
+	✦ Watch for the cults of Orcus and stamp them out whenever they arise. The Demon Prince of the Undead 
+	seeks to claim the Raven Queen’s throne.'
+);
+
+INSERT INTO alignments(
+	name,
+	synopsis,
+	description
+)
+VALUES(
+	'Evil',
+	'Tyranny and hatred',
+	'Evil characters don’t necessarily go out of their way to hurt people, but they’re perfectly willing to take advantage 
+	of the weakness of others to acquire what they want. Evil characters use rules and order to maximize personal gain. 
+	They don’t care whether laws hurt other people. They support institutional structures that give them power, even if 
+	that power comes at the expense of others’ freedom. Slavery and rigid caste structures are not only acceptable but 
+	desirable to evil characters, as long as they are in a position to benefit from them.'
+);
+
+
