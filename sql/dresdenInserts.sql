@@ -155,7 +155,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
 )
 VALUES(
  	'Magic Missile',
@@ -172,11 +173,12 @@ VALUES(
  	NULL,
  	'This power counts as a ranged basic attack. When
 	a power allows you to make a ranged basic attack, you can use this power.',
+ 	'One creature',
  	NULL,
  	NULL,
+ 	'Intelligence vs. Reflex',
  	NULL,
- 	NULL,
- 	NULL
+ 	'Ranged 20'
 );
 
 INSERT INTO powers(
@@ -196,7 +198,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
  )
 VALUES(
  	'Thunderwave',
@@ -213,11 +216,12 @@ VALUES(
  	NULL, /* miss */
  	NULL, /* effect */
  	NULL, /* special */
- 	NULL, /* keyWords */
+ 	'Arcane Implement, Thunder', /* keyWords */
  	'Each creature in blast',  /* target */
  	NULL,	/* requirement */
  	'Intelligence vs. Fortitude', /* attack */
- 	NULL /* trigger */
+ 	NULL, /* trigger */
+ 	'Close blast 3'
  );
 
 INSERT INTO powers(
@@ -237,7 +241,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
  )
 VALUES(
  	'Force Orb',
@@ -258,7 +263,89 @@ VALUES(
  	'Primary Target: One creature or object. Secondary Target: Each enemy adjacent to the primary target',  /* target */
  	NULL,	/* requirement */
  	'Attack: Intelligence vs Secondary Attack: Reflex. Intelligence vs. Reflex', /* attack */
- 	NULL /* trigger */
+ 	NULL, /* trigger */
+ 	'Ranged 20'
+ );
+INSERT INTO powers(
+ 	name,
+ 	powerUsage,
+ 	actionType,
+ 	powerType,
+ 	kind,
+ 	source,
+ 	flavor,
+ 	level,
+ 	hit,
+ 	miss,
+ 	effect,
+ 	special,
+ 	keyWords,
+ 	target,
+ 	requirement,
+ 	attack,
+ 	powerTrigger,
+ 	powerRange
+ )
+ VALUES(
+ 	'Ghost Sound',
+ 	'at-will',
+ 	'standard',
+ 	NULL,
+ 	'class',
+ 	'PHB1',
+ 	'With a wink, you create an illusory sound that emanates from somewhere close by.',
+ 	1,
+ 	NULL,
+ 	NULL,
+ 	'You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target. 
+ 	You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you whisper, you can whisper quietly enough that only creatures adjacent to the target can hear your words.',
+ 	NULL,
+ 	'Arcane Illusion',
+ 	'One object or unoccupied square',
+ 	NULL,
+ 	NULL,
+ 	NULL,
+ 	'Ranged 10'
+ );
+ INSERT INTO powers(
+ 	name,
+ 	powerUsage,
+ 	actionType,
+ 	powerType,
+ 	kind,
+ 	source,
+ 	flavor,
+ 	level,
+ 	hit,
+ 	miss,
+ 	effect,
+ 	special,
+ 	keyWords,
+ 	target,
+ 	requirement,
+ 	attack,
+ 	powerTrigger,
+ 	powerRange
+ )
+ VALUES(
+ 	'Light',
+ 	'at-will',
+ 	'minor',
+ 	NULL,
+ 	'class',
+ 	'PHB1',
+ 	'With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space.',
+ 	1,
+ 	NULL,
+ 	NULL,
+ 	"You cause the target to shed bright light. The light fills the target's square and all squares within 4 squares of it. The light lasts for 5 minutes. Putting out the light is a free action.",
+ 	'You can have only one light cantrip active at a time. If you create a new light, your previously cast light winks out.',
+ 	'Arcane Illusion',
+ 	'One object or unoccupied square',
+ 	NULL,
+ 	NULL,
+ 	NULL,
+ 	'Ranged 5'
  );
 
 INSERT INTO deities(
