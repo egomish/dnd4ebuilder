@@ -1,0 +1,239 @@
+{
+    "characterLevel": 1,
+    "level0": {
+        "name": "TestChar",
+        "age": 100,
+        "gender": "U",
+        "height": 100,
+        "weight": 100,
+        "description": {
+            "personalityTraits": "No personality traits.",
+            "mannerisms": "No mannerisms.",
+            "background": "No background."
+        },
+        "portrait": "images/no-profile-pic.png",
+
+        "alignment": "Lawful Evil",
+        "deity": "Vecna",
+
+        "ddrace": "Human",
+        "abilityBonus1": "",
+        "abilityBonus2": "",
+        "skillBonus1": "",
+        "skillBonus2": "",
+        "abilityScores": [
+            { 
+                "baseStr": 20,
+                "baseCon": 20,
+                "baseDex": 20,
+                "baseInt": 20,
+                "baseWis": 20,
+                "baseCha": 20
+            }
+        ],
+
+        "wealth": 0,
+        "equipment": [""],
+        "magicItems": {
+            "weapons": [
+                "Magic Rod",
+                "Magic Dagger"
+            ],
+            "armor": "Dwarven Chainmail",
+            "arms": "",
+            "feet": "",
+            "hands": "",
+            "head": "",
+            "neck": "",
+            "leftRing": "",
+            "rightRing": "",
+            "waist": ""
+        },
+
+        "languages": ["Common", "Dwarven"],
+        "rituals": ["Gentle Repose"]
+    },
+    "level1": {
+        "ddclass": "Fighter",
+        "skillTrainings": [],
+        "classFeatures": [
+            {
+                "name": "Class Feature",
+                "desc": "This is a class feature."
+            }
+        ],
+        "atwillPower1": "",
+        "atwillPower2": "",
+        "encounterPower": "",
+        "dailyPower": "",
+        "ddfeat": { 
+            "name": "Level 1 Feat", 
+            "desc": "This is a feat description."
+        }
+    },
+    "level2": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level3": {
+        "encounterPower": ""
+    },
+    "level4": {
+        "abilityScoreBonus1": "",
+        "abilityScoreBonus2": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level5": {
+        "dailyPower": ""
+    },
+    "level6": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level7": {
+        "encounterPower": ""
+    },
+    "level8": {
+        "abilityScoreBonus1": "",
+        "abilityScoreBonus2": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "level9": {
+        "dailyPower": ""
+    },
+    "level10": {
+        "utilityPower": "",
+        "ddfeat": { 
+            "name": "", 
+            "desc": "" 
+        }
+    },
+    "calculatedValues": {
+        "halfLevel": 0,
+        "size": "M",
+        "raceFeatures": [
+            {
+                "name": "Race Feature",
+                "desc": "This is a race feature."
+            }
+        ],
+        "movement": {
+            "base": 6,
+            "armor": 0,
+            "item": 0,
+            "misc": 0
+        },
+        "initiative": {
+            "dex": 0,
+            "misc": 0
+        },
+        "abilityScores": {
+            "strTotal": 22,
+            "conTotal": 22,
+            "dexTotal": 22,
+            "intTotal": 22,
+            "wisTotal": 22,
+            "chaTotal": 22,
+            "strMod": 2,
+            "conMod": 2,
+            "dexMod": 2,
+            "intMod": 2,
+            "wisMod": 2,
+            "chaMod": 2
+        },
+        "healthAndSavingThrows": {
+            "maxHP": 100,
+            "bloodiedValue": 50,
+            "surgeValue": 25,
+            "surgesPerDay": 15,
+            "savingThrowMods": "+1 against something",
+            "resistances": ""
+        },
+        "skills": [
+            [10, "Acrobatics",    "DEX", 0, 10, 0, 0],
+            [10, "Arcana",        "INT", 0, 10, 0, 0],
+            [10, "Athletics",     "STR", 0, 10, 0, 0],
+            [10, "Bluff",         "CHA", 0, 10, 0, 0],
+            [10, "Diplomacy",     "CHA", 0, 10, 0, 0],
+            [10, "Dungeoneering", "WIS", 0, 10, 0, 0],
+            [10, "Endurance",     "CON", 0, 10, 0, 0],
+            [10, "Heal",          "WIS", 0, 10, 0, 0],
+            [10, "History",       "INT", 0, 10, 0, 0],
+            [10, "Insight",       "WIS", 0, 10, 0, 0],
+            [10, "Intimidate",    "CHA", 0, 10, 0, 0],
+            [10, "Nature",        "WIS", 0, 10, 0, 0],
+            [10, "Perception",    "WIS", 0, 10, 0, 0],
+            [10, "Religion",      "INT", 0, 10, 0, 0],
+            [10, "Stealth",       "DEX", 0, 10, 0, 0],
+            [10, "Streetwise",    "CHA", 0, 10, 0, 0],
+            [10, "Thievery",      "DEX", 0, 10, 0, 0]
+        ],
+        "defenses": {
+            "ac": {
+                "armor": 4,
+                "abilityMod": 0,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "fortitude": {
+                "abilityMod": 2,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "reflex": {
+                "abilityMod": -1,
+                "class": 0,
+                "feat": 0,
+                "enhancement": 0,
+                "misc": 0
+            },
+            "will": {
+                "abilityMod": 0,
+                "class": 0,
+                "feat": 1,
+                "enhancement": 0,
+                "misc": 0
+            }
+        },
+        "speed": {
+            "armor": 2,
+            "item": 0,
+            "misc": 0
+        },
+        "weaponProficiencies": {
+            "toHit": [],
+            "damageDice": [],
+            "toDam": []
+        },
+        "powers": [
+            {
+                "name": "Power Name",
+                "usage": "Encounter",
+                "actionType": "Minor Action",
+                "source": "PHB3",
+                "target": "Close burst 5",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "This is the effect of the power."]
+                ]
+            }
+        ]
+    }
+}
