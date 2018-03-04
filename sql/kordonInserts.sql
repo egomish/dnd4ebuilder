@@ -252,7 +252,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
  )
 VALUES(
  	'Sure Strike',
@@ -271,7 +272,8 @@ VALUES(
  	'One creature',  /* target */
  	NULL,	/* requirement */
  	'Strength + 2 vs. AC', /* attack */
- 	NULL /* trigger */
+ 	NULL, /* trigger */
+ 	'Melee' /* range */
  );
 
 INSERT INTO powers(
@@ -291,7 +293,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
  )
 VALUES(
  	'Cleave',
@@ -310,7 +313,8 @@ VALUES(
  	'One creature',  /* target */
  	NULL,	/* requirement */
  	'Strength vs. AC', /* attack */
- 	NULL /* trigger */
+ 	NULL, /* trigger */
+ 	'Melee'
  );
 
 INSERT INTO powers(
@@ -330,7 +334,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
  )
 VALUES(
  	'Spinning Sweep',
@@ -350,7 +355,8 @@ VALUES(
  	'One creature',  /* target */
  	NULL,	/* requirement */
  	'Strength vs. AC', /* attack */
- 	NULL /* trigger */
+ 	NULL, /* trigger */
+ 	'Melee' /* range */
  );
 
 INSERT INTO powers(
@@ -370,7 +376,8 @@ INSERT INTO powers(
  	target,
  	requirement,
  	attack,
- 	powerTrigger
+ 	powerTrigger,
+ 	powerRange
  )
 VALUES(
  	'Brute Strike',
@@ -389,7 +396,8 @@ VALUES(
  	'One creature',  /* target */
  	NULL,	/* requirement */
  	'Strength vs. AC', /* attack */
- 	NULL /* trigger */
+ 	NULL, /* trigger */
+ 	'Melee' /* range */
  );
 
 INSERT INTO deities(
@@ -441,6 +449,8 @@ INSERT INTO items(
 	salePrice,
 	weight,
 	weaponGroup,
+	weaponCategory,
+	armorGroup,
 	properties,
 	categories,
 	carryingCapacity,
@@ -461,6 +471,8 @@ VALUES(
 	NULL, /* sale price */
 	8, /* weight */
 	'Heavy Blade', /* weapon group */
+	'Military', /* weapon category */
+	NULL, /* armor group */
 	NULL, /* properties */
 	NULL, /* categories */
 	NULL, /* carrying capacity */
@@ -482,6 +494,8 @@ INSERT INTO items(
 	salePrice,
 	weight,
 	weaponGroup,
+	weaponCategory,
+	armorGroup,
 	properties,
 	categories,
 	carryingCapacity,
@@ -502,6 +516,8 @@ VALUES(
 	NULL, /* sale price */
 	4, /* weight */
 	'Crossbow', /* weapon group */
+	'Military', /* weapon category */
+	NULL, /* armor group */
 	'Load Minor', /* properties */
 	NULL, /* categories */
 	NULL, /* carrying capacity */
@@ -523,6 +539,8 @@ INSERT INTO items(
 	salePrice,
 	weight,
 	weaponGroup,
+	weaponCategory,
+	armorGroup,
 	properties,
 	categories,
 	carryingCapacity,
@@ -543,6 +561,8 @@ VALUES(
 	NULL, /* sale price */
 	45, /* weight */
 	NULL, /* weapon group */
+	NULL, /* weapon category */
+	'Scale', /* armor group */
 	NULL, /* properties */
 	NULL, /* categories */
 	NULL, /* carrying capacity */
