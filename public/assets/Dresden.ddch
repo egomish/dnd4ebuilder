@@ -33,13 +33,18 @@
         ],
 
         "wealth": {
-          "cp": 0,
-          "sp": 0,
-          "gp": 20,
-          "pp": 0,
-          "ad": 0
+            "cp": 0,
+            "sp": 0,
+            "gp": 20,
+            "pp": 0,
+            "ad": 0,
+            "other": [
+                ""
+            ]
         },
-        "equipment": [""],
+        "equipment": [
+            "Spellbook"
+        ],
         "magicItems": {
             "weapons": [
                 "Magic Staff + 3"
@@ -52,7 +57,10 @@
             "neck": "Medallion of Death Deferred + 2",
             "leftRing": "",
             "rightRing": "",
-            "waist": "Belt of Vim (heroic tier)"
+            "waist": "Belt of Vim (heroic tier)",
+            "misc": [
+                "Potion of Healing (heroic tier) (2)"
+            ]
         },
 
         "languages": ["Common", "Primordial"],
@@ -64,7 +72,12 @@
     },
     "level1": {
         "ddclass": "Wizard",
-        "skillTrainings": [],
+        "skillTrainings": [
+            "Arcana",
+            "History",
+            "Nature",
+            "Religion"
+        ],
         "classFeatures": [
             {
                 "name": "Arcane Implement Mastery",
@@ -72,65 +85,76 @@
             },
             {
                 "name": "Staff of Defense",
-                "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage (encounter, immediate interrupt)"
+                "desc": "With staff, +1 AC. Plus, add Con mod to defense against one attack, even after you know damage(encounter, immediate interrupt)."
+            },
+            {
+                "name": "Cantrips",
+                "desc": "Use ghost sound, light, mage hand, and prestidgitation as at-will powers."
+            },
+            {
+                "name": "Ritual Casting",
+                "desc": "Gain Ritual Caster as a bonus feat."
+            },
+            {
+                "name": "Spellbook",
+                "desc": "Three 1st level rituals, plus more at higher levels. Also, twice the daily and utility spells you can use; choose from among these at each extended rest."
             }
-
         ],
-        "atwillPower1": "",
-        "atwillPower2": "",
-        "encounterPower": "",
-        "dailyPower": "",
+        "atwillPower1": "Magic Missile",
+        "atwillPower2": "Thunderwave",
+        "encounterPower": "Force Orb",
+        "dailyPower": "Wizard's Fury",
         "ddfeat": { 
-            "name": "Level 1 Feat", 
-            "desc": "This is a feat description."
+            "name": "Reaper's Touch", 
+            "desc": "You gain a benefit with some attack powers."
         }
     },
     "level2": {
-        "utilityPower": "",
+        "utilityPower": "Guardian Blades",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Armor Proficiency(Leather)", 
+            "desc": "Training with leather armor" 
         }
     },
     "level3": {
-        "encounterPower": ""
+        "encounterPower": "Color Spray"
     },
     "level4": {
-        "abilityScoreBonus1": "",
-        "abilityScoreBonus2": "",
+        "abilityScoreBonus1": "Intelligence",
+        "abilityScoreBonus2": "Wisdom",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Implement Expertise(staff)", 
+            "desc": "+1 to attack rolls with staffs" 
         }
     },
     "level5": {
-        "dailyPower": ""
+        "dailyPower": "Bigby's Icy Grasp"
     },
     "level6": {
-        "utilityPower": "",
+        "utilityPower": "Dispel Magic",
         "ddfeat": { 
-            "name": "", 
+            "name": "White Lotus Riposte", 
             "desc": "" 
         }
     },
     "level7": {
-        "encounterPower": ""
+        "encounterPower": "Fire Burst"
     },
     "level8": {
-        "abilityScoreBonus1": "",
-        "abilityScoreBonus2": "",
+        "abilityScoreBonus1": "Intelligence",
+        "abilityScoreBonus2": "Wisdom",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Toughness", 
+            "desc": "Gain 5 additional hit points per tier" 
         }
     },
     "level9": {
-        "dailyPower": ""
+        "dailyPower": "Visions of Ruin"
     },
     "level10": {
-        "utilityPower": "",
+        "utilityPower": "Tactician's Measure",
         "ddfeat": { 
-            "name": "", 
+            "name": "Devious Jaunt", 
             "desc": "" 
         }
     },
@@ -139,8 +163,16 @@
         "size": "M",
         "raceFeatures": [
             {
-                "name": "Race Feature",
-                "desc": "This is a race feature."
+                "name": "Shadow Jaunt",
+                "desc": "Use shadowjaunt as an encounter power"
+            },
+            {
+                "name": "Winterkin",
+                "desc": "+1 to Fortitude"
+            },
+            {
+                "name": "Shadow Origin",
+                "desc": "Your origin is shadow creature"
             }
         ],
         "movement": {
@@ -150,7 +182,7 @@
             "misc": 0
         },
         "initiative": {
-            "dex": 0,
+            "dex": 1,
             "misc": 0
         },
         "abilityScores": {
@@ -181,52 +213,52 @@
             ]
         },
         "skills": [
-            [ 8, "Acrobatics",    "DEX", 0, 10, 0, 0],
-            [16, "Arcana",        "INT", 0, 10, 0, 0],
-            [ 5, "Athletics",     "STR", 0, 10, 0, 0],
-            [ 4, "Bluff",         "CHA", 0, 10, 0, 0],
-            [ 4, "Diplomacy",     "CHA", 0, 10, 0, 0],
-            [ 7, "Dungeoneering", "WIS", 0, 10, 0, 0],
-            [ 6, "Endurance",     "CON", 0, 10, 0, 0],
-            [ 7, "Heal",          "WIS", 0, 10, 0, 0],
-            [16, "History",       "INT", 0, 10, 0, 0],
-            [ 7, "Insight",       "WIS", 0, 10, 0, 0],
-            [ 4, "Intimidate",    "CHA", 0, 10, 0, 0],
-            [12, "Nature",        "WIS", 0, 10, 0, 0],
-            [ 7, "Perception",    "WIS", 0, 10, 0, 0],
-            [16, "Religion",      "INT", 0, 10, 0, 0],
-            [ 8, "Stealth",       "DEX", 0, 10, 0, 0],
-            [ 4, "Streetwise",    "CHA", 0, 10, 0, 0],
-            [ 6, "Thievery",      "DEX", 0, 10, 0, 0]
+            [ 8, "Acrobatics",    "DEX",  6, 0, 0, 2],
+            [16, "Arcana",        "INT", 11, 5, 0, 0],
+            [ 5, "Athletics",     "STR",  5, 0, 0, 0],
+            [ 4, "Bluff",         "CHA",  4, 0, 0, 0],
+            [ 4, "Diplomacy",     "CHA",  4, 0, 0, 0],
+            [ 7, "Dungeoneering", "WIS",  7, 0, 0, 0],
+            [ 6, "Endurance",     "CON",  6, 0, 0, 0],
+            [ 7, "Heal",          "WIS",  7, 0, 0, 0],
+            [16, "History",       "INT", 11, 5, 0, 0],
+            [ 7, "Insight",       "WIS",  7, 0, 0, 0],
+            [ 4, "Intimidate",    "CHA",  4, 0, 0, 0],
+            [12, "Nature",        "WIS",  7, 5, 0, 0],
+            [ 7, "Perception",    "WIS",  7, 0, 0, 0],
+            [16, "Religion",      "INT", 11, 5, 0, 0],
+            [ 8, "Stealth",       "DEX",  6, 0, 0, 2],
+            [ 4, "Streetwise",    "CHA",  4, 0, 0, 0],
+            [ 6, "Thievery",      "DEX",  6, 0, 0, 0]
         ],
         "defenses": {
             "ac": {
-                "armor": 4,
-                "abilityMod": 0,
+                "armor": 2,
+                "abilityMod": 6,
                 "class": 0,
                 "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "enhancement": 2,
+                "misc": 1
             },
             "fortitude": {
-                "abilityMod": 2,
+                "abilityMod": 1,
                 "class": 0,
                 "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "enhancement": 2,
+                "misc": 2
             },
             "reflex": {
-                "abilityMod": -1,
+                "abilityMod": 6,
                 "class": 0,
                 "feat": 0,
-                "enhancement": 0,
+                "enhancement": 2,
                 "misc": 0
             },
             "will": {
-                "abilityMod": 0,
-                "class": 0,
-                "feat": 1,
-                "enhancement": 0,
+                "abilityMod": 2,
+                "class": 2,
+                "feat": 0,
+                "enhancement": 2,
                 "misc": 0
             }
         },
@@ -237,19 +269,304 @@
               "name": "Magic Staff + 3(Melee)",
               "damageDice": "1d8",
               "damageMod": 3
+            },
+            {
+              "attack": 15,
+              "defType": "Ref",
+              "name": "Magic Missile(Magic Staff + 3)",
+              "damageDice": "2d4",
+              "damageMod": 11
+            },
+            {
+              "attack": 5,
+              "defType": "AC",
+              "name": "Unarmed(Melee)",
+              "damageDice": "1d4",
+              "damageMod": 0
+            },
+            {
+              "attack": 6,
+              "defType": "AC",
+              "name": "Unarmed(Range)",
+              "damageDice": "1d4",
+              "damageMod": 3
             }
         ],
         "powers": [
             {
-                "name": "Power Name",
-                "usage": "Encounter",
-                "actionType": "Minor Action",
-                "source": "PHB3",
-                "target": "Close burst 5",
+                "name": "Ghost Sound",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Light",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
                 "flavor": "This is flavor text.",
                 "elements": [
                     ["Keywords", "Arcane"],
-                    ["Effect", "This is the effect of the power."]
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Mage Hand",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Prestidigitation",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Magic Missile",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Thunderwave",
+                "usage": "At Will",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane", "Illusion"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Shadow Jaunt",
+                "usage": "Encounter",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Staff of Defence",
+                "usage": "Encounter",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Force Orb",
+                "usage": "Encounter",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Color Spray",
+                "usage": "Encounter",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Fire Burst",
+                "usage": "Encounter",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Wizard's Fury",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Bigby's Icy Grasp",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Visions of Ruin",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Phantom Chasm",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Fireball",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Face of Death",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Guardian Blades",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Dispel Magic",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Tactician's Measure",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Expeditious Retreat",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Invisibility",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Repelling Shield",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
                 ]
             }
         ]
