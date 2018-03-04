@@ -544,6 +544,30 @@
                     ["Keywords", "Arcane"],
                     ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
                 ]
+            },
+            {
+                "name": "Invisibility",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
+            },
+            {
+                "name": "Repelling Shield",
+                "usage": "Utility",
+                "actionType": "Standard Action",
+                "source": "PHB",
+                "target": "1 object or unoccupied square",
+                "flavor": "This is flavor text.",
+                "elements": [
+                    ["Keywords", "Arcane"],
+                    ["Effect", "You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target."]
+                ]
             }
         ]
     }
