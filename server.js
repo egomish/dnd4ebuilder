@@ -4,19 +4,27 @@ var port = 3000;
 var upload = require('express-fileupload');
 var fs = require('fs');
 var bodyParser = require('body-parser');
-
-var abilityScores = require('./valueCalculation/calcAbilities.js');
-var defenses = require('./valueCalculation/calcDefenses.js');
-var skills = require('./valueCalculation/calcSkills.js');
-var movement = require('./valueCalculation/calcMovement.js');
-var initiative = require('./valueCalculation/calcInitiative.js');
-var healthAndSavingThrows = require('./valueCalculation/calcHealthAndSaves.js');
-var weaponProficiencies = require('./valueCalculation/calcWeaponProficiencies.js');
-var powers = require('./valueCalculation/calcPowers.js');
+var mysql = require('mysql');
+var calculate = require('./calculateValues.js');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(upload());
+
+var con = mysql.createConnection ({
+    host: "sql3.freemysqlhosting.net",
+    user: "sql3222527",
+    password: "leANL4iLIN",
+    database: "sql3222527"
+});
+
+con.connect(function (err) {
+    if (err) {
+        console.log("Connection to database failed")
+    } else {
+        console.log("Connected to database");
+    }
+});
 
 app.post('/character', function(req, res) {
     var filename = req.body.level0.name;
@@ -50,27 +58,8 @@ app.listen(port, function() {
     console.log('Server app listening on port ' + port);
 });
 
-// Value Calculation
 app.post('/calculateValues', function(req, res) {
   var ddch = req.body;
-  var cv = {}; //cv = Calculated Values
-  
-  // Placeholder Variables
-  getSizeFromDatabase = 'M'
-  getRaceFeaturesFromDatabase = {};
-    
-  cv.halfLevel = Math.floor(ddch.characterLevel / 2);
-  cv.abilityScores = abilityScores.calculate(ddch);
-  cv.size = getSizeFromDatabase;
-  cv.raceFeatures = getRaceFeaturesFromDatabase;
-  cv.movement = movement.calculate(ddch);
-  cv.initiative = initiative.calculate(ddch, cv.abilityScores);
-  cv.healthAndSavingThrows = healthAndSavingThrows.calculate(ddch, cv.abilityScores);
-  cv.skills = skills.calculate(ddch, cv.abilityScores, cv.halfLevel);
-  cv.defenses = defenses.calculate(ddch, cv.abilityScores);
-  cv.weaponProficiencies = weaponProficiencies.calculate(ddch, cv.abilityScores, cv.halfLevel);
-  cv.powers = powers.calculate(ddch, cv);
-  
-  ddch.calculatedValues = cv;
-  res.json(ddch);
+  ddch.calculatedValues = {};
+  calculate.getEverythingFromDatabase(con, ddch, res);
 });
