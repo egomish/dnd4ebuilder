@@ -9,8 +9,17 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(upload());
 
+app.get('/premades', function(req, res) {
+	res.json([
+		'Dresden',
+		'Nijkar',
+		'Perrin',
+		'Phila'
+	]);
+});
+
 app.post('/character', function(req, res) {
-    var filename = req.body.level0.name;
+    var filename = req.body.name;
     if (filename === '') {
         filename = 'TestChar';
     }

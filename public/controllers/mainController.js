@@ -285,6 +285,25 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
         }
     };
 
+    $scope.init = function() {
+        console.log('called init');
+        $scope.selectedPremade = 'Dresden';
+        $http.get('/premades').then(function(response) {
+            $scope.premades = response.data;
+            console.log($scope.premades);
+        }, function (error) {
+            console.log('could not GET premades from server.');
+        });
+    };
+
+    $scope.set_premade = function() {
+         $http.post('/character', {name: $scope.selectedPremade}).then(function(response) {
+            $scope.ddch = response.data;
+        }, function (error) {
+            console.log('could not GET character from server.');
+        });
+    };
+
     $scope.log = function() {
         console.log($scope.ddch);
     };
