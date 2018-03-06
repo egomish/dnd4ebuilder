@@ -290,7 +290,6 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
         $scope.selectedPremade = 'Dresden';
         $http.get('/premades').then(function(response) {
             $scope.premades = response.data;
-            console.log($scope.premades);
         }, function (error) {
             console.log('could not GET premades from server.');
         });
