@@ -18,7 +18,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             alignment: "",
             deity: "",
 
-            ddrace: "",
+            ddrace: "Dwarf",
             abilityBonus1: "",
             abilityBonus2: "",
             skillBonus1: "",
