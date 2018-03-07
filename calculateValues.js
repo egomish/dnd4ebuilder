@@ -1,38 +1,40 @@
 var con;
+var res;
 
 module.exports.getEverythingFromDatabase = function (db, ddch, response) {
     con = db;
-    getSize(ddch, response, database_error);
+    res = response;
+    getSize(ddch);
 }
 
-function getSize (ddch, response, error_callback) {
+function getSize (ddch) {
   var racename = ddch.level0.ddrace;
   var query = "SELECT size FROM races WHERE name LIKE '" + racename + "';";
   con.query(query, function (err, result) {
       if (err) {
-        error_callback(err, query);
+        database_error(err, query);
       } else {
         ddch.calculatedValues.size = result[0].size;
       }
-      getACBonus(ddch, response, error_callback);
+      getACBonus(ddch);
   });
 }
 
-function getACBonus (ddch, response, error_callback) {
+function getACBonus (ddch) {
   var classname = ddch.level1.ddclass;
   var query = "SELECT acBonus FROM classes WHERE name LIKE '" + classname + "';";
   con.query(query, function (err, result) {
       if (err) {
-        error_callback(err, query);
+        database_error(err, query);
       } else {
         ddch.calculatedValues.acBonus = result[0].acBonus;
       }
-      completeResponse(ddch, response, error_callback);
+      completeResponse(ddch);
   });
 }
 
-function completeResponse (ddch, response, error_callback) {
-    response.json(ddch);
+function completeResponse (ddch) {
+    res.json(ddch);
 }
 
 function database_error (err, query) {
