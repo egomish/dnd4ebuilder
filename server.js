@@ -4,25 +4,30 @@ var port = 3000;
 var upload = require('express-fileupload');
 var fs = require('fs');
 var bodyParser = require('body-parser');
+var mysql = require('mysql');
+var calculate = require('./calculateValues.js');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(upload());
 
-app.get('/premades', function(req, res) {
-	fs.readdir('./public/assets/', function(err, items) {
-		var premades = [];
-	    for(var i=0; i<items.length; i++) {
-	    	if(items[i].split('.')[1] == 'ddch') {
-	    		premades.push(items[i].split('.')[0]);
-	    	}
-	    }
-	    res.json(premades);
-	});
+var con = mysql.createConnection ({
+    host: "sql3.freemysqlhosting.net",
+    user: "sql3222527",
+    password: "leANL4iLIN",
+    database: "sql3222527"
+});
+
+con.connect(function (err) {
+    if (err) {
+        console.log("Connection to database failed")
+    } else {
+        console.log("Connected to database");
+    }
 });
 
 app.post('/character', function(req, res) {
-    var filename = req.body.name;
+    var filename = req.body.level0.name;
     if (filename === '') {
         filename = 'TestChar';
     }
@@ -43,11 +48,6 @@ app.post('/uploadfile', function(req, res) {
 			} else {
 				var contents = fs.readFileSync("uploads/" + filetoupload);
 				var jsonContent = JSON.parse(contents);
-				fs.unlink('uploads/'+filetoupload, function(err) {
-					if (err) {
-						throw err;
-					}
-				});
 				res.json(jsonContent);
 			}
 		});
@@ -56,4 +56,10 @@ app.post('/uploadfile', function(req, res) {
 
 app.listen(port, function() {
     console.log('Server app listening on port ' + port);
+});
+
+app.post('/calculateValues', function(req, res) {
+  var ddch = req.body;
+  ddch.calculatedValues = {};
+  calculate.getEverythingFromDatabase(con, ddch, res);
 });
