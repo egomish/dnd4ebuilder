@@ -94,6 +94,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -101,6 +102,7 @@ INSERT INTO features(
 VALUES(
 	'First Strike',
 	'class',
+	'Rogue',
 	NULL,
 	"At the start of an encounter, you have combat advantage against any creatures 
 	that have not yet acted in that encounter.",
@@ -110,6 +112,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -117,6 +120,7 @@ INSERT INTO features(
 VALUES(
 	'Rogue Tactics',
 	'class',
+	'Rogue',
 	NULL,
 	"Rogues operate in a variety of ways. Some rogues use their natural charm and cunning 
 	trickery to deceive foes. Others rely on brute strength to overcome their enemies. 
@@ -131,6 +135,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -138,6 +143,7 @@ INSERT INTO features(
 VALUES(
 	'Rogue Weapon Talent ',
 	'class',
+	'Rogue',
 	NULL,
 	"When you wield a shuriken, your weapon damage die increases by one size. When you 
 	wield a dagger, you gain a +1 bonus to attack rolls.",
@@ -147,6 +153,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -154,6 +161,7 @@ INSERT INTO features(
 VALUES(
 	'Sneak Attack',
 	'class',
+	'Rogue',
 	NULL,
 	"Once per round, when you have combat advantage against an enemy and are using a 
 	weapon from the light blade, the crossbow, or the sling weapon group, an attack you 
@@ -166,6 +174,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -173,6 +182,7 @@ INSERT INTO features(
 VALUES(
 	'Bold',
 	'race',
+	'Halfling',
 	NULL,
 	"You gain a +5 racial bonus to saving throws against fear.",
 	NULL
@@ -181,6 +191,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -188,6 +199,7 @@ INSERT INTO features(
 VALUES(
 	'Nimble Reaction',
 	'race',
+	'Halfling',
 	NULL,
 	"You gain a +2 racial bonus to AC against opportunity attacks.",
 	NULL
@@ -196,6 +208,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -203,6 +216,7 @@ INSERT INTO features(
 VALUES(
 	'Second Chance',
 	'race',
+	'Halfling',
 	NULL,
 	"You can use second chance as an encounter power.",
 	NULL
@@ -211,6 +225,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -218,6 +233,7 @@ INSERT INTO features(
 VALUES(
 	'Artful Dodger',
 	'feat',
+	NULL,
 	NULL,
 	"The rogue gains a bonus to AC against opportunity attacks equal to the rogue's Charisma modifier.",
 	NULL

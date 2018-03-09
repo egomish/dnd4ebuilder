@@ -92,6 +92,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -99,6 +100,7 @@ INSERT INTO features(
 VALUES(
 	'Combat Challenge',
 	'class',
+	'Fighter',
 	NULL,
 	"In combat, it’s dangerous to ignore a fighter. Every time you attack an enemy, whether the attack hits or misses, 
 	you can choose to mark that target. The mark lasts until the end of your next turn. While a target
@@ -112,6 +114,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -119,6 +122,7 @@ INSERT INTO features(
 VALUES(
 	'Combat Superiority',
 	'class',
+	'Fighter',
 	NULL,
 	"You gain a bonus to opportunity attacks equal to your Wisdom modifier. 
 	An enemy struck by your oppor- tunity attack stops moving, if a move provoked the attack. 
@@ -129,6 +133,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -136,6 +141,7 @@ INSERT INTO features(
 VALUES(
 	'Fighter Weapon Talent',
 	'class',
+	'Fighter',
 	NULL,
 	"Choose either one-handed or two-handed weapons. When using a weapon of your chosen style, 
 	you gain a +1 bonus to attack rolls.",
@@ -145,6 +151,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -152,6 +159,7 @@ INSERT INTO features(
 VALUES(
 	'Cast-Iron Stomach',
 	'race',
+	'Dwarf',
 	NULL,
 	"+5 racial bonus to saving throws against poison.",
 	NULL
@@ -160,6 +168,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -167,6 +176,7 @@ INSERT INTO features(
 VALUES(
 	'Dwarven Resilience',
 	'race',
+	'Dwarf',
 	NULL,
 	"You can use your second wind as a minor action instead of a standard action.",
 	NULL
@@ -175,6 +185,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -182,6 +193,7 @@ INSERT INTO features(
 VALUES(
 	'Dwarven Weapon Proficiency',
 	'race',
+	'Dwarf',
 	NULL,
 	"You gain proficiency with the throwing hammer and the warhammer.",
 	NULL
@@ -206,6 +218,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -213,6 +226,7 @@ INSERT INTO features(
 VALUES(
 	'Stand Your Ground',
 	'race',
+	'Dwarf',
 	NULL,
 	"When an effect forces you to move—through a pull, a push, or a slide—you can move 1 square less than the effect specifies. 
 	This means an effect that normally pulls, pushes, or slides a target 1 square does not force you to move unless you want to. 
@@ -223,6 +237,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -230,6 +245,7 @@ INSERT INTO features(
 VALUES(
 	'Toughness',
 	'feat',
+	NULL,
 	NULL,
 	"Gain 5 additional hit points per tier",
 	NULL

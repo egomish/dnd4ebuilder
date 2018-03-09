@@ -60,6 +60,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -67,6 +68,7 @@ INSERT INTO features(
 VALUES(
 	'Arcane Implement Mastery',
 	'class',
+	'Wizard',
 	NULL,
 	"You specialize in the use of one kind of implement to gain additional abilities when you wield it. 
 	Choose one of the following forms of implement mastery: Orb of Imposition, Staff of Defense, or Wand of Accuracy",
@@ -76,6 +78,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -83,6 +86,7 @@ INSERT INTO features(
 VALUES(
 	'Staff of Defense',
 	'class',
+	'Wizard',
 	NULL,
 	"A staff of defense grants you a +1 bonus to AC. In addition, once per encoun-ter as an immediate interrupt, 
 	you gain a bonus to defense against one attack equal to your Constitu- tion modifier. You can declare the bonus 
@@ -94,6 +98,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -101,6 +106,7 @@ INSERT INTO features(
 VALUES(
 	'Cantrips',
 	'class',
+	'Wizard',
 	NULL,
 	"Cantrips are minor spells you gain at 1st level. You can use the ghost sound, light, mage hand, and prestidigitation 
 	cantrips as at-will powers.",
@@ -110,6 +116,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -117,6 +124,7 @@ INSERT INTO features(
 VALUES(
 	'Ritual Casting',
 	'class',
+	'Wizard',
 	NULL,
 	"You gain the Ritual Caster feat as a bonus feat, allowing you to use magical rituals",
 	NULL
@@ -125,6 +133,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -132,6 +141,7 @@ INSERT INTO features(
 VALUES(
 	'Spellbook',
 	'class',
+	'Wizard',
 	NULL,
 	"Three 1st level rituals, plus more at higher levels. Also, twice the daily and utility spells you can use; 
 	choose from among these at each extended rest.",

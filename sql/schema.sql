@@ -23,6 +23,7 @@ CREATE TABLE classes(
 CREATE TABLE features(
 	name VARCHAR(100) PRIMARY KEY,
 	kind ENUM('race', 'class', 'feat'),
+	origin VARCHAR(50),
 	prerequisites TEXT,
 	benefit VARCHAR(255),
 	special VARCHAR(255)
