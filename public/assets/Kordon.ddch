@@ -64,6 +64,20 @@
         "ddclass": "Fighter",
         "skillTrainings": ["Athletics", 
                            "Endurance", "Heal"],
+        "classFeatures": [
+            {
+                "name": "Combat Challenge",
+                "desc": "Mark foes you attack.  They get -2 to attacks not targeting you, and you can make a basic melee attack on them if they shift or don't target you in an attack.  The effect lasts until the end of your next turn or they're marked by another."
+            },
+            {
+                "name": "Combat Superiority",
+                "desc": "Add your Wisdom modifier to opportunity attacks, and halt movement of targets of your successful opportunity attacks."
+            },
+            {
+                "name": "Fighter Talent",
+                "desc": "+1 to hit with Two-handed weapons."
+            }
+        ],
         "atwillPower1": "Sure Strike",
         "atwillPower2": "Cleave",
         "encounterPower": "Spinning Sweep",
@@ -125,20 +139,6 @@
     "calculatedValues": {
         "halfLevel": 0,
         "size": "M",
-        "classFeatures": [
-            {
-                "name": "Combat Challenge",
-                "desc": "Mark foes you attack.  They get -2 to attacks not targeting you, and you can make a basic melee attack on them if they shift or don't target you in an attack.  The effect lasts until the end of your next turn or they're marked by another."
-            },
-            {
-                "name": "Combat Superiority",
-                "desc": "Add your Wisdom modifier to opportunity attacks, and halt movement of targets of your successful opportunity attacks."
-            },
-            {
-                "name": "Fighter Talent",
-                "desc": "+1 to hit with Two-handed weapons."
-            }
-        ],
         "raceFeatures": [
             {
                 "name": "Cast-Iron Stomach",

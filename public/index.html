@@ -6,27 +6,28 @@
     <title>D&D Character Builder</title>
 </head>
 <body>
-    <div class="container" ng-controller="mainController">
+    <div class="container" ng-controller="mainController" ng-init="init()">
         <h2 class="text-center underlined">Dungeons and Dragons 4e Character Builder</h2>
         <br>
         <div class="row" ng-include="'views/basicInfo.html'"></div>
         <br>
-        <div class="col-sm-4"> <!-- First Column -->
+        <div class="row">
+            <div class="col-sm-4"> <!-- First Column -->
                 <div class="row" ng-include="'views/abilityScores.html'"></div>
                 <div class="row" ng-include="'views/healthAndSavingThrows.html'"></div>
                 <div class="row" ng-include="'views/skills.html'"></div>
                 <div class="row" ng-include="'views/powers.html'"></div>
                 <div class="row" ng-include="'views/equipment.html'"></div>
                 <div class="row" ng-include="'views/wealth.html'"></div>
-        </div>
-        <div class="col-sm-4"> <!--Second Column -->
+            </div>
+            <div class="col-sm-4"> <!--Second Column -->
                 <div class="row" ng-include="'views/defenses.html'"></div>
                 <div class="row" ng-include="'views/raceFeatures.html'"></div>
                 <div class="row" ng-include="'views/classFeatures.html'"></div>
                 <div class="row" ng-include="'views/magicItems.html'"></div>
                 <div class="row" ng-include="'views/rituals.html'"></div>
-        </div>
-        <div class="col-sm-4"> <!--Third Column -->
+            </div>
+            <div class="col-sm-4"> <!--Third Column -->
                 <div class="row" ng-include="'views/movement.html'"></div>
                 <div class="row" ng-include="'views/initiative.html'"></div>
                 <div class="row" ng-include="'views/weaponProficiencies.html'"></div>
@@ -34,21 +35,22 @@
                 <div class="row" ng-include="'views/portrait.html'"></div>
                 <div class="row" ng-include="'views/languages.html'"></div>
                 <div class="row" ng-include="'views/characterDetails.html'"></div>
-        </div>
-        <button ng-click="log()">Click me to log</button>
-        <button ng-click="set_ddch()">Get ddch</button><br>
-        <form id="data" name="uploadForm"  action="/uploadfile" method="post" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-sm-4">
-                    <input type="file" name="filetoupload">
-                </div>
-                <div class="col-sm-4">
-                    <input type="submit">
-                </div>
             </div>
-        </form>
-        <br>
-        <button ng-click="download()">Download Character</button>
+            <br>
+        </div>
+        <div class="row">
+            <button ng-click="log()">Click me to log</button><br><br>
+            <select ng-model="selectedPremade">
+                <option ng-repeat="premade in premades track by $index" value="{{premade}}">{{premade}}</option>
+            </select>
+            <button ng-click="set_premade()">Load Premade</button><br><br>
+            <form id="data" name="uploadForm"  action="/uploadfile" method="post" enctype="multipart/form-data">
+                <input type="file" name="filetoupload">
+                <input type="submit">
+            </form>
+            <br>
+            <button ng-click="download()">Download Character</button>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
