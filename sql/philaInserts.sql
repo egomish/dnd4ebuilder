@@ -94,6 +94,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -101,6 +102,7 @@ INSERT INTO features(
 VALUES(
 	'Combat Leader',
 	'class',
+	'Warlord',
 	NULL,
 	"You and each ally 
 	within 10 squares who can see and hear you gain a +2 power bonus to initiative.",
@@ -110,6 +112,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -117,6 +120,7 @@ INSERT INTO features(
 VALUES(
 	'Commanding Presence ',
 	'class',
+	'Warlord',
 	NULL,
 	"Choose one of the following two benefits. Inspiring Presence: When an 
 	ally who can see you spends an action point to take an extra action, that
@@ -132,6 +136,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -139,6 +144,7 @@ INSERT INTO features(
 VALUES(
 	'Inspiring Word',
 	'class',
+	'Warlord',
 	NULL,
 	"Using the inspiring word power, warlords can grant their comrades additional 
 	resilience with nothing more than a shout of encouragement. ",
@@ -148,6 +154,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -155,6 +162,7 @@ INSERT INTO features(
 VALUES(
 	'Dragonborn Fury',
 	'race',
+	'Dragonborn',
 	NULL,
 	"When you’re bloodied, you gain a +1 racial bonus to attack rolls. ",
 	NULL
@@ -163,6 +171,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -170,6 +179,7 @@ INSERT INTO features(
 VALUES(
 	'Draconic Heritage: ',
 	'race',
+	'Dragonborn',
 	NULL,
 	"Your healing surge value is equal to one-quarter of your maximum hit points 
 	+ your Constitution modifier. ",
@@ -179,6 +189,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -186,6 +197,7 @@ INSERT INTO features(
 VALUES(
 	'Dragon Breath: ',
 	'race',
+	'Dragonborn',
 	NULL,
 	" You can use dragon breath as an encounter power.",
 	NULL
@@ -194,6 +206,7 @@ VALUES(
 INSERT INTO features(
 	name,
 	kind,
+	origin,
 	prerequisites,
 	benefit,
 	special
@@ -201,6 +214,7 @@ INSERT INTO features(
 VALUES(
 	'Dragonborn Frenzy',
 	'feat',
+	'Dragonborn',
 	'Dragonborn',
 	" While you are bloodied, you gain a +2 bonus to damage rolls.",
 	NULL
