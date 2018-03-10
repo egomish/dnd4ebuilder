@@ -9,6 +9,7 @@ INSERT INTO races(
 	abilityScoreBonus1,
 	abilityScoreBonus2,
 	size,
+	speed,
 	vision,
 	numberOfLanguages,
 	skillBonus1,
@@ -29,6 +30,7 @@ VALUES(
 	'+2 Strength', /* ability score bonus 1 */
 	'+2 Charisma', /* ability score bonus 2 */
 	'medium', /* size */
+	6, /* speed */
 	'Normal', /* vision */
 	2, /* number of languages */
 	'+2 History', /* skill bonus 1 */

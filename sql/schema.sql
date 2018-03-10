@@ -100,6 +100,7 @@ CREATE TABLE races(
 	abilityScoreBonus1 TEXT,
 	abilityScoreBonus2 TEXT,
 	size ENUM('tiny', 'small', 'medium', 'large', 'huge'),
+	speed INTEGER DEFAULT 6,
 	vision ENUM('normal', 'low light', 'dark vision'),
 	numberOfLanguages INTEGER,
 	skillBonus1 TEXT,
