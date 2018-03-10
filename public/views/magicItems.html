@@ -9,9 +9,9 @@
         <input type="checkbox">
     </div>
     <div ng-if="ddch.level0.magicItems.weapons.length == 0"  class="line">
-	<span class="type">WEAPON</span>
-	<label></label>
-	<input type="checkbox">
+    	<span class="type">WEAPON</span>
+    	<label></label>
+    	<input type="checkbox">
     </div>
     <div class="line">
         <span class="type">ARMOR</span>
@@ -56,6 +56,16 @@
     <div class="line">
         <span class="type">WAIST</span>
         <span class="name">{{ddch.level0.magicItems.waist}}</span>
+        <input type="checkbox">
+    </div>
+    <div class="line" ng-repeat="item in ddch.level0.magicItems.misc">
+        <span class="type">MISC</span>
+        <span class="name">{{item}}</span>
+        <input type="checkbox">
+    </div>
+    <div ng-if="ddch.level0.magicItems.misc.length == 0"  class="line">
+        <span class="type">MISC</span>
+        <label></label>
         <input type="checkbox">
     </div>
 </div>

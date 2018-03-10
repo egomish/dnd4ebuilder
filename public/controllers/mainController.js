@@ -1,5 +1,5 @@
 var app = angular.module('app', []);
-app.controller('mainController', ['$scope', '$http', function($scope, $http) {
+app.controller('mainController', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.ddch = {
         characterLevel: 1,
         level0: {
@@ -53,7 +53,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 neck: '',
                 leftRing: '',
                 rightRing: '',
-                waist: ''
+                waist: '',
+                misc: []
             },
 
             languages: ["Common", "Undercommon"],
@@ -188,8 +189,12 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                 bloodiedValue: 0,
                 surgeValue: 0,
                 surgesPerDay: 0,
-                savingThrowMods: "",
-                resistances: ""
+                savingThrowMods: [
+                    ""
+                ],
+                resistances: [
+                    ""
+                ]
             },
             skills: [
                 [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
@@ -241,11 +246,6 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
                     misc: 0
                 },
             },
-            speed: {
-                armor: 0,
-                item: 0,
-                misc: 0
-            },
             weaponProficiencies: [
                 {
                     attack: 2,
@@ -285,6 +285,24 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
         }
     };
 
+    $scope.init = function() {
+        console.log('called init');
+        $scope.selectedPremade = 'Dresden';
+        $http.get('/premades').then(function(response) {
+            $scope.premades = response.data;
+        }, function (error) {
+            console.log('could not GET premades from server.');
+        });
+    };
+
+    $scope.set_premade = function() {
+         $http.post('/character', {name: $scope.selectedPremade}).then(function(response) {
+            $scope.ddch = response.data;
+        }, function (error) {
+            console.log('could not GET character from server.');
+        });
+    };
+
     $scope.log = function() {
         console.log($scope.ddch);
     };
@@ -303,6 +321,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
           console.log("Error calculating values.");
       });
     }
+
+    //file uploading
     $(document).ready(function() {
         $("form#data").submit(function(e) {
             e.preventDefault();    
@@ -322,4 +342,38 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
             });
         });
     });
+
+    // file downloading
+    $scope.download = function () {
+        var data = $scope.ddch;
+        delete data['calculatedValues'];
+        var filename = $scope.ddch.level0.name + '.ddch';
+
+        if (!data) {
+            console.error('No data');
+            return;
+        }
+
+        if (typeof data === 'object') {
+            data = JSON.stringify(data, undefined, 2);
+        }
+
+        var blob = new Blob([data], {type: 'text/json'});
+
+        // FOR IE:
+
+        if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+            window.navigator.msSaveOrOpenBlob(blob, filename);
+        }
+        else{
+            var e = document.createEvent('MouseEvents'),
+            a = document.createElement('a');
+
+            a.download = filename;
+            a.href = window.URL.createObjectURL(blob);
+            a.dataset.downloadurl = ['text/json', a.download, a.href].join(':');
+            e.initEvent('click');
+            a.dispatchEvent(e);
+        }
+    };
 }]);

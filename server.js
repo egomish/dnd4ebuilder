@@ -26,8 +26,20 @@ con.connect(function (err) {
     }
 });
 
+app.get('/premades', function(req, res) {
+	fs.readdir('./public/assets/', function(err, items) {
+		var premades = [];
+	    for(var i=0; i<items.length; i++) {
+	    	if(items[i].split('.')[1] == 'ddch') {
+	    		premades.push(items[i].split('.')[0]);
+	    	}
+	    }
+	    res.json(premades);
+	});
+});
+
 app.post('/character', function(req, res) {
-    var filename = req.body.level0.name;
+    var filename = req.body.name;
     if (filename === '') {
         filename = 'TestChar';
     }
@@ -48,6 +60,11 @@ app.post('/uploadfile', function(req, res) {
 			} else {
 				var contents = fs.readFileSync("uploads/" + filetoupload);
 				var jsonContent = JSON.parse(contents);
+				fs.unlink('uploads/'+filetoupload, function(err) {
+					if (err) {
+						throw err;
+					}
+				});
 				res.json(jsonContent);
 			}
 		});
