@@ -1,0 +1,180 @@
+halfLevel
+    query: -
+    source attributes: ddch.characterLevel
+    target attributes: ddch.calculatedValues.halfLevel
+
+size
+    query: SELECT size FROM races WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.ddrace
+    target attributes: ddch.calculatedValues.size
+
+raceFeatures
+    query: SELECT name, benefit FROM features WHERE origin LIKE '<racename>';
+    source attributes: ddch.level0.race
+    target attributes: ddch.calculateValues.raceFeatures
+
+base movement
+    query:
+    source attributes:
+    target attributes:
+
+armor check penalty
+    query:
+    source attributes:
+    target attributes:
+
+item bonus to movement (XXX: not implemented)
+miscellaneous bonus to movement (XXX: not implemented)
+miscellaneous bonus to initiative (XXX: not implemented)
+
+strength total
+    query: SELECT abilityScoreBonus1, abilityScoreBonus2 
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseStr
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseStr
+
+strength modifier
+    query: -
+    source attributes: ddch.calculatedValues.abilityScores.strTotal
+    target attributes: ddch.calculatedValues.abilityScores.strMod
+                       ddch.calculatedValues.skills[2][3]
+                       ddch.calculatedValues.defenses.fortitude.abilityMod
+                       ddch.calculatedValues.weaponProficiencies[i].damageMod
+
+constitution total
+    query: 
+    source attributes: 
+    target attributes: 
+
+constitution modifier
+    query: 
+    source attributes: 
+    target attributes: 
+
+dexterity total
+    query: 
+    source attributes: 
+    target attributes: 
+
+dexterity modifier
+    query: 
+    source attributes: 
+    target attributes: 
+
+intelligence total
+    query: 
+    source attributes: 
+    target attributes: 
+
+intelligence modifier
+    query: 
+    source attributes: 
+    target attributes: 
+
+wisdom total
+    query: 
+    source attributes: 
+    target attributes: 
+
+wisdom modifier
+    query: 
+    source attributes: 
+    target attributes: 
+
+charisma total
+    query: 
+    source attributes: 
+    target attributes: 
+
+charisma modifier
+    query: 
+    source attributes: 
+    target attributes: 
+
+max hit points
+    query: 
+    source attributes: 
+    target attributes: 
+
+bloodied value
+    query: 
+    source attributes: 
+    target attributes: 
+
+surge value
+    query: 
+    source attributes: 
+    target attributes: 
+
+surges per day
+    query: 
+    source attributes: 
+    target attributes: 
+
+saving throw modifiers
+    query: 
+    source attributes: 
+    target attributes: 
+
+resistances
+    query: 
+    source attributes: 
+    target attributes: 
+
+skill totals
+    query: 
+    source attributes: 
+    target attributes: 
+
+skill trainings
+    query: 
+    source attributes: 
+    target attributes: 
+
+miscellaneous skill bonuses (XXX: not implemented)
+
+armor bonus to AC
+    query: 
+    source attributes: 
+    target attributes: 
+
+class bonus to AC
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to AC (XXX: not implemented)
+enhancement bonus to AC (XXX: not implemented)
+miscellaneous bonus to AC (XXX: not implemented)
+
+class bonus to fortitude
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to fortitude (XXX: not implemented)
+enhancement bonus to fortitude (XXX: not implemented)
+miscellaneous bonus to fortitude (XXX: not implemented)
+
+class bonus to reflex
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to reflex (XXX: not implemented)
+enhancement bonus to reflex (XXX: not implemented)
+miscellaneous bonus to reflex (XXX: not implemented)
+
+class bonus to will
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to will (XXX: not implemented)
+enhancement bonus to will (XXX: not implemented)
+miscellaneous bonus to will (XXX: not implemented)
+
+weapon proficiencies (XXX: needs a lot more thought)
+powers (XXX: needs a lot more thought)
