@@ -35,7 +35,7 @@ VALUES(
 	2, /* number of languages */
 	'+2 History', /* skill bonus 1 */
 	'+2 Intimidate', /* skill bonus 2 */
-	'DragonBorn Fury, Draconis Heritage, Dragon Breath' /* race features */
+	'Dragonborn Fury, Draconic Heritage, Dragon Breath' /* race features */
 ); 
 
 INSERT INTO classes(
