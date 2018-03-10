@@ -6,14 +6,33 @@ INSERT INTO races(
 	maxHeight,
 	minWeight,
 	maxWeight,
-	abilityScoreBonus1,
-	abilityScoreBonus2,
+	strBonus,
+	conBonus,
+	dexBonus,
+	intBonus,
+	wisBonus,
+	chaBonus,
 	size,
 	speed,
 	vision,
 	numberOfLanguages,
-	skillBonus1,
-	skillBonus2,
+	acrobaticsBonus,
+	arcanaBonus,
+	athleticsBonus,
+	bluffBonus,
+	diplomacyBonus,
+	dungeoneeringBonus,
+	enduranceBonus,
+	healBonus,
+	historyBonus,
+	insightBonus,
+	intimidateBonus,
+	natureBonus,
+	perceptionBonus,
+	religionBonus,
+	stealthBonus,
+	streetwiseBonus,
+	thieveryBonus,
 	racialFeatures
 )
 VALUES(
@@ -27,14 +46,33 @@ VALUES(
 	"6'8''", /* max height */
 	220, /* min weight */
 	320, /* max weight */
-	'+2 Strength', /* ability score bonus 1 */
-	'+2 Charisma', /* ability score bonus 2 */
+	2, /* strength bonus */
+	0, /* constitution bonus */
+	0, /* dexterity bonus */
+	0, /* intelligence bonus */
+	0, /* wisdom bonus */
+	2, /* charisma bonus */
 	'medium', /* size */
 	6, /* speed */
 	'Normal', /* vision */
 	2, /* number of languages */
-	'+2 History', /* skill bonus 1 */
-	'+2 Intimidate', /* skill bonus 2 */
+	0, /* acrobatics bonus */
+	0, /* arcana bonus */
+	0, /* athletics bonus */
+	0, /* bluff bonus */
+	0, /* diplomacy bonus */
+	0, /* dungeoneering bonus */
+	0, /* endurance bonus */
+	0, /* heal bonus */
+	2, /* history bonus */
+	0, /* insight bonus */
+	2, /* intimidate bonus */
+	0, /* nature bonus */
+	0, /* perception bonus */
+	0, /* religtion bonus */
+	0, /* stealth bonus */
+	0, /* streetwise bonus */
+	0, /* thievery bonus */
 	'Dragonborn Fury, Draconic Heritage, Dragon Breath' /* race features */
 ); 
 

@@ -6,14 +6,33 @@ INSERT INTO races(
 	maxHeight,
 	minWeight,
 	maxWeight,
-	abilityScoreBonus1,
-	abilityScoreBonus2,
+	strBonus,
+	conBonus,
+	dexBonus,
+	intBonus,
+	wisBonus,
+	chaBonus,
 	size,
 	speed,
 	vision,
 	numberOfLanguages,
-	skillBonus1,
-	skillBonus2,
+	acrobaticsBonus,
+	arcanaBonus,
+	athleticsBonus,
+	bluffBonus,
+	diplomacyBonus,
+	dungeoneeringBonus,
+	enduranceBonus,
+	healBonus,
+	historyBonus,
+	insightBonus,
+	intimidateBonus,
+	natureBonus,
+	perceptionBonus,
+	religionBonus,
+	stealthBonus,
+	streetwiseBonus,
+	thieveryBonus,
 	racialFeatures
 )
 VALUES(
@@ -27,14 +46,33 @@ VALUES(
 	"4'9''", /* max height */
 	160, /* min weight */
 	220, /* max weight */
-	'+2 Constitution', /* ability score bonus 1 */
-	'+2 Wisdom', /* ability score bonus 2 */
+	0, /* strength bonus */
+	2, /* constitution bonus */
+	0, /* dexterity bonus */
+	0, /* intelligence bonus */
+	2, /* wisdom bonus */
+	0, /* charisma bonus */
 	'medium', /* size */
 	5, /* speed */
 	'low light', /* vision */
 	2, /* number of languages */
-	'+2 Dungeoneering', /* skill bonus 1 */
-	'+2 Endurance', /* skill bonus 2 */
+	0, /* acrobatics bonus */
+	0, /* arcana bonus */
+	0, /* athletics bonus */
+	0, /* bluff bonus */
+	0, /* diplomacy bonus */
+	2, /* dungeoneering bonus */
+	2, /* endurance bonus */
+	0, /* heal bonus */
+	0, /* history bonus */
+	0, /* insight bonus */
+	0, /* intimidate bonus */
+	0, /* nature bonus */
+	0, /* perception bonus */
+	0, /* religtion bonus */
+	0, /* stealth bonus */
+	0, /* streetwise bonus */
+	0, /* thievery bonus */
 	'Cast-Iron Stomach, Dwarven Resilience, Dwarven Weapon Proficiency, Encumbered Speed, Stand Your Ground' /* race features */
 ); 
 
