@@ -79,21 +79,16 @@ function doQuerySimple () {
 
 function doQueryStrengthTotal () {
     var racename = "Dragonborn";
-    var query = "SELECT abilityScoreBonus1, abilityScoreBonus2 "
+    var query = "SELECT strBonus "
               + "FROM races "
               + "WHERE name LIKE '" + racename + "';";
     con.query(query, function (err, result) {
         if (err) {
             database_error(err, query);
         } else {
-            var bonus1 = result[0]["abilityScoreBonus1"];
-            var bonus2 = result[0]["abilityScoreBonus2"];
+            var bonus = result[0]["strBonus"];
             console.log("\n" + query);
-            console.log("bonus1: " + bonus1);
-            console.log("bonus2: " + bonus2);
-            if (bonus1 === "+2 Strength" || bonus2 === "+2 Strength") {
-                console.log("+2 to strTotal");
-            }
+            console.log("strength bonus: " + bonus);
         }
         finishQueries();
     });
