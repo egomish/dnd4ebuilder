@@ -9,3 +9,10 @@ h3 {
 	background-color: #2d2d2d;
 	color: white;
 }
+
+.title {
+	font-family: "Berkshire Swash";
+	text-align: center;
+	font-size: 50px;
+	padding-bottom: 30px;
+}
