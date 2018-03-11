@@ -38,18 +38,32 @@
             </div>
             <br>
         </div>
-        <div class="row">
-            <button ng-click="log()">Click me to log</button><br><br>
-            <select ng-model="selectedPremade">
-                <option ng-repeat="premade in premades track by $index" value="{{premade}}">{{premade}}</option>
-            </select>
-            <button ng-click="set_premade()">Load Premade</button><br><br>
-            <form id="data" name="uploadForm"  action="/uploadfile" method="post" enctype="multipart/form-data">
-                <input type="file" name="filetoupload">
-                <input type="submit">
-            </form>
-            <br>
-            <button ng-click="download()">Download Character</button>
+        <br><br><br>
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h4>Log Character</h4>
+                    <button ng-click="log()">Console Log</button><br><br>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Select Premade</h4>
+                    <select ng-model="selectedPremade">
+                        <option ng-repeat="premade in premades track by $index" value="{{premade}}">{{premade}}</option>
+                    </select><br><br>
+                    <button ng-click="set_premade()">Load</button>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Upload Character</h4>
+                    <form id="data" name="uploadForm"  action="/uploadfile" method="post" enctype="multipart/form-data">
+                        <input type="file" name="filetoupload"><br>
+                        <input type="submit">
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Download Character</h4>
+                    <button ng-click="download()">Download</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
