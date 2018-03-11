@@ -234,7 +234,7 @@
                 "misc": 0
             },
             "will": {
-                "abilityMod": 0,
+                "abilityMod": 4,
                 "class": 0,
                 "feat": 0,
                 "enhancement": 0,
