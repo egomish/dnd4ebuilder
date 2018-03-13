@@ -14,9 +14,11 @@ raceFeatures
     target attributes: ddch.calculateValues.raceFeatures
 
 base movement
-    query:
-    source attributes:
-    target attributes:
+    query: SELECT speed 
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.ddrace
+    target attributes: ddch.calculatedValues.movement.base
 
 armor check penalty
     query:
@@ -135,14 +137,21 @@ charisma modifier
                        ddch.calculatedValues.defenses.will.abilityMod
 
 max hit points
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT level1HP, perLevelHP
+           FROM classes
+           WHERE name LIKE '<classname>';
+    source attributes: ddch.level1.ddclass
+                       ddch.characterLevel
+                       ddch.calculatedValues.abilityScores.conTotal
+                       (and feats eventually)
+    target attributes: ddch.calculatedValues.healthAndSavingThrows.maxHP
+                       ddch.calculatedValues.healthAndSavingThrows.bloodiedValue
+                       ddch.calculatedValues.healthAndSavingThrows.surgeValue
 
 bloodied value
-    query: 
-    source attributes: 
-    target attributes: 
+    query: -
+    source attributes: ddch.calculatedValues.healthAndSavingThrows.maxHP
+    target attributes: ddch.calculatedValues.healthAndSavingThrows.bloodiedValue
 
 surge value
     query: 
