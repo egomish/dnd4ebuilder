@@ -1,5 +1,5 @@
-var app = angular.module('app', []);
-app.controller('mainController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+var app = angular.module('app', ['ui.bootstrap']);
+app.controller('mainController', ['$scope', '$http', '$window', '$modal', function($scope, $http, $window, $modal) {
     $scope.ddch = {
         characterLevel: undefined,
         level0: {
@@ -332,5 +332,18 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
             e.initEvent('click');
             a.dispatchEvent(e);
         }
+    };
+
+    // modal events
+    $scope.chooseRace = function() {
+        $scope.modalInstance = $modal.open({
+            templateUrl: '../views/modals/race.html',
+            controller: 'modalsController',
+            size: 'sm',
+            scope: $scope
+        });
+        $scope.modalInstance.result.then(function(selectedItem) {
+            $scope.ddch.level0.ddrace = selectedItem;
+        });
     };
 }]);
