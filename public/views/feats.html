@@ -2,42 +2,44 @@
 
 <h3>Feats</h3>
 <div class="features feats">
-    <ul>
-        <li>
-            <label ng-bind="ddch.level1.ddfeat.name+ ':'"></label>
-            <ul>
-                <li ng-bind="ddch.level1.ddfeat.desc"></li>
-            </ul>
-        </li>
-        <li ng-if="ddch.level2.ddfeat.name != '' && ddch.level2.ddfeat.name != undefined">
-            <label ng-bind="ddch.level2.ddfeat.name+ ':'"></label>
-            <ul>
-                <li ng-bind="ddch.level2.ddfeat.desc"></li>
-            </ul>
-        </li>
-        <li ng-if="ddch.level4.ddfeat.name != '' && ddch.level4.ddfeat.name != undefined">
-            <label ng-bind="ddch.level4.ddfeat.name+ ':'"></label>
-            <ul>
-                <li ng-bind="ddch.level4.ddfeat.desc"></li>
-            </ul>
-        </li>
-        <li ng-if="ddch.level6.ddfeat.name != '' && ddch.level6.ddfeat.name != undefined">
-            <label ng-bind="ddch.level6.ddfeat.name+ ':'"></label>
-            <ul>
-                <li ng-bind="ddch.level6.ddfeat.desc"></li>
-            </ul>
-        </li>
-        <li ng-if="ddch.level8.ddfeat.name != '' && ddch.level8.ddfeat.name != undefined">
-            <label ng-bind="ddch.level8.ddfeat.name+ ':'"></label>
-            <ul>
-                <li ng-bind="ddch.level8.ddfeat.desc"></li>
-            </ul>
-        </li>
-        <li ng-if="ddch.level10.ddfeat.name != '' && ddch.level10.ddfeat.name != undefined">
-            <label ng-bind="ddch.level10.ddfeat.name+ ':'"></label>
-            <ul>
-                <li ng-bind="ddch.level10.ddfeat.desc"></li>
-            </ul>
-        </li>
-    </ul>
+    <div ng-if="!allFeatsUndefined()">
+        <ul>
+            <li>
+                <label ng-bind="ddch.level1.ddfeat.name+ ':'"></label>
+                <ul>
+                    <li ng-bind="ddch.level1.ddfeat.desc"></li>
+                </ul>
+            </li>
+            <li ng-if="ddch.level2.ddfeat.name != '' && ddch.level2.ddfeat.name != undefined">
+                <label ng-bind="ddch.level2.ddfeat.name+ ':'"></label>
+                <ul>
+                    <li ng-bind="ddch.level2.ddfeat.desc"></li>
+                </ul>
+            </li>
+            <li ng-if="ddch.level4.ddfeat.name != '' && ddch.level4.ddfeat.name != undefined">
+                <label ng-bind="ddch.level4.ddfeat.name+ ':'"></label>
+                <ul>
+                    <li ng-bind="ddch.level4.ddfeat.desc"></li>
+                </ul>
+            </li>
+            <li ng-if="ddch.level6.ddfeat.name != '' && ddch.level6.ddfeat.name != undefined">
+                <label ng-bind="ddch.level6.ddfeat.name+ ':'"></label>
+                <ul>
+                    <li ng-bind="ddch.level6.ddfeat.desc"></li>
+                </ul>
+            </li>
+            <li ng-if="ddch.level8.ddfeat.name != '' && ddch.level8.ddfeat.name != undefined">
+                <label ng-bind="ddch.level8.ddfeat.name+ ':'"></label>
+                <ul>
+                    <li ng-bind="ddch.level8.ddfeat.desc"></li>
+                </ul>
+            </li>
+            <li ng-if="ddch.level10.ddfeat.name != '' && ddch.level10.ddfeat.name != undefined">
+                <label ng-bind="ddch.level10.ddfeat.name+ ':'"></label>
+                <ul>
+                    <li ng-bind="ddch.level10.ddfeat.desc"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
