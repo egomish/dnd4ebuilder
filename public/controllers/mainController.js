@@ -1,5 +1,5 @@
-var app = angular.module('app', ['ui.bootstrap']);
-app.controller('mainController', ['$scope', '$http', '$window', '$modal', function($scope, $http, $window, $modal) {
+var app = angular.module('app', []);
+app.controller('mainController', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.ddch = {
         characterLevel: undefined,
         level0: {
