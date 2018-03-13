@@ -269,7 +269,14 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
         }, function (error) {
             console.log('could not GET character from server.');
         });
-
+    }
+    $scope.calc_values = function() {
+      $http.post('/calculateValues', $scope.ddch).then(function(response) {
+          $scope.ddch = response.data;
+          console.log($scope.ddch);
+      }, function (error) {
+          console.log("Error calculating values.");
+      });
     }
 
     //file uploading

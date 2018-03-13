@@ -1,0 +1,221 @@
+halfLevel
+    query: -
+    source attributes: ddch.characterLevel
+    target attributes: ddch.calculatedValues.halfLevel
+
+size
+    query: SELECT size FROM races WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.ddrace
+    target attributes: ddch.calculatedValues.size
+
+raceFeatures
+    query: SELECT name, benefit FROM features WHERE origin LIKE '<racename>';
+    source attributes: ddch.level0.race
+    target attributes: ddch.calculateValues.raceFeatures
+
+base movement
+    query:
+    source attributes:
+    target attributes:
+
+armor check penalty
+    query:
+    source attributes:
+    target attributes:
+
+item bonus to movement (XXX: not implemented)
+miscellaneous bonus to movement (XXX: not implemented)
+miscellaneous bonus to initiative (XXX: not implemented)
+
+strength total
+    query: SELECT strBonus
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseStr
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseStr
+
+strength modifier
+    query: - calculated from strength total -
+    source attributes: ddch.calculatedValues.abilityScores.strTotal
+    target attributes: ddch.calculatedValues.abilityScores.strMod
+                       ddch.calculatedValues.skills[2][3]
+                       ddch.calculatedValues.defenses.fortitude.abilityMod
+                       ddch.calculatedValues.weaponProficiencies[i].damageMod
+
+constitution total
+    query: SELECT conBonus
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseCon
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseCon
+                       ddch.calculatedValues.healthAndSavingThrows.maxHP
+
+constitution modifier
+    query: - calculated from constitution total -
+    source attributes: ddch.calculatedValues.abilityScores.conTotal
+    target attributes: ddch.calculatedValues.abilityScores.conMod
+                       ddch.calculatedValues.skills[6][3]
+                       ddch.calculatedValues.defenses.fortitude.abilityMod
+                       ddch.calculatedValues.healthAndSavingThrows.surgesPerDay
+
+dexterity total
+    query: SELECT dexBonus
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseDex
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseDex
+
+dexterity modifier
+    query: - calculated from dexterity total -
+    source attributes: ddch.calculatedValues.abilityScores.dexTotal
+    target attributes: ddch.calculatedValues.abilityScores.dexMod
+                       ddch.calculatedValues.skills[0][3]
+                       ddch.calculatedValues.skills[14][3]
+                       ddch.calculatedValues.skills[16][3]
+                       ddch.calculatedValues.defenses.ac.abilityMod
+                       ddch.calculatedValues.defenses.reflex.abilityMod
+                       ddch.calculatedValues.weaponProficiencies[i].damageMod
+
+intelligence total
+    query: SELECT intBonus
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseInt
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseInt
+
+intelligence modifier
+    query: - calculated from intelligence total -
+    source attributes: ddch.calculatedValues.abilityScores.intTotal
+    target attributes: ddch.calculatedValues.abilityScores.intMod
+                       ddch.calculatedValues.skills[1][3]
+                       ddch.calculatedValues.skills[8][3]
+                       ddch.calculatedValues.skills[13][3]
+                       ddch.calculatedValues.defenses.ac.abilityMod
+                       ddch.calculatedValues.defenses.reflex.abilityMod
+
+wisdom total
+    query: SELECT wisBonus
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseWis
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseWis
+
+wisdom modifier
+    query: - calculated from wisdom total -
+    source attributes: ddch.calculatedValues.abilityScores.wisTotal
+    target attributes: ddch.calculatedValues.abilityScores.wisMod
+                       ddch.calculatedValues.skills[5][3]
+                       ddch.calculatedValues.skills[7][3]
+                       ddch.calculatedValues.skills[9][3]
+                       ddch.calculatedValues.skills[11][3]
+                       ddch.calculatedValues.skills[12][3]
+                       ddch.calculatedValues.defenses.will.abilityMod
+
+charisma total
+    query: SELECT chaBonus
+           FROM races 
+           WHERE name LIKE '<racename>';
+    source attributes: ddch.level0.abilityScores.baseCha
+                       ddch.ddrace
+    target attributes: ddch.calculatedValues.abilityScores.baseCha
+
+charisma modifier
+    query: - calculated from charisma total -
+    source attributes: ddch.calculatedValues.abilityScores.chaTotal
+    target attributes: ddch.calculatedValues.abilityScores.chaMod
+                       ddch.calculatedValues.skills[3][3]
+                       ddch.calculatedValues.skills[4][3]
+                       ddch.calculatedValues.skills[10][3]
+                       ddch.calculatedValues.skills[15][3]
+                       ddch.calculatedValues.defenses.will.abilityMod
+
+max hit points
+    query: 
+    source attributes: 
+    target attributes: 
+
+bloodied value
+    query: 
+    source attributes: 
+    target attributes: 
+
+surge value
+    query: 
+    source attributes: 
+    target attributes: 
+
+surges per day
+    query: 
+    source attributes: 
+    target attributes: 
+
+saving throw modifiers
+    query: 
+    source attributes: 
+    target attributes: 
+
+resistances
+    query: 
+    source attributes: 
+    target attributes: 
+
+skill totals
+    query: 
+    source attributes: 
+    target attributes: 
+
+skill trainings
+    query: 
+    source attributes: 
+    target attributes: 
+
+miscellaneous skill bonuses (XXX: not implemented)
+
+armor bonus to AC
+    query: 
+    source attributes: 
+    target attributes: 
+
+class bonus to AC
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to AC (XXX: not implemented)
+enhancement bonus to AC (XXX: not implemented)
+miscellaneous bonus to AC (XXX: not implemented)
+
+class bonus to fortitude
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to fortitude (XXX: not implemented)
+enhancement bonus to fortitude (XXX: not implemented)
+miscellaneous bonus to fortitude (XXX: not implemented)
+
+class bonus to reflex
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to reflex (XXX: not implemented)
+enhancement bonus to reflex (XXX: not implemented)
+miscellaneous bonus to reflex (XXX: not implemented)
+
+class bonus to will
+    query: 
+    source attributes: 
+    target attributes: 
+
+feat bonus to will (XXX: not implemented)
+enhancement bonus to will (XXX: not implemented)
+miscellaneous bonus to will (XXX: not implemented)
+
+weapon proficiencies (XXX: needs a lot more thought)
+powers (XXX: needs a lot more thought)
