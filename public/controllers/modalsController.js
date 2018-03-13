@@ -13,7 +13,6 @@ app.controller('modalsController', ['$scope', '$http', function($scope, $http) {
         for(var i=0; i<$scope.races.length; i++) {
             if($scope.races[i].name == $scope.selectedRace) {
                 $scope.raceDescription = $scope.races[i].description;
-                console.log($scope.raceDescription);
             }
         }
     };
