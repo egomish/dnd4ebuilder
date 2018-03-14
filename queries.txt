@@ -35,7 +35,7 @@ strength total
            WHERE name LIKE '<racename>';
     source attributes: ddch.level0.abilityScores.baseStr
                        ddch.ddrace
-    target attributes: ddch.calculatedValues.abilityScores.baseStr
+    target attributes: ddch.calculatedValues.abilityScores.strTotal
 
 strength modifier
     query: - calculated from strength total -
@@ -51,7 +51,7 @@ constitution total
            WHERE name LIKE '<racename>';
     source attributes: ddch.level0.abilityScores.baseCon
                        ddch.ddrace
-    target attributes: ddch.calculatedValues.abilityScores.baseCon
+    target attributes: ddch.calculatedValues.abilityScores.conTotal
                        ddch.calculatedValues.healthAndSavingThrows.maxHP
 
 constitution modifier
@@ -68,7 +68,7 @@ dexterity total
            WHERE name LIKE '<racename>';
     source attributes: ddch.level0.abilityScores.baseDex
                        ddch.ddrace
-    target attributes: ddch.calculatedValues.abilityScores.baseDex
+    target attributes: ddch.calculatedValues.abilityScores.dexTotal
 
 dexterity modifier
     query: - calculated from dexterity total -
@@ -87,7 +87,7 @@ intelligence total
            WHERE name LIKE '<racename>';
     source attributes: ddch.level0.abilityScores.baseInt
                        ddch.ddrace
-    target attributes: ddch.calculatedValues.abilityScores.baseInt
+    target attributes: ddch.calculatedValues.abilityScores.intTotal
 
 intelligence modifier
     query: - calculated from intelligence total -
@@ -105,7 +105,7 @@ wisdom total
            WHERE name LIKE '<racename>';
     source attributes: ddch.level0.abilityScores.baseWis
                        ddch.ddrace
-    target attributes: ddch.calculatedValues.abilityScores.baseWis
+    target attributes: ddch.calculatedValues.abilityScores.wisTotal
 
 wisdom modifier
     query: - calculated from wisdom total -
@@ -124,7 +124,7 @@ charisma total
            WHERE name LIKE '<racename>';
     source attributes: ddch.level0.abilityScores.baseCha
                        ddch.ddrace
-    target attributes: ddch.calculatedValues.abilityScores.baseCha
+    target attributes: ddch.calculatedValues.abilityScores.chaTotal
 
 charisma modifier
     query: - calculated from charisma total -
