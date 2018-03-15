@@ -179,12 +179,18 @@ skill totals
            enduranceBonus, healBonus, historyBonus, insightBonus, intimidateBonus, natureBonus, perceptionBonus, 
            religionBonus, stealthBonus, streetwiseBonus, thieveryBonus FROM races WHERE name LIKE <name of Race>
     source attributes: ddch.level0.ddrace
-    target attributes: ddch.calculatedValues.skills
+                       ddch.calculatedValues.halfLevel
+                       ddch.calculatedValues.skills[0 : 16][3]
+                       ddch.level0.equipment
+                       ddch.level0.magicItems
+    target attributes: ddch.calculatedValues.skills[0 : 16][0]
+                       ddch.calculatedValues.skills[0 : 16][5]
+                       ddch.calculatedValues.skills[0 : 16][6]
 
 skill trainings
     query: 
     source attributes: ddch.level1.skillTrainings
-    target attributes: ddch.calculatedValues.skills
+    target attributes: ddch.calculatedValues.skills[0 : 16][4]
 
 miscellaneous skill bonuses (XXX: not implemented)
 
