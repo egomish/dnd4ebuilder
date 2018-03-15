@@ -175,8 +175,10 @@ resistances
     target attributes: ddch.calculatedValues.healthAndSavingThrows.resistances
 
 skill totals
-    query: 
-    source attributes: 
+    query: SELECT strBonus, conBonus, dexBonus, intBonus, wisBonus FROM
+    source attributes: ddch.level0.ddrace
+                       ddch.level0.abilityBonus1
+                       ddch.level0.abilityBonus2
     target attributes: 
 
 skill trainings
