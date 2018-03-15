@@ -2,8 +2,8 @@
 
 <h3>Languages Known</h3>
 <div class="languages">
-    <span ng-repeat="language in ddch.level0.languages">
-        {{language}}
-        {{$last ? '' : ','}}
-    </span>
+    <span ng-if="language != ddch.level0.languages[ddch.level0.languages.length-1]" 
+    ng-repeat="language in ddch.level0.languages" ng-bind="language + ','"></span>
+    <span ng-if="language == ddch.level0.languages[ddch.level0.languages.length-1]" 
+    ng-repeat="language in ddch.level0.languages" ng-bind="language"></span>
 </div>

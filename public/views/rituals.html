@@ -5,7 +5,7 @@
 	<table>
 		<tr ng-repeat="ritual in ddch.level0.rituals track by $index">
 			<td>
-			    <p>{{ritual}}</p>
+			    <p ng-bind="ritual"></p>
 			</td>
 		</tr>
 	</table>

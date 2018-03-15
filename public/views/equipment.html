@@ -8,6 +8,7 @@
         comma at the end as well was too hard, so I used 
         three spaces for separation instead
       -->
-      <p ng-bind="item + '&nbsp &nbsp &nbsp'"></p>
+      <p ng-if="item != ddch.level0.equipment[ddch.level0.equipment.length-1]" ng-bind="item +','"></p>
+      <p ng-if="item == ddch.level0.equipment[ddch.level0.equipment.length-1]" ng-bind="item"></p>
     </span>
 </div>

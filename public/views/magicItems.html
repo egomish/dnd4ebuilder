@@ -3,69 +3,122 @@
 
 <h3>Magic Items</h3>
 <div class="magicItems">
-    <div class="line" ng-repeat="weapon in ddch.level0.magicItems.weapons">
-        <span class="type">WEAPON</span>
-        <span class="name">{{weapon}}</span>
-        <input type="checkbox">
+    <div class="row line" ng-repeat="weapon in ddch.level0.magicItems.weapons">
+        <div class="col-sm-2">
+            <span class="type">WEAPON</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="weapon"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div ng-if="ddch.level0.magicItems.weapons.length == 0"  class="line">
-    	<span class="type">WEAPON</span>
-    	<label></label>
-    	<input type="checkbox">
+    <div>
+    <div ng-if="ddch.level0.magicItems.weapons.length == 0"  class="row line">
+        <div class="col-sm-2">
+            <span class="type">WEAPON</span>
+        </div>
+        <div class="col-sm-10">
+            <label></label>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">ARMOR</span>
-        <span class="name">{{ddch.level0.magicItems.armor}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">ARMOR</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.armor"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">ARMS</span>
-        <span class="name">{{ddch.level0.magicItems.arms}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">ARMS</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.arms"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">FEET</span>
-        <span class="name">{{ddch.level0.magicItems.feet}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">FEET</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.feet"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">HANDS</span>
-        <span class="name">{{ddch.level0.magicItems.hands}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">HANDS</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.hands"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">HEAD</span>
-        <span class="name">{{ddch.level0.magicItems.head}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">HEAD</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.head"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">NECK</span>
-        <span class="name">{{ddch.level0.magicItems.neck}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">NECK</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.neck"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">RING</span>
-        <span class="name">{{ddch.level0.magicItems.leftRing}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">RING</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.leftRing"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">RING</span>
-        <span class="name">{{ddch.level0.magicItems.rightRing}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">RING</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.rightRing"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line">
-        <span class="type">WAIST</span>
-        <span class="name">{{ddch.level0.magicItems.waist}}</span>
-        <input type="checkbox">
+    <div class="row line">
+        <div class="col-sm-2">
+            <span class="type">WAIST</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="ddch.level0.magicItems.waist"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div class="line" ng-repeat="item in ddch.level0.magicItems.misc">
-        <span class="type">MISC</span>
-        <span class="name">{{item}}</span>
-        <input type="checkbox">
+    <div class="row line" ng-repeat="item in ddch.level0.magicItems.misc">
+        <div class="col-sm-2">
+            <span class="type">MISC</span>
+        </div>
+        <div class="col-sm-10">
+            <span class="name" ng-bind="item"></span>
+            <input type="checkbox">
+        </div>
     </div>
-    <div ng-if="ddch.level0.magicItems.misc.length == 0"  class="line">
-        <span class="type">MISC</span>
-        <label></label>
-        <input type="checkbox">
+    <div ng-if="ddch.level0.magicItems.misc.length == 0"  class="row line">
+        <div class="col-sm-2">
+            <span class="type">MISC</span>
+        </div>
+        <div class="col-sm-10">
+            <label></label>
+            <input type="checkbox">
+        </div>
     </div>
 </div>
