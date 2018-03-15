@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/healthAndSavingThrowsStyle.css">
 
 <h3>Health and Saving Throws</h3>
-<div class="healthAndSavingThrows">
+<div class="healthAndSavingThrows" ng-init="assembleResistances()">
   <table>
     <tr>
       <th>Max HP</th>
@@ -26,8 +26,8 @@
     <tr>
       <th>Resistances</th>
     </tr>
-    <tr ng-repeat="resist in ddch.calculatedValues.healthAndSavingThrows.resistances">
-      <td id="savesAndResists" ng-bind="resist"></td>
+    <tr>
+      <td id="savesAndResists">{{assembleResistances()}}</td>
     </tr>
   </table>
 </div>

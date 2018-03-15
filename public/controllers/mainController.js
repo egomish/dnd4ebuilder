@@ -252,6 +252,19 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
         );
     };
 
+    $scope.assembleResistances = function() {
+        var arr = $scope.ddch.calculatedValues.healthAndSavingThrows.resistances;
+        var resistances = "";
+        for(var i=0; i<arr.length; i++) {
+            if(i<arr.length-1) {
+                resistances += arr[i] + ', ';
+            } else {
+                resistances += arr[i];
+            }
+        }
+        return resistances;
+    }; 
+
     $scope.set_premade = function() {
          $http.post('/character', {name: $scope.selectedPremade}).then(function(response) {
             $scope.ddch = response.data;
