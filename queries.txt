@@ -189,41 +189,52 @@ skill trainings
 miscellaneous skill bonuses (XXX: not implemented)
 
 armor bonus to AC
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT armorBonus
+           FROM items
+           WHERE name LIKE '<armorname>';
+    source attributes: ddch.level0.equipment
+                       ddch.level0.magicItems.armor
+    target attributes: ddch.calculatedValues.defenses.ac.armor
 
 class bonus to AC
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT acBonus
+           FROM classes
+           WHERE name LIKE '<classname>';
+    source attributes: ddch.level1.ddclass
+    target attributes: ddch.calculatedValues.defenses.ac.class
 
 feat bonus to AC (XXX: not implemented)
 enhancement bonus to AC (XXX: not implemented)
 miscellaneous bonus to AC (XXX: not implemented)
 
 class bonus to fortitude
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT fortBonus
+           FROM classes
+           WHERE name LIKE '<classname>';
+    source attributes: ddch.level1.ddclass
+    target attributes: ddch.calculatedValues.defenses.fortitude.class
 
 feat bonus to fortitude (XXX: not implemented)
 enhancement bonus to fortitude (XXX: not implemented)
 miscellaneous bonus to fortitude (XXX: not implemented)
 
 class bonus to reflex
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT reflexBonus
+           FROM classes
+           WHERE name LIKE '<classname>';
+    source attributes: ddch.level1.ddclass
+    target attributes: ddch.calculatedValues.defenses.reflex.class
 
 feat bonus to reflex (XXX: not implemented)
 enhancement bonus to reflex (XXX: not implemented)
 miscellaneous bonus to reflex (XXX: not implemented)
 
 class bonus to will
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT willBonus
+           FROM classes
+           WHERE name LIKE '<classname>';
+    source attributes: ddch.level1.ddclass
+    target attributes: ddch.calculatedValues.defenses.will.class
 
 feat bonus to will (XXX: not implemented)
 enhancement bonus to will (XXX: not implemented)
