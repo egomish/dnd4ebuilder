@@ -3,6 +3,7 @@ app.controller('modalsController', ['$scope', '$http', function($scope, $http) {
         $http.get('/races').then(function(response) {
           $scope.races = response.data;
           $scope.selectedRace = $scope.races[0].name;
+          $scope.raceDescription = $scope.races[0].description;
       }, function (error) {
           console.log('Could not GET races from server');
       });
