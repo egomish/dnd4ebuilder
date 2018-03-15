@@ -174,23 +174,31 @@ resistances
                        ddch.level0.magicItems
     target attributes: ddch.calculatedValues.healthAndSavingThrows.resistances
 
-skill totals
+skill raceMod
     query: SELECT acrobaticsBonus, arcanaBonus, athleticsBonus, bluffBonus, diplomacyBonus, dungeoneeringBonus, 
            enduranceBonus, healBonus, historyBonus, insightBonus, intimidateBonus, natureBonus, perceptionBonus, 
            religionBonus, stealthBonus, streetwiseBonus, thieveryBonus FROM races WHERE name LIKE <name of Race>
     source attributes: ddch.level0.ddrace
-                       ddch.calculatedValues.halfLevel
-                       ddch.calculatedValues.skills[0 : 16][3]
-                       ddch.level0.equipment
-                       ddch.level0.magicItems
-    target attributes: ddch.calculatedValues.skills[0 : 16][0]
-                       ddch.calculatedValues.skills[0 : 16][5]
-                       ddch.calculatedValues.skills[0 : 16][6]
+    target attributes: ddch.calculatedValues.skills[0 : 16][6]
 
 skill trainings
     query: 
     source attributes: ddch.level1.skillTrainings
     target attributes: ddch.calculatedValues.skills[0 : 16][4]
+
+skill armorPenalty
+    query: SELECT armorCheck FROM items WHERE name LIKE <armor in question>
+    source attributes: ddch.level0.equipment
+                       ddch.level0.magicItems
+    target attributes: ddch.calculatedValues.skills[0 : 16][5]
+
+skill totals
+    query:
+    source attributes: ddch.calculatedValues.skills[0 : 16][3]
+                       ddch.calculatedValues.skills[0 : 16][4]
+                       ddch.calculatedValues.skills[0 : 16][5]
+                       ddch.calculatedValues.skills[0 : 16][6]
+    target attributes: ddch.calculatedValues.skills[0 : 16][0]
 
 miscellaneous skill bonuses (XXX: not implemented)
 
