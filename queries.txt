@@ -169,9 +169,10 @@ saving throw modifiers
     target attributes: 
 
 resistances
-    query: 
-    source attributes: 
-    target attributes: 
+    query: SELECT properties FROM items WHERE name LIKE <name of relevent armor or equipment>
+    source attributes: ddch.level0.equipment
+                       ddch.level0.magicItems
+    target attributes: ddch.calculatedValues.healthAndSavingThrows.resistances
 
 skill totals
     query: 
