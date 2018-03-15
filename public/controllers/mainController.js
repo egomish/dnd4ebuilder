@@ -1,89 +1,76 @@
-var app = angular.module('app', []);
-app.controller('mainController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+var app = angular.module('app', ['ui.bootstrap']);
+app.controller('mainController', ['$scope', '$http', '$window', '$modal', function($scope, $http, $window, $modal) {
     $scope.ddch = {
-        characterLevel: 1,
+        characterLevel: undefined,
         level0: {
-            name: "",
-            age: 0,
-            gender: "",
-            height: 0,
-            weight: 0,
+            name: undefined,
+            age: undefined,
+            gender: undefined,
+            height: undefined,
+            weight: undefined,
             description: {
-                personalityTraits: "",
-                mannerisms: "",
-                background: ""
+                personalityTraits: undefined,
+                mannerisms: undefined,
+                background: undefined
             },
             portrait: "assets/no-profile-pic.png",
 
-            alignment: "",
-            deity: "",
+            alignment: undefined,
+            deity: undefined,
 
-            ddrace: "",
+            ddrace: undefined,
             abilityBonus1: "",
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
             abilityScores: [
                 { 
-                    baseStr: 10,
-                    baseCon: 10,
-                    baseDex: 10,
-                    baseInt: 10,
-                    baseWis: 10,
-                    baseCha: 10
+                    baseStr: 0,
+                    baseCon: 0,
+                    baseDex: 0,
+                    baseInt: 0,
+                    baseWis: 0,
+                    baseCha: 0
                 }
             ],
 
             wealth: {
-                cp: 5,
-                sp: 4,
-                gp: 73,
-                pp: 92,
-                ad: 4,
-                other: ["Crystal Ball (1000gp)", "Rubies (700gp)"]
+                cp: 0,
+                sp: 0,
+                gp: 0,
+                pp: 0,
+                ad: 0,
+                other: []
             },
             equipment: [""],
             magicItems: {
                 weapons: [],
-                armor: '',
-                arms: '',
-                feet: '',
-                hands: '',
-                head: '',
-                neck: '',
-                leftRing: '',
-                rightRing: '',
-                waist: '',
+                armor: "",
+                arms: "",
+                feet: "",
+                hands: "",
+                head: "",
+                neck: "",
+                leftRing: "",
+                rightRing: "",
+                waist: "",
                 misc: []
             },
 
-            languages: ["Common", "Undercommon"],
-            rituals: ["",""],
+            languages: [],
+            rituals: ["", ""],
         },
         level1: {
             ddclass: "",
             skillTrainings: [],
-            classFeatures: [
-                {
-                    name: "Combat Leader",
-                    desc: "You and allies within 10 that see and hear you gain +2 to initiative."
-                },
-                {
-                    name: "Tactical Presence",
-                    desc: "Ally you can see that spends an action point to attack gains bonus to attack: 1/2 int mod."
-                },
-                {
-                    name: "Inspiring Word",
-                    desc: "Use inspiring word as an encounter (special) power, minor action."
-                }
-            ],
+            classFeatures: [],
             atwillPower1: "",
             atwillPower2: "",
             encounterPower: "",
             dailyPower: "",
             ddfeat: { 
-                name: "Toughness", 
-                desc: "Gain 5 additional hit points per tier" 
+                name: "", 
+                desc: "" 
             }
         },
         level2: {
@@ -137,31 +124,10 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
         },
         calculatedValues: {
             halfLevel: 0,
-            size: "M",
-            raceFeatures: [
-                {
-                    name: 'Dwarven Weapon Proficiency',
-                    desc: 'Proficient with hammers.'
-                    },
-                {
-                    name: 'Cast-Iron Stomach',
-                    desc: '+5 bonus to saving throws against poison.'
-                },
-                {
-                    name: 'Encumbered Speed',
-                    desc: 'Armor or heavy load does not reduce your speed.'
-                },
-                {
-                    name: 'Dwarven Resilience',
-                    desc: 'Second Wind is a minor action'
-                },
-                {
-                    name: 'Stand Your Ground',
-                    desc: 'Can move 1 less when being forced to move.'
-                }
-            ],
+            size: "",
+            raceFeatures: [],
             movement: {
-                base: 5,
+                base: 0,
                 armor: 0,
                 item: 0,
                 misc: 0
@@ -171,12 +137,12 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
                 misc: 0
             },
             abilityScores: {
-                strTotal: 10,
-                conTotal: 10,
-                dexTotal: 10,
-                intTotal: 10,
-                wisTotal: 10,
-                chaTotal: 10,
+                strTotal: 0,
+                conTotal: 0,
+                dexTotal: 0,
+                intTotal: 0,
+                wisTotal: 0,
+                chaTotal: 0,
                 strMod: 0,
                 conMod: 0,
                 dexMod: 0,
@@ -189,12 +155,8 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
                 bloodiedValue: 0,
                 surgeValue: 0,
                 surgesPerDay: 0,
-                savingThrowMods: [
-                    ""
-                ],
-                resistances: [
-                    ""
-                ]
+                savingThrowMods: [""],
+                resistances: [""]
             },
             skills: [
                 [0, "Acrobatics",    "DEX", 0, 0, 0, 0],
@@ -248,39 +210,23 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
             },
             weaponProficiencies: [
                 {
-                    attack: 2,
-                    defType: "AC",
-                    name: "QuarterStaff",
-                    damageDice: "1d8",
-                    damageMod: 2
+                    attack: 0,
+                    defType: "",
+                    name: "",
+                    damageDice: "",
+                    damageMod: 0
                 },
             ],
             powers: [
                 {
-                    name: "Commander's Strike",
-                    usage: "At-Will",
-                    actionType: "Standard Action",
-                    source: "PHB1",
-                    target: "One creature",
-                    flavor: "With a shout, you command an ally to attack.",
-                    "elements": [
-                        ["Keywords", "Martial, Weapon"],
-                        ["Effect", "One of your allies can take a free action to make a melee basic attack against the target. The ally gains a bonus to the damage roll equal to your Int modifier."],
-                    ],
-                },
-                {
-                    name: "Overwhelming Force Trap",
-                    usage: "Encounter",
-                    actionType: "Immediate Interrupt",
-                    source: "Dr384",
-                    target: "Close burst 3",
-                    flavor: "You keep the order to spring the trap ready, allowing your allies sto spring into action on a moment's notice.",
-                    "elements": [
-                        ["Keywords", "Martial"],
-                        ["Trigger", "An ally in the burst makes a melee basic attack"],
-                        ["Effect", "The target uses one of their melee at-will attack powers instead of making a melee basic attack. If the attack hits, the subbect of the target's attack is also dazed until the end of the target's next turn."],
-                    ],
-                },
+                    name: "",
+                    usage: "",
+                    actionType: "",
+                    source: "",
+                    target: "",
+                    flavor: "",
+                    elements: []
+                }
             ],
         }
     };
@@ -293,6 +239,17 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
         }, function (error) {
             console.log('could not GET premades from server.');
         });
+    };
+
+    $scope.allFeatsUndefined = function() {
+        return (
+            $scope.ddch.level1.ddfeat.name == "" && $scope.ddch.level1.ddfeat.desc == "" &&
+            $scope.ddch.level2.ddfeat.name == "" && $scope.ddch.level2.ddfeat.desc == "" &&
+            $scope.ddch.level4.ddfeat.name == "" && $scope.ddch.level4.ddfeat.desc == "" &&
+            $scope.ddch.level6.ddfeat.name == "" && $scope.ddch.level6.ddfeat.desc == "" &&
+            $scope.ddch.level8.ddfeat.name == "" && $scope.ddch.level8.ddfeat.desc == "" &&
+            $scope.ddch.level10.ddfeat.name == "" && $scope.ddch.level10.ddfeat.desc == ""
+        );
     };
 
     $scope.set_premade = function() {
@@ -375,5 +332,18 @@ app.controller('mainController', ['$scope', '$http', '$window', function($scope,
             e.initEvent('click');
             a.dispatchEvent(e);
         }
+    };
+
+    // modal events
+    $scope.chooseRace = function() {
+        $scope.modalInstance = $modal.open({
+            templateUrl: '../views/modals/race.html',
+            controller: 'modalsController',
+            size: 'sm',
+            scope: $scope
+        });
+        $scope.modalInstance.result.then(function(selectedItem) {
+            $scope.ddch.level0.ddrace = selectedItem;
+        });
     };
 }]);

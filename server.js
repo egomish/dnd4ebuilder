@@ -80,3 +80,14 @@ app.post('/calculateValues', function(req, res) {
   ddch.calculatedValues = {};
   calculate.getEverythingFromDatabase(con, ddch, res);
 });
+
+// modal queries
+app.get('/races', function(req, res) {
+	con.query('SELECT name, description FROM races', function(err, result) {
+		if(err) {
+			throw err;
+		} else {
+			res.json(result);
+		}
+	});
+});

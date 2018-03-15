@@ -10,25 +10,25 @@
             <input ng-model="ddch.characterLevel"><br>
             <label>Level</label>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <input type="text" ng-model="ddch.level1.ddclass"><br>
             <label>Class</label>
         </div>
-        <div class="col-sm-2">
-            <input type="text"><br>
-            <label>Paragon Path</label>
+        <div class="col-sm-1">
+            <input type="text" ng-model="ddch.level0.age"><br>
+            <label>Age</label>
         </div>
         <div class="col-sm-2">
-            <input type="text"><br>
-            <label>Epic Destiny</label>
+            <input type="text" ng-model="ddch.level0.gender"><br>
+            <label>Gender</label>
         </div>
     </div>
 
     <br>
 
     <div class="row">
-        <div class="col-sm-2">
-            <input type="text" ng-model="ddch.level0.ddrace"><br>
+        <div class="col-sm-3">
+            <input type="text" ng-model="ddch.level0.ddrace" ng-click="chooseRace()"><br>
             <label>Race</label>
         </div>
         <div class="col-sm-1">
@@ -47,18 +47,11 @@
             <input type="text" ng-model="ddch.level0.alignment"><br>
             <label>Alignment</label>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <input type="text" ng-model="ddch.level0.deity"><br>
             <label>Deity</label>
         </div>
-        <div class="col-sm-1">
-            <input type="text" ng-model="ddch.level0.gender"><br>
-            <label>Gender</label>
-        </div>
-        <div class="col-sm-1">
-            <input type="text" ng-model="ddch.level0.age"><br>
-            <label>Age</label>
-        </div>
     </div>
 </div>
+
 

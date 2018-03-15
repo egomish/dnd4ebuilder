@@ -3,11 +3,12 @@
 <head>
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
     <title>D&D Character Builder</title>
 </head>
 <body>
+    <h1 class="heading">Dungeons and Dragons 4e Character Builder</h1>
     <div class="container" ng-controller="mainController" ng-init="init()">
-        <h2 class="text-center underlined">Dungeons and Dragons 4e Character Builder</h2>
         <br>
         <div class="row" ng-include="'views/basicInfo.html'"></div>
         <br>
@@ -52,10 +53,14 @@
             <button ng-click="download()">Download Character</button>
             <br>
             <button ng-click="calc_values()">Calculate</button>
+
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
     <script src="controllers/mainController.js"></script>
+    <script src="controllers/modalsController.js"></script>
 </body>
 </html>
