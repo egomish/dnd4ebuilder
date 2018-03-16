@@ -21,9 +21,16 @@ base movement
     target attributes: ddch.calculatedValues.movement.base
 
 armor check penalty
-    query:
-    source attributes:
-    target attributes:
+    query: SELECT armorCheck
+           FROM items
+           WHERE name LIKE '<armorname>';
+    source attributes: ddch.level0.equipment
+                       ddch.level0.magicItems.armor
+    target attributes: ddch.calculatedValues.skills[0][5]
+                       ddch.calculatedValues.skills[2][5]
+                       ddch.calculatedValues.skills[6][5]
+                       ddch.calculatedValues.skills[14][5]
+                       ddch.calculatedValues.skills[16][5]
 
 item bonus to movement (XXX: not implemented)
 miscellaneous bonus to movement (XXX: not implemented)
