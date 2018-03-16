@@ -2,6 +2,11 @@ var con;
 var ddch;
 var res;
 
+/*
+ *  Requirement: Ability scores must be calculated in order: 
+ *               STR, CON, DEX, INT, WIS, CHA.
+ */
+
 module.exports.getEverythingFromDatabase = function (db, ddchar, response) {
     con = db;
     ddch = ddchar;
@@ -56,7 +61,7 @@ function getStrengthTotal () {
           database_error(err, query);
       } else {
           for (tuple in result) {
-              strbonus = result[tuple].strBonus;
+              var strbonus = result[tuple].strBonus;
               ddch.calculatedValues.abilityScores.strTotal = basestr;
               ddch.calculatedValues.abilityScores.strTotal += strbonus;
           }
@@ -71,7 +76,6 @@ function getStrengthModifier () {
 
     ddch.calculatedValues.abilityScores.strMod = strmod;
     ddch.calculatedValues.skills[2][3] = strmod;
-    // make sure this is called before getConModifier
     ddch.calculatedValues.defenses.fortitude.abilityMod = strmod;
     //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
     getConTotal();
@@ -87,7 +91,7 @@ function getConTotal () {
           database_error(err, query);
       } else {
           for (tuple in result) {
-              conbonus = result[tuple].conBonus;
+              var conbonus = result[tuple].conBonus;
               ddch.calculatedValues.abilityScores.conTotal = basecon;
               ddch.calculatedValues.abilityScores.conTotal += conbonus;
               ddch.calculatedValues.healthAndSavingThrows.maxHP += ddch.calculatedValues.abilityScores.conTotal;
@@ -103,8 +107,9 @@ function getConModifier () {
 
     ddch.calculatedValues.abilityScores.conMod = conmod;
     ddch.calculatedValues.skills[6][3] = conmod;
-    if (conmod > ddch.calculatedValues.defenses.fortitude.abilityMod)
-      ddch.calculatedValues.defenses.fortitude.abilityMod = conmod;
+    if (conmod > ddch.calculatedValues.defenses.fortitude.abilityMod) {
+        ddch.calculatedValues.defenses.fortitude.abilityMod = conmod;
+    }
     ddch.calculatedValues.healthAndSavingThrows.surgesPerDay += conmod;
 
     getDexTotal();
@@ -120,7 +125,7 @@ function getDexTotal () {
           database_error(err, query);
       } else {
           for (tuple in result) {
-              dexbonus = result[tuple].dexBonus;
+              var dexbonus = result[tuple].dexBonus;
               ddch.calculatedValues.abilityScores.dexTotal = basedex;
               ddch.calculatedValues.abilityScores.dexTotal += dexbonus;
           }
@@ -137,9 +142,7 @@ function getDexModifier () {
     ddch.calculatedValues.skills[0][3] = dexmod;
     ddch.calculatedValues.skills[14][3] = dexmod;
     ddch.calculatedValues.skills[16][3] = dexmod;
-    //TODO: the dex or int Mod is not included in AC calculation if the user is wearing heavy armor
-    //      This check must be done either here or elsewhere in the future. For the purpose
-    //      of now, including dex or int by default will work just fine.
+    //TODO: prevent ability modfiier bonus when wearing heavy armor
     ddch.calculatedValues.defenses.ac.abilityMod = dexmod;
     ddch.calculatedValues.defenses.reflex.abilityMod = dexmod;
     //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
@@ -157,7 +160,7 @@ function getIntTotal () {
           database_error(err, query);
       } else {
           for (tuple in result) {
-              intbonus = result[tuple].intBonus;
+              var intbonus = result[tuple].intBonus;
               ddch.calculatedValues.abilityScores.intTotal = baseint;
               ddch.calculatedValues.abilityScores.intTotal += intbonus;
           }
@@ -174,13 +177,13 @@ function getIntModifier () {
     ddch.calculatedValues.skills[1][3] = intmod;
     ddch.calculatedValues.skills[8][3] = intmod;
     ddch.calculatedValues.skills[13][3] = intmod;
-    //TODO: the dex or int Mod is not included in AC if the user is wearing heavy armor
-    //      This check must be done either here or elsewhere in the future. For the purpose
-    //      of now, including dex or int by default will work just fine.
-    if (intmod > ddch.calculatedValues.abilityScores.dexMod)
-      ddch.calculatedValues.defenses.ac.abilityMod = intmod;
-    if (intmod > ddch.calculatedValues.defenses.reflex.abilityMod)
-      ddch.calculatedValues.defenses.reflex.abilityMod = intmod;
+    //TODO: prevent ability modfiier bonus when wearing heavy armor
+    if (intmod > ddch.calculatedValues.abilityScores.dexMod) {
+        ddch.calculatedValues.defenses.ac.abilityMod = intmod;
+    }
+    if (intmod > ddch.calculatedValues.defenses.reflex.abilityMod) {
+        ddch.calculatedValues.defenses.reflex.abilityMod = intmod;
+    }
     //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
     
     getWisTotal();
@@ -196,7 +199,7 @@ function getWisTotal () {
           database_error(err, query);
       } else {
           for (tuple in result) {
-              dexbonus = result[tuple].wisBonus;
+              var wisbonus = result[tuple].wisBonus;
               ddch.calculatedValues.abilityScores.wisTotal = basewis;
               ddch.calculatedValues.abilityScores.wisTotal += wisbonus;
           }
@@ -230,7 +233,7 @@ function getChaTotal () {
           database_error(err, query);
       } else {
           for (tuple in result) {
-              chabonus = result[tuple].chaBonus;
+              var chabonus = result[tuple].chaBonus;
               ddch.calculatedValues.abilityScores.chaTotal = basecha;
               ddch.calculatedValues.abilityScores.chaTotal += chabonus;
           }
@@ -248,8 +251,9 @@ function getChaModifier () {
     ddch.calculatedValues.skills[4][3] = chamod;
     ddch.calculatedValues.skills[10][3] = chamod;
     ddch.calculatedValues.skills[15][3] = chamod;
-    if (chamod > ddch.calculatedValues.defenses.will.abilityMod)
-      ddch.calculatedValues.defenses.will.abilityMod = chamod;
+    if (chamod > ddch.calculatedValues.defenses.will.abilityMod) {
+        ddch.calculatedValues.defenses.will.abilityMod = chamod;
+    }
     
     getACBonus();
 }
