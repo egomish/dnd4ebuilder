@@ -24,12 +24,12 @@ app.controller('mainController', ['$scope', '$http', '$window', '$modal', functi
             skillBonus1: "",
             skillBonus2: "",
             abilityScores: { 
-                baseStr: 0,
-                baseCon: 0,
-                baseDex: 0,
-                baseInt: 0,
-                baseWis: 0,
-                baseCha: 0
+                baseStr: 10,
+                baseCon: 10,
+                baseDex: 10,
+                baseInt: 10,
+                baseWis: 10,
+                baseCha: 10
             },
 
             wealth: {
@@ -135,12 +135,12 @@ app.controller('mainController', ['$scope', '$http', '$window', '$modal', functi
                 misc: 0
             },
             abilityScores: {
-                strTotal: 0,
-                conTotal: 0,
-                dexTotal: 0,
-                intTotal: 0,
-                wisTotal: 0,
-                chaTotal: 0,
+                strTotal: 10,
+                conTotal: 10,
+                dexTotal: 10,
+                intTotal: 10,
+                wisTotal: 10,
+                chaTotal: 10,
                 strMod: 0,
                 conMod: 0,
                 dexMod: 0,

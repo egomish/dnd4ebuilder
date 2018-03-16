@@ -255,20 +255,7 @@ function getChaModifier () {
         ddch.calculatedValues.defenses.will.abilityMod = chamod;
     }
     
-    getACBonus();
-}
-
-function getACBonus () {
-    var classname = ddch.level1.ddclass;
-    var query = "SELECT acBonus FROM classes WHERE name LIKE '" + classname + "';";
-    con.query(query, function (err, result) {
-        if (err) {
-            database_error(err, query);
-        } else {
-            ddch.calculatedValues.acBonus = result[0].acBonus;
-        }
-        completeResponse();
-    });
+    completeResponse();
 }
 
 function completeResponse () {
