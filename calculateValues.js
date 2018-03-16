@@ -75,7 +75,6 @@ function getStrengthModifier () {
     ddch.calculatedValues.defenses.fortitude.abilityMod = strmod;
     //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
     getConTotal();
-    getACBonus();
 }
 
 function getConTotal () {
@@ -138,10 +137,121 @@ function getDexModifier () {
     ddch.calculatedValues.skills[0][3] = dexmod;
     ddch.calculatedValues.skills[14][3] = dexmod;
     ddch.calculatedValues.skills[16][3] = dexmod;
+    //TODO: the dex or int Mod is not included in AC calculation if the user is wearing heavy armor
+    //      This check must be done either here or elsewhere in the future. For the purpose
+    //      of now, including dex or int by default will work just fine.
     ddch.calculatedValues.defenses.ac.abilityMod = dexmod;
     ddch.calculatedValues.defenses.reflex.abilityMod = dexmod;
     //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
     
+    getIntTotal();
+}
+
+function getIntTotal () {
+    var racename = ddch.level0.ddrace;
+    var baseint = ddch.level0.abilityScores.baseInt;
+    var query = "SELECT intBonus FROM races " 
+              + "WHERE name LIKE '" + racename + "';";
+    con.query(query, function (err, result) {
+      if (err) {
+          database_error(err, query);
+      } else {
+          for (tuple in result) {
+              intbonus = result[tuple].intBonus;
+              ddch.calculatedValues.abilityScores.intTotal = baseint;
+              ddch.calculatedValues.abilityScores.intTotal += intbonus;
+          }
+      }
+      getIntModifier();
+    });
+}
+
+function getIntModifier () {
+    var inttotal = ddch.calculatedValues.abilityScores.intTotal;
+    var intmod = getAbilMod(ddch.calculatedValues.abilityScores.intTotal);
+
+    ddch.calculatedValues.abilityScores.intMod = intmod;
+    ddch.calculatedValues.skills[1][3] = intmod;
+    ddch.calculatedValues.skills[8][3] = intmod;
+    ddch.calculatedValues.skills[13][3] = intmod;
+    //TODO: the dex or int Mod is not included in AC if the user is wearing heavy armor
+    //      This check must be done either here or elsewhere in the future. For the purpose
+    //      of now, including dex or int by default will work just fine.
+    if (intmod > ddch.calculatedValues.abilityScores.dexMod)
+      ddch.calculatedValues.defenses.ac.abilityMod = intmod;
+    if (intmod > ddch.calculatedValues.defenses.reflex.abilityMod)
+      ddch.calculatedValues.defenses.reflex.abilityMod = intmod;
+    //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
+    
+    getWisTotal();
+}
+
+function getWisTotal () {
+    var racename = ddch.level0.ddrace;
+    var basewis = ddch.level0.abilityScores.baseWis;
+    var query = "SELECT wisBonus FROM races " 
+              + "WHERE name LIKE '" + racename + "';";
+    con.query(query, function (err, result) {
+      if (err) {
+          database_error(err, query);
+      } else {
+          for (tuple in result) {
+              dexbonus = result[tuple].wisBonus;
+              ddch.calculatedValues.abilityScores.wisTotal = basewis;
+              ddch.calculatedValues.abilityScores.wisTotal += wisbonus;
+          }
+      }
+      getWisModifier();
+    });
+}
+
+function getWisModifier () {
+    var wistotal = ddch.calculatedValues.abilityScores.wisTotal;
+    var wismod = getAbilMod(ddch.calculatedValues.abilityScores.wisTotal);
+
+    ddch.calculatedValues.abilityScores.wisMod = wismod;
+    ddch.calculatedValues.skills[5][3] = wismod;
+    ddch.calculatedValues.skills[7][3] = wismod;
+    ddch.calculatedValues.skills[9][3] = wismod;
+    ddch.calculatedValues.skills[11][3] = wismod;
+    ddch.calculatedValues.skills[12][3] = wismod;
+    ddch.calculatedValues.defenses.will.abilityMod = wismod;
+    
+    getChaTotal();
+}
+
+function getChaTotal () {
+    var racename = ddch.level0.ddrace;
+    var basecha = ddch.level0.abilityScores.baseCha;
+    var query = "SELECT chaBonus FROM races " 
+              + "WHERE name LIKE '" + racename + "';";
+    con.query(query, function (err, result) {
+      if (err) {
+          database_error(err, query);
+      } else {
+          for (tuple in result) {
+              chabonus = result[tuple].chaBonus;
+              ddch.calculatedValues.abilityScores.chaTotal = basecha;
+              ddch.calculatedValues.abilityScores.chaTotal += chabonus;
+          }
+      }
+      getChaModifier();
+    });
+}
+
+function getChaModifier () {
+    var chatotal = ddch.calculatedValues.abilityScores.chaTotal;
+    var chamod = getAbilMod(ddch.calculatedValues.abilityScores.chaTotal);
+
+    ddch.calculatedValues.abilityScores.chaMod = chamod;
+    ddch.calculatedValues.skills[3][3] = chamod;
+    ddch.calculatedValues.skills[4][3] = chamod;
+    ddch.calculatedValues.skills[10][3] = chamod;
+    ddch.calculatedValues.skills[15][3] = chamod;
+    if (chamod > ddch.calculatedValues.defenses.will.abilityMod)
+      ddch.calculatedValues.defenses.will.abilityMod = chamod;
+    
+    getACBonus();
 }
 
 function getACBonus () {
