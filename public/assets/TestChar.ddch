@@ -21,7 +21,7 @@
         "abilityBonus2": "CHA",
         "skillBonus1": "Acrobatics",
         "skillBonus2": "Thievery",
-        "abilityScores": { 
+        "abilityScores": {
             "baseStr": 10,
             "baseCon": 12,
             "baseDex": 16,

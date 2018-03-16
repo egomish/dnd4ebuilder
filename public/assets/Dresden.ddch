@@ -21,7 +21,7 @@
         "abilityBonus2": "INT",
         "skillBonus1": "Acrobatics",
         "skillBonus2": "Stealth",
-        "abilityScores": { 
+        "abilityScores": {
             "baseStr": 10,
             "baseCon": 13,
             "baseDex": 10,

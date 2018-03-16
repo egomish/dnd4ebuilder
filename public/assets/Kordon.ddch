@@ -21,7 +21,7 @@
         "abilityBonus2": "WIS",
         "skillBonus1": "Dungeoneering",
         "skillBonus2": "Endurance",
-        "abilityScores": { 
+        "abilityScores": {
           "baseStr": 16,
           "baseCon": 15,
           "baseDex": 14,
