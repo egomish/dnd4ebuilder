@@ -1,8 +1,8 @@
 .otherEquipment {
-    border: 1px solid black;
-    min-height: 110px;
+    border: none;
+    min-height: 50px;
     width: 90%;
-    padding: 20px;
+    padding-left: 10px;
 }
 
 .otherEquipment p {

@@ -13,16 +13,21 @@
     padding:2px;
 }
 
+.healthAndSavingThrows .center {
+  text-align: center;
+}
+
 .healthAndSavingThrows td {
-    text-align: center;
+    text-align: left;
     border: 1px solid black;
     font-size: 20px;
 }
 
 #savesAndResists {
-  text-align: center;
-  vertical-align: center;
+  text-align: left;
+  vertical-align: top;
   width: 100%;
   height: 75px;
   font-size: 15px;
+  padding-left: 10px;
 }
