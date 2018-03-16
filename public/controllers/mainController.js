@@ -355,6 +355,7 @@ app.controller('mainController', ['$scope', '$http', '$window', '$modal', functi
         });
         $scope.modalInstance.result.then(function(selectedItem) {
             $scope.ddch.level0.ddrace = selectedItem;
+            $scope.calc_values();
         });
     };
 }]);
