@@ -23,16 +23,14 @@ app.controller('mainController', ['$scope', '$http', '$window', '$modal', functi
             abilityBonus2: "",
             skillBonus1: "",
             skillBonus2: "",
-            abilityScores: [
-                { 
+            abilityScores: { 
                     baseStr: 0,
                     baseCon: 0,
                     baseDex: 0,
                     baseInt: 0,
                     baseWis: 0,
                     baseCha: 0
-                }
-            ],
+                },
 
             wealth: {
                 cp: 0,

@@ -21,16 +21,14 @@
         "abilityBonus2": "WIS",
         "skillBonus1": "Dungeoneering",
         "skillBonus2": "Endurance",
-        "abilityScores": [
-            { 
-              "baseStr": 16,
-              "baseCon": 15,
-              "baseDex": 14,
-              "baseInt": 11,
-              "baseWis": 10,
-              "baseCha": 8
-            }
-        ],
+        "abilityScores": {
+          "baseStr": 16,
+          "baseCon": 15,
+          "baseDex": 14,
+          "baseInt": 11,
+          "baseWis": 10,
+          "baseCha": 8
+        },
 
         "wealth": {
           "cp": 0,
