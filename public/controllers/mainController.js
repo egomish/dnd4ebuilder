@@ -313,7 +313,8 @@ app.controller('mainController', ['$scope', '$http', '$window', '$modal', functi
 
     // file downloading
     $scope.download = function () {
-        var data = $scope.ddch;
+        var data = JSON.stringify($scope.ddch);
+        data = JSON.parse(data);
         delete data['calculatedValues'];
         var filename = $scope.ddch.level0.name + '.ddch';
 
