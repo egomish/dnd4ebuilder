@@ -1,25 +1,28 @@
-<link rel="stylesheet" href="styles/initiative.css">
+<link rel="stylesheet" href="styles/Initiative.css">
 
 <h3>Initiative</h3>
-<div class="initiative" ng-init="initInitiative()">
-	<table>
-		<tr>
-			<th>Score</th>
-			<th>DEX</th>
-			<th>1/2<br>LVL</th>
-			<th>MISC</th>
-		</tr>
-		<tr>
-			<td ng-bind="ddch.calculatedValues.initiative.dex + 
-				ddch.calculatedValues.halfLevel + 
-				ddch.calculatedValues.initiative.misc"></td>
-			<td ng-bind="ddch.calculatedValues.initiative.dex"></td>
-			<td ng-bind="ddch.calculatedValues.halfLevel"></td>
-			<td ng-bind="ddch.calculatedValues.initiative.misc"></td>
-		</tr>
-	</table>
-
-	<div class="conditional-bonuses">
-		Conditional Bonuses:
-	</div>
+<div class="initiative">
+    <table>
+        <tr>
+            <th style="text-align:left;">Score</th>
+            <th>DEX</th>
+            <th>1/2<br>LVL</th>
+            <th>Misc</th>
+        </tr>
+        <tr>
+            <td style="text-align: left; background-color: #2d2d2d; color: white;">
+                <input type="text" disabled="disabled" 
+                       value="{{ddch.calculatedValues.initiative.dex + 
+                                ddch.calculatedValues.halfLevel + 
+                                ddch.calculatedValues.initiative.misc}}">
+                <label>Initiative</label>
+            </td>
+            <td ng-bind="ddch.calculatedValues.initiative.dex"></td>
+            <td ng-bind="ddch.calculatedValues.halfLevel"></td>
+            <td ng-bind="ddch.calculatedValues.initiative.misc"></td>
+        </tr>
+    </table>
+    <div class="conditional-bonuses">
+        Conditional Bonuses:
+    </div>
 </div>
