@@ -17,14 +17,6 @@
     left: 40px;
     top:17px;
     font-size: 12px;
-    display: inline-block;
-    width: 80%;
-}
-
-.magicItems .type 
-{
-    display: inline-block;
-    width: 5%;
 }
 
 .magicItems span {
