@@ -1,5 +1,80 @@
- /* wizard class */
- INSERT INTO classes(
+INSERT INTO races(
+	name,
+	synopsis,
+	description,
+	minHeight,
+	maxHeight,
+	minWeight,
+	maxWeight,
+	strBonus,
+	conBonus,
+	dexBonus,
+	intBonus,
+	wisBonus,
+	chaBonus,
+	size,
+	speed,
+	vision,
+	numberOfLanguages,
+	acrobaticsBonus,
+	arcanaBonus,
+	athleticsBonus,
+	bluffBonus,
+	diplomacyBonus,
+	dungeoneeringBonus,
+	enduranceBonus,
+	healBonus,
+	historyBonus,
+	insightBonus,
+	intimidateBonus,
+	natureBonus,
+	perceptionBonus,
+	religionBonus,
+	stealthBonus,
+	streetwiseBonus,
+	thieveryBonus,
+	racialFeatures
+)
+VALUES(
+	'Shadar-kai', /* name */
+	'Cold of heart and dark of eye, passion burns still within these people of shadow and deep winter.', /* synopsis */
+	'Long eons in the Shadowfell have shaped the shadar-kai into a fiery and, some say, cruel people. Fighting the apathy pervasive in their home plane, shadar-kai live passionately and fearlessly, if grimly. They see themselves as instruments of death and dissolution, the bringers of the righteous end to complacency, stagnation, and life itself. Theirs is a harsh society of self interest. Among shadar-kai, the strong of body and mind excel and create legends. The weak molder to dust, passing into eternity unremembered.', /* description */
+	"5'7''", /* min height */
+	"6'0''", /* max height */
+	110, /* min weight */
+	170, /* max weight */
+	0, /* strength bonus */
+	0, /* constitution bonus */
+	2, /* dexterity bonus */
+	2, /* intelligence bonus */
+	0, /* wisdom bonus */
+	0, /* charisma bonus */
+	'medium', /* size */
+	6, /* speed */
+	'low light', /* vision */
+	2, /* number of languages */
+	2, /* acrobatics bonus */
+	0, /* arcana bonus */
+	0, /* athletics bonus */
+	0, /* bluff bonus */
+	0, /* diplomacy bonus */
+	0, /* dungeoneering bonus */
+	0, /* endurance bonus */
+	0, /* heal bonus */
+	0, /* history bonus */
+	0, /* insight bonus */
+	0, /* intimidate bonus */
+	0, /* nature bonus */
+	0, /* perception bonus */
+	0, /* religtion bonus */
+	2, /* stealth bonus */
+	0, /* streetwise bonus */
+	0, /* thievery bonus */
+	'Shadow Jaunt, Shadow Origin, Winterkin' /* race features */
+); 
+
+/* wizard class */
+INSERT INTO classes(
  	name,
  	synopsis,
  	description,
@@ -145,6 +220,91 @@ VALUES(
 	NULL,
 	"Three 1st level rituals, plus more at higher levels. Also, twice the daily and utility spells you can use; 
 	choose from among these at each extended rest.",
+	NULL
+);
+
+INSERT INTO features(
+	name,
+	kind,
+	origin,
+	prerequisites,
+	benefit,
+	special
+)
+VALUES(
+	"Reaper's Touch",
+	'class',
+	'Wizard',
+	NULL,
+	"You gain a benefit with some attack powers.",
+	NULL
+);
+
+INSERT INTO features(
+	name,
+	kind,
+	origin,
+	prerequisites,
+	benefit,
+	special
+)
+VALUES(
+	"Armor Proficiency(Leather)",
+	'Armor Proficiency',
+	NULL,
+	NULL,
+	"You gain training with leather armor.",
+	NULL
+);
+
+INSERT INTO features(
+	name,
+	kind,
+	origin,
+	prerequisites,
+	benefit,
+	special
+)
+VALUES(
+	"Implement Expertise (staff)",
+	'Implement Expertise',
+	NULL,
+	NULL,
+	"+1 to attack rolls with staffs.",
+	NULL
+);
+
+INSERT INTO features(
+	name,
+	kind,
+	origin,
+	prerequisites,
+	benefit,
+	special
+)
+VALUES(
+	"White Lotus Riposte",
+	'Heroic',
+	'Wizard',
+	NULL,
+	"When an enemy you hit with an arcane at-will power attacks you before the start of your next turn, that enemey takes damage equal to abil modifier to the power's damage.",
+	NULL
+);
+
+INSERT INTO features(
+	name,
+	kind,
+	origin,
+	prerequisites,
+	benefit,
+	special
+)
+VALUES(
+	"Devious Jaunt",
+	'race',
+	'Shadar-kai',
+	'int 13',
+	"Can add Int modifier to the distace you can teleport with shadow jaunt.",
 	NULL
 );
 
