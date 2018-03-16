@@ -8,17 +8,16 @@
 }
 
 .powers th {
+    padding-left: 5px;
+}
+
+.powers tr {
     border: 1px solid black;
-    background-color: #2d2d2d;
-    color: white;
-    text-align: center;
-    font-size: 13px;
-    padding:2px;
 }
 
 .powers td {
     text-align: left;
-    border: 1px solid black;
-    font-size: 12px;
+    font-size: 14px;
     height: 18px;
+    padding: 5px;
 }
