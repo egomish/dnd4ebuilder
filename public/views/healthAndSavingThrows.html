@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/healthAndSavingThrowsStyle.css">
 
 <h3>Health and Saving Throws</h3>
-<div class="healthAndSavingThrows">
+<div class="healthAndSavingThrows" ng-init="assembleResistances()">
   <table>
     <tr>
       <th>Max HP</th>
@@ -10,10 +10,10 @@
       <th>Surges/Day</th>
     </tr>
     <tr>
-      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.maxHP"></td>
-      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.bloodiedValue"></td>
-      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.surgeValue"></td>
-      <td ng-bind="ddch.calculatedValues.healthAndSavingThrows.surgesPerDay"></td>
+      <td class="center" ng-bind="ddch.calculatedValues.healthAndSavingThrows.maxHP"></td>
+      <td class="center" ng-bind="ddch.calculatedValues.healthAndSavingThrows.bloodiedValue"></td>
+      <td class="center" ng-bind="ddch.calculatedValues.healthAndSavingThrows.surgeValue"></td>
+      <td class="center" ng-bind="ddch.calculatedValues.healthAndSavingThrows.surgesPerDay"></td>
     </tr>
   </table>
   <table>
@@ -21,13 +21,13 @@
       <th>Saving Throws</th>
     </tr>
     <tr ng-repeat="throw in ddch.calculatedValues.healthAndSavingThrows.savingThrowMods">
-      <td id="savesAndResists">{{throw}}</td>
+      <td id="savesAndResists" ng-bind="throw"></td>
     </tr>
     <tr>
       <th>Resistances</th>
     </tr>
-    <tr ng-repeat="resist in ddch.calculatedValues.healthAndSavingThrows.resistances">
-      <td id="savesAndResists">{{resist}}</td>
+    <tr>
+      <td id="savesAndResists">{{assembleResistances()}}</td>
     </tr>
   </table>
 </div>

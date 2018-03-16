@@ -21,16 +21,14 @@
         "abilityBonus2": "WIS",
         "skillBonus1": "Dungeoneering",
         "skillBonus2": "Endurance",
-        "abilityScores": [
-            { 
-              "baseStr": 16,
-              "baseCon": 15,
-              "baseDex": 14,
-              "baseInt": 11,
-              "baseWis": 10,
-              "baseCha": 8
-            }
-        ],
+        "abilityScores": {
+          "baseStr": 16,
+          "baseCon": 15,
+          "baseDex": 14,
+          "baseInt": 11,
+          "baseWis": 10,
+          "baseCha": 8
+        },
 
         "wealth": {
           "cp": 0,
@@ -64,6 +62,20 @@
         "ddclass": "Fighter",
         "skillTrainings": ["Athletics", 
                            "Endurance", "Heal"],
+        "classFeatures": [
+            {
+                "name": "Combat Challenge",
+                "desc": "Mark foes you attack.  They get -2 to attacks not targeting you, and you can make a basic melee attack on them if they shift or don't target you in an attack.  The effect lasts until the end of your next turn or they're marked by another."
+            },
+            {
+                "name": "Combat Superiority",
+                "desc": "Add your Wisdom modifier to opportunity attacks, and halt movement of targets of your successful opportunity attacks."
+            },
+            {
+                "name": "Fighter Talent",
+                "desc": "+1 to hit with Two-handed weapons."
+            }
+        ],
         "atwillPower1": "Sure Strike",
         "atwillPower2": "Cleave",
         "encounterPower": "Spinning Sweep",
@@ -125,20 +137,6 @@
     "calculatedValues": {
         "halfLevel": 0,
         "size": "M",
-        "classFeatures": [
-            {
-                "name": "Combat Challenge",
-                "desc": "Mark foes you attack.  They get -2 to attacks not targeting you, and you can make a basic melee attack on them if they shift or don't target you in an attack.  The effect lasts until the end of your next turn or they're marked by another."
-            },
-            {
-                "name": "Combat Superiority",
-                "desc": "Add your Wisdom modifier to opportunity attacks, and halt movement of targets of your successful opportunity attacks."
-            },
-            {
-                "name": "Fighter Talent",
-                "desc": "+1 to hit with Two-handed weapons."
-            }
-        ],
         "raceFeatures": [
             {
                 "name": "Cast-Iron Stomach",
@@ -183,7 +181,7 @@
             "dexMod": 2,
             "intMod": 0,
             "wisMod": 1,
-            "chaMod": 0
+            "chaMod": -1
         },
         "healthAndSavingThrows": {
             "maxHP": 37,

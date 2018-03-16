@@ -3,30 +3,38 @@
 <head>
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/modalsController.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
     <title>D&D Character Builder</title>
 </head>
-<body>
-    <div class="container" ng-controller="mainController">
-        <h2 class="text-center underlined">Dungeons and Dragons 4e Character Builder</h2>
+<body ng-controller="mainController" ng-init="init()">
+    <h1 class="heading">Dungeons and Dragons 4e Character Builder</h1>
+    <div class="container">
         <br>
         <div class="row" ng-include="'views/basicInfo.html'"></div>
         <br>
-        <div class="col-sm-4"> <!-- First Column -->
+        <div class="row">
+            <div class="col-sm-4"> <!-- First Column -->
                 <div class="row" ng-include="'views/abilityScores.html'"></div>
                 <div class="row" ng-include="'views/healthAndSavingThrows.html'"></div>
                 <div class="row" ng-include="'views/skills.html'"></div>
                 <div class="row" ng-include="'views/powers.html'"></div>
                 <div class="row" ng-include="'views/equipment.html'"></div>
                 <div class="row" ng-include="'views/wealth.html'"></div>
-        </div>
-        <div class="col-sm-4"> <!--Second Column -->
+            </div>
+            <div class="col-sm-4"> <!--Second Column -->
                 <div class="row" ng-include="'views/defenses.html'"></div>
                 <div class="row" ng-include="'views/raceFeatures.html'"></div>
                 <div class="row" ng-include="'views/classFeatures.html'"></div>
                 <div class="row" ng-include="'views/magicItems.html'"></div>
                 <div class="row" ng-include="'views/rituals.html'"></div>
-        </div>
-        <div class="col-sm-4"> <!--Third Column -->
+            </div>
+            <div class="col-sm-4"> <!--Third Column -->
                 <div class="row" ng-include="'views/movement.html'"></div>
                 <div class="row" ng-include="'views/initiative.html'"></div>
                 <div class="row" ng-include="'views/weaponProficiencies.html'"></div>
@@ -34,24 +42,36 @@
                 <div class="row" ng-include="'views/portrait.html'"></div>
                 <div class="row" ng-include="'views/languages.html'"></div>
                 <div class="row" ng-include="'views/characterDetails.html'"></div>
+            </div>
+            <br>
         </div>
-        <button ng-click="log()">Click me to log</button>
-        <button ng-click="set_ddch()">Get ddch</button><br>
-        <form id="data" name="uploadForm"  action="/uploadfile" method="post" enctype="multipart/form-data">
+        <br><br><br>
+        <div class="well well-sm">
             <div class="row">
-                <div class="col-sm-4">
-                    <input type="file" name="filetoupload">
+                <div class="col-sm-3">
+                    <h4>Log Character</h4>
+                    <button ng-click="log()">Console Log</button><br><br>
                 </div>
-                <div class="col-sm-4">
-                    <input type="submit">
+                <div class="col-sm-3">
+                    <h4>Select Premade</h4>
+                    <select ng-model="selectedPremade">
+                        <option ng-repeat="premade in premades track by $index" value="{{premade}}">{{premade}}</option>
+                    </select><br><br>
+                    <button ng-click="set_premade()">Load</button>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Upload Character</h4>
+                    <form id="data" name="uploadForm"  action="/uploadfile" method="post" enctype="multipart/form-data">
+                        <input type="file" name="filetoupload"><br>
+                        <input type="submit">
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Download Character</h4>
+                    <button ng-click="download()">Download</button>
                 </div>
             </div>
-        </form>
-        <br>
-        <button ng-click="download()">Download Character</button>
+        </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="controllers/mainController.js"></script>
 </body>
 </html>

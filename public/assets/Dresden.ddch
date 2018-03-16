@@ -21,16 +21,14 @@
         "abilityBonus2": "INT",
         "skillBonus1": "Acrobatics",
         "skillBonus2": "Stealth",
-        "abilityScores": [
-            { 
-                "baseStr": 10,
-                "baseCon": 13,
-                "baseDex": 10,
-                "baseInt": 18,
-                "baseWis": 13,
-                "baseCha": 8
-            }
-        ],
+        "abilityScores": {
+            "baseStr": 10,
+            "baseCon": 13,
+            "baseDex": 10,
+            "baseInt": 18,
+            "baseWis": 13,
+            "baseCha": 8
+        },
 
         "wealth": {
             "cp": 0,
@@ -134,7 +132,7 @@
         "utilityPower": "Dispel Magic",
         "ddfeat": { 
             "name": "White Lotus Riposte", 
-            "desc": "" 
+            "desc": "When an enemy you hit with an arcane at-will power attacks you before the start of your next turn, that enemey takes damage equal to abil modifier to the power's damage." 
         }
     },
     "level7": {
@@ -155,7 +153,7 @@
         "utilityPower": "Tactician's Measure",
         "ddfeat": { 
             "name": "Devious Jaunt", 
-            "desc": "" 
+            "desc": "Can add Int modifier to the distace you can teleport with shadow jaunt." 
         }
     },
     "calculatedValues": {

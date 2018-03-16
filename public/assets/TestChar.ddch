@@ -2,233 +2,350 @@
     "characterLevel": 1,
     "level0": {
         "name": "TestChar",
-        "age": 100,
-        "gender": "U",
-        "height": 100,
-        "weight": 100,
+        "age": 27,
+        "gender": "M",
+        "height": 48,
+        "weight": 81,
         "description": {
-            "personalityTraits": "No personality traits.",
-            "mannerisms": "No mannerisms.",
-            "background": "No background."
+            "personalityTraits": "Energetic, Self-Centered, and Charismatic",
+            "mannerisms": "In your face, bloodlusty",
+            "background": "Grew up in the thieve's guild"
         },
-        "portrait": "assets/no-profile-pic.png",
+        "portrait": "images/no-profile-pic.png",
 
-        "alignment": "Lawful Evil",
-        "deity": "Vecna",
+        "alignment": "Chaotic Good",
+        "deity": "Laeris",
 
-        "ddrace": "Human",
-        "abilityBonus1": "",
-        "abilityBonus2": "",
-        "skillBonus1": "",
-        "skillBonus2": "",
-        "abilityScores": [
-            { 
-                "baseStr": 20,
-                "baseCon": 20,
-                "baseDex": 20,
-                "baseInt": 20,
-                "baseWis": 20,
-                "baseCha": 20
-            }
-        ],
+        "ddrace": "Halfling",
+        "abilityBonus1": "DEX",
+        "abilityBonus2": "CHA",
+        "skillBonus1": "Acrobatics",
+        "skillBonus2": "Thievery",
+        "abilityScores": {
+            "baseStr": 10,
+            "baseCon": 12,
+            "baseDex": 16,
+            "baseInt": 10,
+            "baseWis": 10,
+            "baseCha": 16
+        },
 
-        "wealth": 0,
-        "equipment": [""],
+        "wealth": {
+          "cp": 1,
+          "sp": 2,
+          "gp": 3,
+          "pp": 4,
+          "ad": 5,
+          "other": ["Other wealth"]
+        },
+        "equipment": ["Leather Armor", "Dagger", "Hand Crossbow"],
         "magicItems": {
-            "weapons": [
-                "Magic Rod",
-                "Magic Dagger"
-            ],
-            "armor": "Dwarven Chainmail",
-            "arms": "",
-            "feet": "",
-            "hands": "",
-            "head": "",
-            "neck": "",
-            "leftRing": "",
-            "rightRing": "",
-            "waist": ""
+            "weapons": ["Weapon 1", "Weapon 2"],
+            "armor": "Test Armor",
+            "arms": "Test Gauntlets",
+            "feet": "Test Shoes",
+            "hands": "Test Gloves",
+            "head": "Test Helmet",
+            "neck": "Test Necklace",
+            "leftRing": "Test Left Ring",
+            "rightRing": "Test Right Ring",
+            "waist": "Test Belt"
         },
 
-        "languages": ["Common", "Dwarven"],
-        "rituals": ["Gentle Repose"]
+        "languages": ["Common", "Deep"],
+        "rituals": ["Ritual 1", "Ritual 2"]
     },
     "level1": {
-        "ddclass": "Fighter",
-        "skillTrainings": [],
+        "ddclass": "Rogue",
+        "skillTrainings": ["Acrobatics", "Bluff", "Intimidate",
+                           "Stealth", "Streetwise", "Thievery"],
         "classFeatures": [
             {
-                "name": "Class Feature",
-                "desc": "This is a class feature."
+                "name": "First Strike",
+                "desc": "At the start of an encounter, you have combat advantage against any creatures that have not yet acted in that encounter"
+            },
+            {
+                "name": "Rogue Tactics",
+                "desc": "Rogues operate in a variety of ways. Some rogues use their natural charm and cunning trickery to deceive foes. Others rely on brute strength to overcome their enemies. Choose one of the following options. Artful Dodger: You gain a bonus to AC equal to your Charisma modifier against opportunity attacks."
+            },
+            {
+                "name": "Rogue Weapon Talent",
+                "desc": "When you wield a shuriken, your weapon damage die increases by one size. When you wield a dagger, you gain a +1 bonus to attack rolls. "
+            },
+            {
+                "name": "Sneak Attack",
+                "desc": "Once per round, when you have combat advantage against an enemy and are using a weapon from the light blade, the crossbow, or the sling weapon group, an attack you make against that enemy deals extra damage if the attack hits. You decide whether to apply the extra damage after making the damage roll. As you advance in level, your extra damage increases. Level 1-10: +2d6, 11-20: +3d6, 21-30: +5d6"
             }
         ],
-        "atwillPower1": "",
-        "atwillPower2": "",
-        "encounterPower": "",
-        "dailyPower": "",
-        "ddfeat": { 
-            "name": "Level 1 Feat", 
-            "desc": "This is a feat description."
+        "atwillPower1": "Deft Strike",
+        "atwillPower2": "Riposte Strike",
+        "encounterPower": "Positioning Strike",
+        "dailyPower": "Trick Strike",
+        "ddfeat": {
+            "name": "Artful Dodger",
+            "desc": "The rogue gains a bonus to AC against opportunity attacks equal to the rogue's Charisma modifier."
         }
     },
     "level2": {
-        "utilityPower": "",
+        "utilityPower": "Level 2 Utility Power",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Level 2 feat", 
+            "desc": "Level 2 feat description" 
         }
     },
     "level3": {
-        "encounterPower": ""
+        "encounterPower": "Level 3 encounter power"
     },
     "level4": {
-        "abilityScoreBonus1": "",
-        "abilityScoreBonus2": "",
+        "abilityScoreBonus1": "Level 4 ability score bonus 1",
+        "abilityScoreBonus2": "Level 4 ability score bonus 2",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Level 4 feat", 
+            "desc": "Level 4 feat description" 
         }
     },
     "level5": {
-        "dailyPower": ""
+        "dailyPower": "Level 5 daily power"
     },
     "level6": {
-        "utilityPower": "",
+        "utilityPower": "Level 6 utility power",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Level 6 feat", 
+            "desc": "Level 6 feat description" 
         }
     },
     "level7": {
-        "encounterPower": ""
+        "encounterPower": "Level 7 encounter power"
     },
     "level8": {
-        "abilityScoreBonus1": "",
-        "abilityScoreBonus2": "",
+        "abilityScoreBonus1": "Level 8 ability score bonus 1",
+        "abilityScoreBonus2": "Level 8 ability score bonus 2",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Level 8 feat", 
+            "desc": "Level 8 feat description" 
         }
     },
     "level9": {
-        "dailyPower": ""
+        "dailyPower": "Level 9 daily power"
     },
     "level10": {
-        "utilityPower": "",
+        "utilityPower": "Level 10 utility power",
         "ddfeat": { 
-            "name": "", 
-            "desc": "" 
+            "name": "Level 10 feat", 
+            "desc": "Level 10 feat description" 
         }
     },
     "calculatedValues": {
         "halfLevel": 0,
-        "size": "M",
+        "size": "Small",
         "raceFeatures": [
             {
-                "name": "Race Feature",
-                "desc": "This is a race feature."
+                "name": "Bold",
+                "desc": "+5 racial bonus against fear."
+                },
+            {
+                "name": "Nimble Reaction",
+                "desc": "+2 racial bonus against opportunity attacks."
+            },
+            {
+                "name": "Second Chance",
+                "desc": "Second Chance encounter power."
             }
         ],
         "movement": {
             "base": 6,
-            "armor": 0,
-            "item": 0,
-            "misc": 0
+            "armor": 1,
+            "item": 2,
+            "misc": 3
         },
         "initiative": {
-            "dex": 0,
-            "misc": 0
+            "dex": 4,
+            "misc": 1
         },
         "abilityScores": {
-            "strTotal": 22,
-            "conTotal": 22,
-            "dexTotal": 22,
-            "intTotal": 22,
-            "wisTotal": 22,
-            "chaTotal": 22,
+            "strTotal": 10,
+            "conTotal": 12,
+            "dexTotal": 18,
+            "intTotal": 10,
+            "wisTotal": 10,
+            "chaTotal": 18,
             "strMod": 2,
-            "conMod": 2,
-            "dexMod": 2,
-            "intMod": 2,
-            "wisMod": 2,
-            "chaMod": 2
+            "conMod": 1,
+            "dexMod": 4,
+            "intMod": 1,
+            "wisMod": 3,
+            "chaMod": 4
         },
         "healthAndSavingThrows": {
-            "maxHP": 100,
-            "bloodiedValue": 50,
-            "surgeValue": 25,
-            "surgesPerDay": 15,
+            "maxHP": 24,
+            "bloodiedValue": 12,
+            "surgeValue": 6,
+            "surgesPerDay": 7,
             "savingThrowMods": [
-                "+1 against something"
+                "+5 racial bonus against fear."
             ],
             "resistances": [
-                ""
+                "Test resistance 1",
+                "Test resistance 2"
             ]
         },
         "skills": [
-            [10, "Acrobatics",    "DEX", 0, 10, 0, 0],
-            [10, "Arcana",        "INT", 0, 10, 0, 0],
-            [10, "Athletics",     "STR", 0, 10, 0, 0],
-            [10, "Bluff",         "CHA", 0, 10, 0, 0],
-            [10, "Diplomacy",     "CHA", 0, 10, 0, 0],
-            [10, "Dungeoneering", "WIS", 0, 10, 0, 0],
-            [10, "Endurance",     "CON", 0, 10, 0, 0],
-            [10, "Heal",          "WIS", 0, 10, 0, 0],
-            [10, "History",       "INT", 0, 10, 0, 0],
-            [10, "Insight",       "WIS", 0, 10, 0, 0],
-            [10, "Intimidate",    "CHA", 0, 10, 0, 0],
-            [10, "Nature",        "WIS", 0, 10, 0, 0],
-            [10, "Perception",    "WIS", 0, 10, 0, 0],
-            [10, "Religion",      "INT", 0, 10, 0, 0],
-            [10, "Stealth",       "DEX", 0, 10, 0, 0],
-            [10, "Streetwise",    "CHA", 0, 10, 0, 0],
-            [10, "Thievery",      "DEX", 0, 10, 0, 0]
+            [11, "Acrobatics",    "DEX", 4, 5, 0, 2],
+            [10, "Arcana",        "INT", 0, 0, 0, 0],
+            [1, "Athletics",     "STR", 1, 0, 0, 0],
+            [9, "Bluff",         "CHA", 4, 5, 0, 0],
+            [4, "Diplomacy",     "CHA", 4, 0, 0, 0],
+            [10, "Dungeoneering", "WIS", 0, 0, 0, 0],
+            [12, "Endurance",     "CON", 0, 0, 0, 0],
+            [10, "Heal",          "WIS", 0, 0, 0, 0],
+            [10, "History",       "INT", 0, 0, 0, 0],
+            [10, "Insight",       "WIS", 0, 0, 0, 0],
+            [9, "Intimidate",    "CHA", 4, 5, 0, 0],
+            [10, "Nature",        "WIS", 0, 0, 0, 0],
+            [10, "Perception",    "WIS", 0, 0, 0, 0],
+            [10, "Religion",      "INT", 0, 0, 0, 0],
+            [9, "Stealth",       "DEX", 4, 5, 0, 0],
+            [9, "Streetwise",    "CHA", 4, 5, 0, 0],
+            [11, "Thievery",      "DEX", 4, 5, 0, 2]
         ],
         "defenses": {
             "ac": {
-                "armor": 4,
-                "abilityMod": 0,
-                "class": 0,
-                "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "armor": 2,
+                "abilityMod": 4,
+                "class": 1,
+                "feat": 2,
+                "enhancement": 3,
+                "misc": 4
             },
             "fortitude": {
-                "abilityMod": 2,
-                "class": 0,
-                "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "abilityMod": 1,
+                "class": 2,
+                "feat": 3,
+                "enhancement": 4,
+                "misc": 5
             },
             "reflex": {
-                "abilityMod": -1,
-                "class": 0,
-                "feat": 0,
-                "enhancement": 0,
-                "misc": 0
+                "abilityMod": 4,
+                "class": 2,
+                "feat": 5,
+                "enhancement": 1,
+                "misc": 2
             },
             "will": {
-                "abilityMod": 0,
-                "class": 0,
-                "feat": 1,
-                "enhancement": 0,
-                "misc": 0
+                "abilityMod": 1,
+                "class": 2,
+                "feat": 3,
+                "enhancement": 4,
+                "misc": 5
             }
         },
         "weaponProficiencies": [
-            
+            {
+                "attack": 8,
+                "defType": "AC",
+                "name": "Dagger",
+                "damageDice": "1d4",
+                "damageMod": 4
+            },
+            {
+              "attack": 6,
+              "defType": "AC",
+              "name": "Hand Crossbow",
+              "damageDice": "1d6",
+              "damageMod": 4
+            },
+            {
+              "attack": 7,
+              "defType": "AC",
+              "name": "Shuriken",
+              "damageDice": "1d6",
+              "damageMod": 4
+            },
+            {
+              "attack": 6,
+              "defType": "AC",
+              "name": "Sling",
+              "damageDice": "1d6",
+              "damageMod": 4
+            },
+            {
+              "attack": 6,
+              "defType": "AC",
+              "name": "Shortsword",
+              "damageDice": "1d6",
+              "damageMod": 4
+            },
+            {
+              "attack": 0,
+              "defType": "AC",
+              "name": "Unarmed",
+              "damageDice": "1d4",
+              "damageMod": 0
+            }
         ],
         "powers": [
             {
-                "name": "Power Name",
-                "usage": "Encounter",
-                "actionType": "Minor Action",
-                "source": "PHB3",
-                "target": "Close burst 5",
-                "flavor": "This is flavor text.",
+                "name": "Deft Strike",
+                "usage": "At-Will",
+                "actionType": "Standard Action",
+                "source": "PHB1",
+                "target": "One Creature",
+                "flavor": "A final lunge brings you into an advantageous position",
                 "elements": [
-                    ["Keywords", "Arcane"],
-                    ["Effect", "This is the effect of the power."]
+                    ["Special:", "You can move 2 sqaures before the attack"],
+                    ["Attack:", "Dexterity vs. AC"],
+                    ["Hit:", "1[W] + Dexterity Modifier damage."],
+                    ["Extra", "Increase damage to 2[W]+Dexterity modifier at 21st level."]
+                ]
+            },
+            {
+                "name": "Riposte Strike",
+                "usage": "At-Will",
+                "actionType": "Standard Action",
+                "source": "PHB1",
+                "target": "One Creature",
+                "flavor": "With a calculated strike, you leave your foe vulnerable to an adroit riposte should he dare attack you.",
+                "elements": [
+                    ["Attack:", "Dexterity vs. AC"],
+                    ["Hit:", "1[W] + Dexterity Modifier damage. If the target attacks you before the start of your next turn, you make your riposte against the target as an immediate interrupt: a Strength vs. AC attack that deals 1[W] + Strength modifier damage."],
+                    ["Extra", "Increase damage to 2[W]+Dexterity modifier and riposte to 2[W] + Strength modifier at 21st level."]
+                ]
+            },
+            {
+                "name": "Positioning Strike",
+                "usage": "Encounter",
+                "actionType": "Standard Action",
+                "source": "PHB1",
+                "target": "One Creature",
+                "flavor": "A false stumble and a shove place the enemy exactly where you want him.",
+                "elements": [
+                    ["Attack:", "Dexterity vs. Will"],
+                    ["Hit:", "1[W] + Dexterity Modifier damage, and you slide the target 1 square."],
+                    ["Extra", "Artful Dodger: You slide the target a number of squares equal to your Charisma modifier."]
+                ]
+            },
+            {
+                "name": "Trick Strike",
+                "usage": "Daily",
+                "actionType": "Standard Action",
+                "source": "PHB1",
+                "target": "One Creature",
+                "flavor": "Through a series of feints and lures, you manuever your foe right where you want him.",
+                "elements": [
+                    ["Attack:", "Dexterity vs. AC"],
+                    ["Hit:", "3[W] + Dexterity Modifier damage, and you slide the target 1 square."],
+                    ["Effect", "Until the end of the encounter, each time you hit the target you slide it 1 square."]
+                ]
+            },
+            {
+                "name": "Second Chance",
+                "usage": "Encounter",
+                "actionType": "Immediate Interrupt",
+                "source": "PHB1",
+                "target": "Personal",
+                "flavor": "Luck and small size combine to work in your favor as you dodge your enemy's attack.",
+                "elements": [
+                    ["Effect", "When an attack hits you, force an enemy to roll the attack again. The enemy used the second roll, even if it's lower."]
                 ]
             }
         ]

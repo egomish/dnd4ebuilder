@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="styles/score.css">
 
-<h3>Abilty Scores</h3>
+<h3>Ability Scores</h3>
 <div class="scores">
     <div class="col-sm-4 left">
         <table>
@@ -66,34 +66,23 @@
                 <th>Mod+1/2lvl</th>
             </tr>
             <tr>
-                <td class="table_box">
-                    {{ddch.calculatedValues.abilityScores.strMod + ddch.calculatedValues.halfLevel}}
+                <td class="table_box" ng-bind="ddch.calculatedValues.abilityScores.strMod + ddch.calculatedValues.halfLevel"></td>
+            </tr>
+            <tr>
+                <td class="table_box" ng-bind="ddch.calculatedValues.abilityScores.conMod + ddch.calculatedValues.halfLevel"></td>
+            </tr>
+            <tr>
+                <td class="table_box" ng-bind="ddch.calculatedValues.abilityScores.dexMod + ddch.calculatedValues.halfLevel"></td>
+            </tr>
+            <tr>
+                <td class="table_box" ng-bind="ddch.calculatedValues.abilityScores.intMod + ddch.calculatedValues.halfLevel"></td>
+            </tr>
+            <tr>
+                <td class="table_box" ng-bind="ddch.calculatedValues.abilityScores.wisMod + ddch.calculatedValues.halfLevel">
                 </td>
             </tr>
             <tr>
-                <td class="table_box">
-                    {{ddch.calculatedValues.abilityScores.conMod + ddch.calculatedValues.halfLevel}}
-                </td>
-            </tr>
-            <tr>
-                <td class="table_box">
-                    {{ddch.calculatedValues.abilityScores.dexMod + ddch.calculatedValues.halfLevel}}
-                </td>
-            </tr>
-            <tr>
-                <td class="table_box">
-                    {{ddch.calculatedValues.abilityScores.intMod + ddch.calculatedValues.halfLevel}}
-                </td>
-            </tr>
-            <tr>
-                <td class="table_box">
-                    {{ddch.calculatedValues.abilityScores.wisMod + ddch.calculatedValues.halfLevel}}
-                </td>
-            </tr>
-            <tr>
-                <td class="table_box">
-                    {{ddch.calculatedValues.abilityScores.chaMod + ddch.calculatedValues.halfLevel}}
-                </td>
+                <td class="table_box" ng-bind="ddch.calculatedValues.abilityScores.chaMod + ddch.calculatedValues.halfLevel"></td>
             </tr>
         </table>
     </div>

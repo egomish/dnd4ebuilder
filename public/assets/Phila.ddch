@@ -21,16 +21,14 @@
         "abilityBonus2": "CHA",
         "skillBonus1": "History",
         "skillBonus2": "Intimidate",
-        "abilityScores": [
-            { 
-                "baseStr": 16,
-                "baseCon": 12,
-                "baseDex": 11,
-                "baseInt": 11,
-                "baseWis": 8,
-                "baseCha": 16
-            }
-        ],
+        "abilityScores": {
+            "baseStr": 16,
+            "baseCon": 12,
+            "baseDex": 11,
+            "baseInt": 11,
+            "baseWis": 8,
+            "baseCha": 16
+        },
 
         "wealth": {
           "cp": 0,
@@ -64,6 +62,20 @@
         "ddclass": "Warlord",
         "skillTrainings": ["Athletics", "Diplomacy", 
                            "Endurance", "History"],
+        "classFeatures": [
+            {
+                "name": "Combat Leader",
+                "desc": "You and allies within 10 squares that see and hear you gain +2 to initiative."
+            },
+            {
+                "name": "Inspiring Presence",
+                "desc": "If an Ally that can see you spends an Action Point to take an Extra Action, they regain HP equal to your Charisma modifier + half your level."
+            },
+            {
+                "name": "Inspiring Word",
+                "desc": "Use inspiring word as an encounter (special) power, minor action."
+            }
+        ],
         "atwillPower1": "Commander's Strike",
         "atwillPower2": "Furious Smash",
         "encounterPower": "Hammer and Anvil",
@@ -125,20 +137,6 @@
     "calculatedValues": {
         "halfLevel": 0,
         "size": "M",
-        "classFeatures": [
-            {
-                "name": "Combat Leader",
-                "desc": "You and allies within 10 squares that see and hear you gain +2 to initiative."
-            },
-            {
-                "name": "Inspiring Presence",
-                "desc": "If an Ally that can see you spends an Action Point to take an Extra Action, they regain HP equal to your Charisma modifier + half your level."
-            },
-            {
-                "name": "Inspiring Word",
-                "desc": "Use inspiring word as an encounter (special) power, minor action."
-            }
-        ],
         "raceFeatures": [
             {
                 "name": "Dragonborn Fury",

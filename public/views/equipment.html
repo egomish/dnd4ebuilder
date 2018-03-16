@@ -2,12 +2,13 @@
 <h3>Equipment</h3>
 
 <div class="otherEquipment">
-    <span ng-repeat="item in ddch.level0.equipment">
+    <span ng-repeat="item in ddch.level0.equipment track by $index">
       <!-- 
         Separating items with commas without having a
         comma at the end as well was too hard, so I used 
         three spaces for separation instead
       -->
-      <p ng-bind="item + '&nbsp &nbsp &nbsp'"></p>
+      <p ng-if="item != ddch.level0.equipment[ddch.level0.equipment.length-1]" ng-bind="item +','"></p>
+      <p ng-if="item == ddch.level0.equipment[ddch.level0.equipment.length-1]" ng-bind="item"></p>
     </span>
 </div>

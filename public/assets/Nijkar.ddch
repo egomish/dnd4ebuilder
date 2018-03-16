@@ -21,16 +21,14 @@
         "abilityBonus2": "CHA",
         "skillBonus1": "Acrobatics",
         "skillBonus2": "Thievery",
-        "abilityScores": [
-            { 
-                "baseStr": 10,
-                "baseCon": 12,
-                "baseDex": 16,
-                "baseInt": 10,
-                "baseWis": 10,
-                "baseCha": 16
-            }
-        ],
+        "abilityScores": {
+            "baseStr": 10,
+            "baseCon": 12,
+            "baseDex": 16,
+            "baseInt": 10,
+            "baseWis": 10,
+            "baseCha": 16
+        },
 
         "wealth": {
           "cp": 0,
@@ -193,19 +191,19 @@
         },
         "skills": [
             [11, "Acrobatics",    "DEX", 4, 5, 0, 2],
-            [10, "Arcana",        "INT", 0, 0, 0, 0],
-            [1, "Athletics",     "STR", 1, 0, 0, 0],
+            [0, "Arcana",        "INT", 0, 0, 0, 0],
+            [0, "Athletics",     "STR", 0, 0, 0, 0],
             [9, "Bluff",         "CHA", 4, 5, 0, 0],
             [4, "Diplomacy",     "CHA", 4, 0, 0, 0],
-            [10, "Dungeoneering", "WIS", 0, 0, 0, 0],
-            [12, "Endurance",     "CON", 0, 0, 0, 0],
-            [10, "Heal",          "WIS", 0, 0, 0, 0],
-            [10, "History",       "INT", 0, 0, 0, 0],
-            [10, "Insight",       "WIS", 0, 0, 0, 0],
+            [0, "Dungeoneering", "WIS", 0, 0, 0, 0],
+            [1, "Endurance",     "CON", 1, 0, 0, 0],
+            [0, "Heal",          "WIS", 0, 0, 0, 0],
+            [0, "History",       "INT", 0, 0, 0, 0],
+            [0, "Insight",       "WIS", 0, 0, 0, 0],
             [9, "Intimidate",    "CHA", 4, 5, 0, 0],
-            [10, "Nature",        "WIS", 0, 0, 0, 0],
-            [10, "Perception",    "WIS", 0, 0, 0, 0],
-            [10, "Religion",      "INT", 0, 0, 0, 0],
+            [0, "Nature",        "WIS", 0, 0, 0, 0],
+            [0, "Perception",    "WIS", 0, 0, 0, 0],
+            [0, "Religion",      "INT", 0, 0, 0, 0],
             [9, "Stealth",       "DEX", 4, 5, 0, 0],
             [9, "Streetwise",    "CHA", 4, 5, 0, 0],
             [11, "Thievery",      "DEX", 4, 5, 0, 2]
@@ -234,7 +232,7 @@
                 "misc": 0
             },
             "will": {
-                "abilityMod": 0,
+                "abilityMod": 4,
                 "class": 0,
                 "feat": 0,
                 "enhancement": 0,

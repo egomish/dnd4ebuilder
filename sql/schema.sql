@@ -1,94 +1,54 @@
- CREATE TABLE classes(
- 	name VARCHAR(50) PRIMARY KEY,
- 	synopsis TEXT,
- 	description TEXT,
- 	role VARCHAR(255),
- 	powerSource VARCHAR(255),
- 	keyAbilityScores VARCHAR(70),
- 	armorProficiencies TEXT,
- 	weaponProficiencies TEXT,
- 	implements VARCHAR(50),
- 	acBonus INTEGER,
- 	fortBonus INTEGER,
- 	reflexBonus INTEGER,
- 	willBonus INTEGER,
- 	level1HP INTEGER,
- 	perLevelHP INTEGER,
- 	surges INTEGER,
- 	numberOfSkills INTEGER,
- 	builds VARCHAR(100),
- 	classFeatures TEXT
- );
+CREATE TABLE classes(
+	name VARCHAR(50) PRIMARY KEY,
+	synopsis TEXT,
+	description TEXT,
+	role VARCHAR(255),
+	powerSource VARCHAR(255),
+	keyAbilityScores VARCHAR(70),
+	armorProficiencies TEXT,
+	weaponProficiencies TEXT,
+	implements VARCHAR(50),
+	acBonus INTEGER,
+	fortBonus INTEGER,
+	reflexBonus INTEGER,
+	willBonus INTEGER,
+	level1HP INTEGER,
+	perLevelHP INTEGER,
+	surges INTEGER,
+	numberOfSkills INTEGER,
+	builds VARCHAR(100),
+	classFeatures TEXT
+);
 
- CREATE TABLE features(
- 	name VARCHAR(100) PRIMARY KEY,
- 	kind ENUM('race', 'class', 'feat'),
- 	prerequisites TEXT,
- 	benefit VARCHAR(255),
- 	special VARCHAR(255)
- );
+CREATE TABLE features(
+	name VARCHAR(100) PRIMARY KEY,
+	kind ENUM('race', 'class', 'feat'),
+	origin VARCHAR(50),
+	prerequisites TEXT,
+	benefit VARCHAR(255),
+	special VARCHAR(255)
+);
 
- CREATE TABLE powers(
- 	name VARCHAR(50) PRIMARY KEY,
- 	powerUsage ENUM('item', 'at-will', 'encounter', 'daily'),
- 	actionType ENUM('standard', 'minor', 'move', 'Immediate Interrupt', 'Immediate Reaction'),
- 	powerType ENUM('attack', 'utility'),
- 	kind ENUM('race', 'class', 'feat', 'item'),
- 	source ENUM('PHB1', 'Heroes of the Shadowfell', 'PHB2', 'PHB3', 'MP', 'DP', 'AP', 'PP'),
- 	flavor TEXT,
- 	level INTEGER,
- 	hit TEXT,
- 	miss TEXT,
- 	effect TEXT,
- 	special TEXT,
- 	keyWords TEXT,
- 	target TEXT,
- 	requirement TEXT,
- 	attack TEXT,
- 	powerTrigger TEXT
- );
-
- INSERT INTO powers(
- 	name,
- 	powerUsage,
- 	actionType,
- 	powerType,
- 	kind,
- 	source,
- 	flavor,
- 	level,
- 	hit,
- 	miss,
- 	effect,
- 	special,
- 	keyWords,
- 	target,
- 	requirement,
- 	attack,
- 	powerTrigger
- )
- VALUES(
- 	'Magic Missile',
- 	'at-will',
- 	'standard',
- 	'attack',
- 	'class',
- 	'PHB1',
- 	'You launch a silvery bolt of force at an enemy.',
- 	1,
- 	'2d4 + Intelligence modifier force damage.
-	Increase damage to 4d4 + Intelligence modifier at 21st level.',
- 	NULL,
- 	NULL,
- 	'This power counts as a ranged basic attack. When
-	a power allows you to make a ranged basic attack, you can use this power.',
- 	NULL,
- 	NULL,
- 	NULL,
- 	NULL,
- 	NULL
-
- );
+CREATE TABLE powers(
+	name VARCHAR(50) PRIMARY KEY,
+	powerUsage ENUM('item', 'at-will', 'encounter', 'daily'),
+	actionType ENUM('standard', 'minor', 'move', 'Immediate Interrupt', 'Immediate Reaction'),
+	powerType ENUM('attack', 'utility'),
+	kind ENUM('race', 'class', 'feat', 'item'),
+	source ENUM('PHB1', 'Heroes of the Shadowfell', 'PHB2', 'PHB3', 'MP', 'DP', 'AP', 'PP'),
+	flavor TEXT,
+	level INTEGER,
+	hit TEXT,
+	miss TEXT,
+	effect TEXT,
+	special TEXT,
+	keyWords TEXT,
+	target TEXT,
+	requirement TEXT,
+	attack TEXT,
+	powerTrigger TEXT,
+	powerRange TEXT
+);
 
 CREATE TABLE languages(
 	name VARCHAR (50) PRIMARY KEY,
@@ -137,13 +97,33 @@ CREATE TABLE races(
 	maxHeight VARCHAR(10),
 	minWeight INTEGER,
 	maxWeight INTEGER,
-	abilityScoreBonus1 TEXT,
-	abilityScoreBonus2 TEXT,
+	strBonus INTEGER,
+	conBonus INTEGER,
+	dexBonus INTEGER,
+	intBonus INTEGER,
+	wisBonus INTEGER,
+	chaBonus INTEGER,
 	size ENUM('tiny', 'small', 'medium', 'large', 'huge'),
+	speed INTEGER DEFAULT 6,
 	vision ENUM('normal', 'low light', 'dark vision'),
 	numberOfLanguages INTEGER,
-	skillBonus1 TEXT,
-	skillBonus2 TEXT,
+	acrobaticsBonus INTEGER,
+	arcanaBonus INTEGER,
+	athleticsBonus INTEGER,
+	bluffBonus INTEGER,
+	diplomacyBonus INTEGER,
+	dungeoneeringBonus INTEGER,
+	enduranceBonus INTEGER,
+	healBonus INTEGER,
+	historyBonus INTEGER,
+	insightBonus INTEGER,
+	intimidateBonus INTEGER,
+	natureBonus INTEGER,
+	perceptionBonus INTEGER,
+	religionBonus INTEGER,
+	stealthBonus INTEGER,
+	streetwiseBonus INTEGER,
+	thieveryBonus INTEGER,
 	racialFeatures TEXT
 );
 
@@ -158,6 +138,8 @@ CREATE TABLE items(
 	salePrice FLOAT,
 	weight INTEGER,
 	weaponGroup VARCHAR(20),
+	weaponCategory ENUM('Improvised', 'Simple', 'Military', 'Superior'),
+	armorGroup VARCHAR(20),
 	properties varchar(30),
 	categories TEXT,
 	carryingCapacity INTEGER,
