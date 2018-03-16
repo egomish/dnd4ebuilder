@@ -36,7 +36,7 @@ INSERT INTO races(
 	racialFeatures
 )
 VALUES(
-	'DragonBorn', /* name */
+	'Dragonborn', /* name */
 	'Proud, honorable warriors, born from the blood of an ancient dragon god', /* synopsis */
 	"Born to fight, dragonborn are a race of wandering mercenaries, soldiers, and 
 	adventurers. Long ago, their empire contended for worldwide dominion, but now only 
@@ -217,7 +217,7 @@ INSERT INTO features(
 	special
 )
 VALUES(
-	'Draconic Heritage: ',
+	'Draconic Heritage',
 	'race',
 	'Dragonborn',
 	NULL,
@@ -235,7 +235,7 @@ INSERT INTO features(
 	special
 )
 VALUES(
-	'Dragon Breath: ',
+	'Dragon Breath',
 	'race',
 	'Dragonborn',
 	NULL,
