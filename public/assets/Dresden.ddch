@@ -21,16 +21,14 @@
         "abilityBonus2": "INT",
         "skillBonus1": "Acrobatics",
         "skillBonus2": "Stealth",
-        "abilityScores": [
-            { 
-                "baseStr": 10,
-                "baseCon": 13,
-                "baseDex": 10,
-                "baseInt": 18,
-                "baseWis": 13,
-                "baseCha": 8
-            }
-        ],
+        "abilityScores": { 
+            "baseStr": 10,
+            "baseCon": 13,
+            "baseDex": 10,
+            "baseInt": 18,
+            "baseWis": 13,
+            "baseCha": 8
+        },
 
         "wealth": {
             "cp": 0,

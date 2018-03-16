@@ -21,16 +21,14 @@
         "abilityBonus2": "CHA",
         "skillBonus1": "History",
         "skillBonus2": "Intimidate",
-        "abilityScores": [
-            { 
+        "abilityScores": { 
                 "baseStr": 16,
                 "baseCon": 12,
                 "baseDex": 11,
                 "baseInt": 11,
                 "baseWis": 8,
                 "baseCha": 16
-            }
-        ],
+            },
 
         "wealth": {
           "cp": 0,
