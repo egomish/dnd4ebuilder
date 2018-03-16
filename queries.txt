@@ -190,7 +190,11 @@ skill armorPenalty
     query: SELECT armorCheck FROM items WHERE name LIKE <armor in question>
     source attributes: ddch.level0.equipment
                        ddch.level0.magicItems
-    target attributes: ddch.calculatedValues.skills[0 : 16][5]
+    target attributes: ddch.calculatedValues.skills[0][5]
+                       ddch.calculatedValues.skills[2][5]
+                       ddch.calculatedValues.skills[6][5]
+                       ddch.calculatedValues.skills[14][5]
+                       ddch.calculatedValues.skills[16][5]
 
 skill totals
     query:
