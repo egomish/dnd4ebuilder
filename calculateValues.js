@@ -9,6 +9,10 @@ module.exports.getEverythingFromDatabase = function (db, ddchar, response) {
     getSize();
 }
 
+function getAbilMod (abilityscore) {
+    return Math.floor((abilityscore - 10) / 2);
+}
+
 function getSize () {
     var racename = ddch.level0.ddrace;
     var query = "SELECT size FROM races WHERE name LIKE '" + racename + "';";
@@ -38,8 +42,39 @@ function getRaceFeatures () {
               ddch.calculatedValues.raceFeatures[tuple] = feature;
           }
       }
-      getACBonus();
+      getStrengthTotal();
     });
+}
+
+function getStrengthTotal () {
+    var racename = ddch.level0.ddrace;
+    var basestr = ddch.level0.abilityScores.baseStr;
+    var query = "SELECT strBonus FROM races " 
+              + "WHERE name LIKE '" + racename + "';";
+    con.query(query, function (err, result) {
+      if (err) {
+          database_error(err, query);
+      } else {
+          for (tuple in result) {
+              strbonus = result[tuple].strBonus;
+              ddch.calculatedValues.abilityScores.strTotal = basestr;
+              ddch.calculatedValues.abilityScores.strTotal += strbonus;
+          }
+      }
+      getStrengthModifier();
+    });
+}
+
+function getStrengthModifier () {
+    var strtotal = ddch.calculatedValues.abilityScores.strTotal;
+    var strmod = getAbilMod(ddch.calculatedValues.abilityScores.strTotal);
+
+    ddch.calculatedValues.abilityScores.strMod = strmod;
+    ddch.calculatedValues.skills[2][3] = strmod;
+    ddch.calculatedValues.defenses.fortitude.abilityMod = strmod;
+    //TODO: handle ddch.calculatedValues.weaponProficiencies[i].damageMod
+
+    getACBonus();
 }
 
 function getACBonus () {

@@ -77,7 +77,6 @@ app.listen(port, function() {
 
 app.post('/calculateValues', function(req, res) {
   var ddch = req.body;
-  ddch.calculatedValues = {};
   calculate.getEverythingFromDatabase(con, ddch, res);
 });
 
