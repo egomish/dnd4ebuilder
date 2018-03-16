@@ -181,7 +181,7 @@
             "dexMod": 2,
             "intMod": 0,
             "wisMod": 1,
-            "chaMod": 0
+            "chaMod": -1
         },
         "healthAndSavingThrows": {
             "maxHP": 37,
