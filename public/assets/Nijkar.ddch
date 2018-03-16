@@ -21,16 +21,14 @@
         "abilityBonus2": "CHA",
         "skillBonus1": "Acrobatics",
         "skillBonus2": "Thievery",
-        "abilityScores": [
-            { 
-                "baseStr": 10,
-                "baseCon": 12,
-                "baseDex": 16,
-                "baseInt": 10,
-                "baseWis": 10,
-                "baseCha": 16
-            }
-        ],
+        "abilityScores": {
+            "baseStr": 10,
+            "baseCon": 12,
+            "baseDex": 16,
+            "baseInt": 10,
+            "baseWis": 10,
+            "baseCha": 16
+        },
 
         "wealth": {
           "cp": 0,
