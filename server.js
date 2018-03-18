@@ -50,6 +50,13 @@ app.post('/character', function(req, res) {
 });
 
 app.post('/uploadfile', function(req, res) {
+	if(!fs.existsSync('uploads')) {
+		    fs.mkdirSync('uploads');
+		}
+	writeFile(req, res);
+});
+
+var writeFile = function(req, res) {
 	if(req.files) {
 		var file = req.files.filetoupload;
 		var filetoupload = file.name;
@@ -69,7 +76,7 @@ app.post('/uploadfile', function(req, res) {
 			}
 		});
 	}
-});
+};
 
 app.listen(port, function() {
     console.log('Server app listening on port ' + port);
